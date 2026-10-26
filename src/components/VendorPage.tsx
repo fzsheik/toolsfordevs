@@ -29,6 +29,7 @@ export default async function VendorPage({ vendor }: { vendor: VendorId }) {
   const last = events.find((e) => e.kind === "reset");
   const banked = events.find((e) => e.kind === "banked" && last && e.date > last.date);
   const faq = FAQ(v, last?.date);
+  const checked = new Date();
   return (
     <div className={`v-${vendor}`}>
       <JsonLd
@@ -42,6 +43,13 @@ export default async function VendorPage({ vendor }: { vendor: VendorId }) {
                 name: f.q,
                 acceptedAnswer: { "@type": "Answer", text: f.a },
               })),
+            },
+            {
+              "@type": "WebPage",
+              name: `${v.name} reset tracker`,
+              url: `${SITE.url}${v.path}`,
+              dateModified: checked.toISOString(),
+              ...(last ? { datePublished: last.date } : {}),
             },
             {
               "@type": "BreadcrumbList",
@@ -70,6 +78,7 @@ export default async function VendorPage({ vendor }: { vendor: VendorId }) {
         <p>No resets logged yet.</p>
       )}
       <CallYourShot vendors={[{ id: vendor, name: v.name, resetDates: events.filter((e) => e.kind === "reset").map((e) => e.date) }]} />
+      <p className="checked">Checked <time dateTime={checked.toISOString()}>{checked.toISOString().slice(0, 16).replace("T", " ")} UTC</time></p>
       <Estimate vendor={vendor} />
       <h2>Every {v.name} reset so far</h2>
       <EventList events={events} />

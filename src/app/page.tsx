@@ -19,6 +19,19 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   const events = await getEvents();
+  const checked = new Date();
+  const lastOf = (id: string) => events.find((e) => e.vendor === id && e.kind === "reset");
+  const phrase = (id: "claude" | "codex") => {
+    const l = lastOf(id);
+    const d = l ? daysSince(l.date) : null;
+    return `${VENDORS[id].name} ${l ? (d === 0 ? "reset today" : d === 1 ? "last reset 1 day ago" : `last reset ${d} days ago`) : "has no logged reset"} (${l ? fmtDate(l.date) : "n/a"})`;
+  };
+  const answer = `${phrase("claude")}. ${phrase("codex")}. Full history, sources and a rough guess at the next reset below.`;
+  const faq = [
+    { q: "Did Claude reset today?", a: `${phrase("claude")}. Extra resets are announced by Anthropic staff on X; this page checks every few minutes.` },
+    { q: "Did Codex reset today?", a: `${phrase("codex")}. Extra resets are announced by OpenAI staff on X; this page checks every few minutes.` },
+    { q: "How often do Claude and Codex usage limits reset?", a: "Normal 5-hour and weekly windows roll on their own. Separate one-off resets are announced ad hoc, roughly every few weeks, with no published schedule. The rhythm cards on this page show the recent gaps." },
+  ];
   return (
     <>
       <JsonLd
@@ -30,10 +43,18 @@ export default async function Home() {
           description: SITE.tagline,
         }}
       />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+        }}
+      />
       <section className="home-intro" aria-labelledby="home-title">
-        <p className="eyebrow"><span className="status-dot" />$ did-it-reset --claude --codex</p>
-        <h1 id="home-title">Less waiting.<br />More building.</h1>
-        <p className="intro-copy">Did your limits reset? Last reset, full history, and a rough guess at the next one.</p>
+        <p className="eyebrow">$ did-it-reset --claude --codex</p>
+        <h1 id="home-title">Did Claude or Codex reset?</h1>
+        <p className="intro-copy">{answer}</p>
+        <p className="checked">Checked <time dateTime={checked.toISOString()}>{checked.toISOString().slice(0, 16).replace("T", " ")} UTC</time></p>
       </section>
       <div className="section-heading">
         <h2>The reset log</h2>
@@ -79,6 +100,13 @@ export default async function Home() {
         <span className="eyebrow">{"// latest news"}</span>
       </div>
       <EventList events={events.slice(0, 5)} />
+      <h2>Quick answers</h2>
+      {faq.map((f) => (
+        <details key={f.q} open>
+          <summary>{f.q}</summary>
+          <p>{f.a}</p>
+        </details>
+      ))}
       <p className="history-link"><Link href="/reset-history">Explore the full reset history <span aria-hidden="true">→</span></Link></p>
     </>
   );

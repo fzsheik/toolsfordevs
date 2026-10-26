@@ -57,8 +57,6 @@ h3{margin:0}
 
 /* home intro */
 .home-intro{padding:20px 0 8px}
-.status-dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--lime);border:2px solid var(--line);margin-right:8px;animation:pulse 1.6s infinite}
-@keyframes pulse{50%{transform:scale(1.5)}}
 .intro-copy{font-size:1.2rem;max-width:52ch;margin:0 0 6px}
 .section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:44px 0 16px}
 .section-heading h2{margin:0}
@@ -186,3 +184,6 @@ details p{margin:8px 0 2px;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
 .news-heading{flex-direction:column;align-items:center;text-align:center;gap:4px}
 .history-link{text-align:center}
+.checked{font:600 .75rem/1.4 var(--font-mono),monospace;color:var(--muted);margin:10px 0 0}
+.ctx{margin:18px 0}
+.ctx a{font-weight:800}

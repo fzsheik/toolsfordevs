@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Bricolage_Grotesque, Figtree, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { SITE } from "@/lib/site";
 import BrandMark from "@/components/BrandMark";
@@ -49,6 +51,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <p>Data: <a href="https://codex-reset.com/" rel="noopener" target="_blank">codex-reset.com</a> and <a href="https://claude-resets.com/" rel="noopener" target="_blank">claude-resets.com</a>, merged with our own log.</p>
           <p>Independent. Not affiliated with Anthropic or OpenAI. Claude is a trademark of Anthropic; Codex and OpenAI are trademarks of OpenAI. Every entry links its sources; &quot;Source-linked&quot; means the primary link is cited but not yet checked by us.</p>
         </footer>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
