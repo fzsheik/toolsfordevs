@@ -1381,7 +1381,11 @@
         "label": "Spotted via codex-reset.com",
         "url": "https://codex-reset.com/"
       }
-    ]
+    ],
+    "quote": {
+      "text": "Day 21/ Wonder what happens the remaining seven days. But today is a reset.",
+      "via": "codex-reset.com"
+    }
   },
   {
     "id": "codex-2026-10-22",
@@ -1402,7 +1406,11 @@
         "label": "Spotted via codex-reset.com",
         "url": "https://codex-reset.com/"
       }
-    ]
+    ],
+    "quote": {
+      "text": "Day 17/ Bet you thought we forgot, but no, it’s reset day today.\n\nAlso good time to remind you to get Daybreak Blue access, it only takes 15 mins and you don’t want to have to do it in the middle of an incident.",
+      "via": "codex-reset.com"
+    }
   },
   {
     "id": "codex-2026-10-20",
@@ -1423,6 +1431,10 @@
         "label": "Spotted via codex-reset.com",
         "url": "https://codex-reset.com/"
       }
-    ]
+    ],
+    "quote": {
+      "text": "Day 15/ Nevermind, we're still cooking... and reset. Enjoy. https://t.co/RZ9WhtI802",
+      "via": "codex-reset.com"
+    }
   }
 ]
