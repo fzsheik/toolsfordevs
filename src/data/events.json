@@ -7,7 +7,7 @@
     "title": "ClaudeDevs resets everyone's 5-hour and weekly limits",
     "summary": "ClaudeDevs posted: \"Happy Friday! We've reset everyone's 5-hour and weekly rate limits.\" No reason was given. Applied server-side to subscription plans; API limits are separate.",
     "scope": "5-hour + weekly, all subscribers",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "ClaudeDevs on X (primary)",
@@ -28,7 +28,7 @@
     "title": "ClaudeDevs resets 5-hour and weekly limits for all users",
     "summary": "ClaudeDevs posted: \"We've reset 5-hour and weekly rate limits for all users.\" No reason given. Some outlets date this July 10; the post is cited as July 9.",
     "scope": "5-hour + weekly, all users",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "ClaudeDevs on X (primary)",
@@ -49,7 +49,7 @@
     "title": "ClaudeDevs resets limits again, third blanket reset in three weeks",
     "summary": "ClaudeDevs repeated the July 9 wording. No reason given.",
     "scope": "5-hour + weekly, all users",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "ClaudeDevs on X (primary)",
@@ -70,7 +70,7 @@
     "title": "Sam Altman resets Codex limits for 3 million weekly users",
     "summary": "One-time usage limit reset celebrating 3 million weekly Codex users. Altman said further resets would follow for each additional million users, up to 10 million.",
     "scope": "Usage limits, all Codex users",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "Business Today (secondary)",
@@ -86,7 +86,7 @@
     "title": "Codex lets you bank rate limit resets and use them later",
     "summary": "Go, Plus, Pro and Business users get one free saved reset that expires 30 days after credit. Plus and Pro can earn more via referrals (up to four banked). Changelog dates it June 11; public announcement on X June 12. OpenAI has not said whether a reset clears the 5-hour window, weekly limit, or both.",
     "scope": "Feature: saved resets",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "OpenAI on X (primary)",
@@ -111,7 +111,7 @@
     "title": "@ClaudeDevs announces a Claude usage limit reset",
     "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@ClaudeDevs on X (primary)",
@@ -132,7 +132,7 @@
     "title": "@ClaudeDevs announces a Claude usage limit reset",
     "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@ClaudeDevs on X (primary)",
@@ -153,7 +153,7 @@
     "title": "@ClaudeDevs announces a Claude usage limit reset",
     "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@ClaudeDevs on X (primary)",
@@ -174,7 +174,7 @@
     "title": "@ClaudeDevs announces a Claude usage limit reset",
     "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@ClaudeDevs on X (primary)",
@@ -195,7 +195,7 @@
     "title": "@ClaudeDevs announces a Claude usage limit reset",
     "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@ClaudeDevs on X (primary)",
@@ -216,7 +216,7 @@
     "title": "@ClaudeDevs announces a Claude usage limit reset",
     "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@ClaudeDevs on X (primary)",
@@ -237,7 +237,7 @@
     "title": "@ClaudeDevs announces a Claude usage limit reset",
     "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@ClaudeDevs on X (primary)",
@@ -258,7 +258,7 @@
     "title": "@ClaudeDevs announces a Claude usage limit reset",
     "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@ClaudeDevs on X (primary)",
@@ -279,7 +279,7 @@
     "title": "@lydiahallie announces a Claude usage limit reset",
     "summary": "@lydiahallie posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@lydiahallie on X (primary)",
@@ -300,7 +300,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -321,7 +321,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -342,7 +342,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -363,7 +363,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -384,7 +384,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -405,7 +405,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -426,7 +426,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -447,7 +447,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -468,7 +468,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -489,7 +489,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -510,7 +510,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -531,7 +531,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -552,7 +552,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -573,7 +573,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -594,7 +594,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -615,7 +615,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -636,7 +636,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -657,7 +657,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -678,7 +678,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -699,7 +699,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -720,7 +720,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -741,7 +741,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -762,7 +762,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -783,7 +783,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -804,7 +804,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -825,7 +825,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -846,7 +846,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -867,7 +867,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -888,7 +888,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -909,7 +909,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -930,7 +930,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -951,7 +951,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -972,7 +972,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -993,7 +993,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -1014,7 +1014,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -1035,7 +1035,7 @@
     "title": "@ClaudeDevs announces a Claude usage limit reset",
     "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@ClaudeDevs on X (primary)",
@@ -1056,7 +1056,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -1077,7 +1077,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -1098,7 +1098,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -1119,7 +1119,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -1140,7 +1140,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -1161,7 +1161,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -1182,7 +1182,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -1203,7 +1203,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -1224,7 +1224,7 @@
     "title": "@ClaudeDevs grants a banked Claude reset",
     "summary": "@ClaudeDevs posted about a banked Claude reset: a credit you redeem later, not an immediate flush of your limits. Read the linked post for who got it.",
     "scope": "Banked reset credit (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@ClaudeDevs on X (primary)",
@@ -1245,7 +1245,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -1266,7 +1266,7 @@
     "title": "@thsottiaux grants a banked Codex reset",
     "summary": "@thsottiaux posted about a banked Codex reset: a credit you redeem later, not an immediate flush of your limits. Read the linked post for who got it.",
     "scope": "Banked reset credit (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -1287,7 +1287,7 @@
     "title": "@thsottiaux grants a banked Codex reset",
     "summary": "@thsottiaux posted about a banked Codex reset: a credit you redeem later, not an immediate flush of your limits. Read the linked post for who got it.",
     "scope": "Banked reset credit (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -1308,7 +1308,7 @@
     "title": "@thsottiaux grants a banked Codex reset",
     "summary": "@thsottiaux posted about a banked Codex reset: a credit you redeem later, not an immediate flush of your limits. Read the linked post for who got it.",
     "scope": "Banked reset credit (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -1329,7 +1329,7 @@
     "title": "@thsottiaux grants a banked Codex reset",
     "summary": "@thsottiaux posted about a banked Codex reset: a credit you redeem later, not an immediate flush of your limits. Read the linked post for who got it.",
     "scope": "Banked reset credit (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -1350,7 +1350,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -1371,7 +1371,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -1392,7 +1392,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
@@ -1413,7 +1413,7 @@
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
     "scope": "Usage limits (see post)",
-    "status": "reported",
+    "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
