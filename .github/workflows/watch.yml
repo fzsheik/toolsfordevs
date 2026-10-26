@@ -1,0 +1,30 @@
+name: watch-resets
+on:
+  schedule:
+    - cron: "7,37 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: watch-resets
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/watch.mjs
+      - run: node scripts/promote.mjs
+      - run: node scripts/quotes.mjs || true
+      - name: Commit new events
+        run: |
+          git config user.name "reset-bot"
+          git config user.email "reset-bot@users.noreply.github.com"
+          git add src/data
+          git diff --cached --quiet || (git commit -m "chore: new reset events" && git push)

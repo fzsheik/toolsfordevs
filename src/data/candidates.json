@@ -1,0 +1,188 @@
+[
+  {
+    "id": "7d5d7726f8d1",
+    "vendor": "codex",
+    "source": {
+      "label": "Codex changelog",
+      "url": "https://learn.chatgpt.com/docs/changelog"
+    },
+    "snippet": "Usage-limit explanations and reset times now appear directly in the chat.",
+    "detectedAt": "2026-10-26T14:23:43.124Z",
+    "reviewed": false
+  },
+  {
+    "id": "933e9a04d9ae",
+    "vendor": "codex",
+    "source": {
+      "label": "Codex changelog",
+      "url": "https://learn.chatgpt.com/docs/changelog"
+    },
+    "snippet": "Track remaining usage and reset times with Home Screen and Lock Screen widgets.",
+    "detectedAt": "2026-10-26T14:23:43.130Z",
+    "reviewed": false
+  },
+  {
+    "id": "b536372cdb3f",
+    "vendor": "codex",
+    "source": {
+      "label": "Codex changelog",
+      "url": "https://learn.chatgpt.com/docs/changelog"
+    },
+    "snippet": "Confirm usage-limit resets before redemption",
+    "detectedAt": "2026-10-26T14:23:43.130Z",
+    "reviewed": false
+  },
+  {
+    "id": "b1f6516da6d6",
+    "vendor": "codex",
+    "source": {
+      "label": "Codex changelog",
+      "url": "https://learn.chatgpt.com/docs/changelog"
+    },
+    "snippet": "Usage-limit reset credits now show their type and expiration, and let you choose which credit to redeem. (",
+    "detectedAt": "2026-10-26T14:23:43.130Z",
+    "reviewed": false
+  },
+  {
+    "id": "4f134719477b",
+    "vendor": "codex",
+    "source": {
+      "label": "Codex changelog",
+      "url": "https://learn.chatgpt.com/docs/changelog"
+    },
+    "snippet": "can now show and redeem earned usage-limit reset credits, with confirmation, retry, and refreshed availability states. (",
+    "detectedAt": "2026-10-26T14:23:43.130Z",
+    "reviewed": false
+  },
+  {
+    "id": "e1abdc340fb1",
+    "vendor": "codex",
+    "source": {
+      "label": "Codex changelog",
+      "url": "https://learn.chatgpt.com/docs/changelog"
+    },
+    "snippet": "App-server clients can list immediate child threads, correlate external-agent imports with detailed results, and read or redeem rate-limit reset credits. (",
+    "detectedAt": "2026-10-26T14:23:43.130Z",
+    "reviewed": false
+  },
+  {
+    "id": "fe6f7bf04da5",
+    "vendor": "codex",
+    "source": {
+      "label": "Codex changelog",
+      "url": "https://learn.chatgpt.com/docs/changelog"
+    },
+    "snippet": "Usage resets and Browser Developer mode",
+    "detectedAt": "2026-10-26T14:23:43.130Z",
+    "reviewed": false
+  },
+  {
+    "id": "0e98973f336a",
+    "vendor": "codex",
+    "source": {
+      "label": "Codex changelog",
+      "url": "https://learn.chatgpt.com/docs/changelog"
+    },
+    "snippet": "Added rate-limit reset banking for Plus and Pro users, including one free",
+    "detectedAt": "2026-10-26T14:23:43.130Z",
+    "reviewed": false
+  },
+  {
+    "id": "2048997818673537399",
+    "vendor": "codex",
+    "postId": "2048997818673537399",
+    "date": "2026-04-28",
+    "source": {
+      "label": "X post (via claude-resets.com)",
+      "url": "https://x.com/thsottiaux/status/2048997818673537399"
+    },
+    "snippet": "Don't just reset Codex rate limits for fun, it costs money. Don't just reset Codex rate limits for fun, it costs money. ... but the vibes are good ... I have reset Codex rate limits for ALL paid plans to celebrate a good week and allow…",
+    "via": "claude-resets.com",
+    "detectedAt": "2026-10-26T14:23:44.031Z",
+    "reviewed": false
+  },
+  {
+    "id": "2086972802457063486",
+    "vendor": "codex",
+    "postId": "2086972802457063486",
+    "date": "2026-08-11",
+    "source": {
+      "label": "X post (via claude-resets.com)",
+      "url": "https://x.com/thsottiaux/status/2086972802457063486"
+    },
+    "snippet": "Hi. It is done.",
+    "via": "claude-resets.com",
+    "detectedAt": "2026-10-26T14:23:44.031Z",
+    "reviewed": false
+  },
+  {
+    "id": "2090766694897619318",
+    "vendor": "codex",
+    "postId": "2090766694897619318",
+    "date": "2026-08-21",
+    "source": {
+      "label": "X post (via claude-resets.com)",
+      "url": "https://x.com/thsottiaux/status/2090766694897619318"
+    },
+    "snippet": "It's me again. I come bearing great news. First of all, we have hit 20M active users for Codex some time this week. Second of all, this is cause for celebration and during the day we will credit every Codex and ChatGPT Work user with a…",
+    "via": "claude-resets.com",
+    "detectedAt": "2026-10-26T14:23:44.031Z",
+    "reviewed": false
+  },
+  {
+    "id": "2093014447833116908",
+    "vendor": "codex",
+    "postId": "2093014447833116908",
+    "date": "2026-08-27",
+    "source": {
+      "label": "X post (via claude-resets.com)",
+      "url": "https://x.com/thsottiaux/status/2093014447833116908"
+    },
+    "snippet": "Never slept better and feeling reseted. Brand new me and brand new usage for all ChatGPT Work and Codex users. Regaining my youth one button press at a time. Happy Thursday",
+    "via": "claude-resets.com",
+    "detectedAt": "2026-10-26T14:23:44.031Z",
+    "reviewed": false
+  },
+  {
+    "id": "2102463847714247142",
+    "vendor": "codex",
+    "postId": "2102463847714247142",
+    "date": "2026-09-22",
+    "source": {
+      "label": "X post (via claude-resets.com)",
+      "url": "https://x.com/thsottiaux/status/2102463847714247142"
+    },
+    "snippet": "GPT-6 Sol and Luna are out. Not only are they a very significant improvement across the board, but also in writing and general \"you know when you try it\" quality. We are also permanently reducing the API price by 50% making both of them…",
+    "via": "claude-resets.com",
+    "detectedAt": "2026-10-26T14:23:44.031Z",
+    "reviewed": false
+  },
+  {
+    "id": "2107676072871600470",
+    "vendor": "codex",
+    "postId": "2107676072871600470",
+    "date": "2026-10-07",
+    "source": {
+      "label": "X post (via claude-resets.com)",
+      "url": "https://x.com/thsottiaux/status/2107676072871600470"
+    },
+    "snippet": "We shipped four things that were deemed good to great and some math proofs, but the vote is clear and the community demands a reset. I did calibrate it and it *seems* that the game is rigged in reset's favor, but such are the rules at the…",
+    "via": "claude-resets.com",
+    "detectedAt": "2026-10-26T14:23:44.031Z",
+    "reviewed": false
+  },
+  {
+    "id": "2108040921044639779",
+    "vendor": "codex",
+    "postId": "2108040921044639779",
+    "date": "2026-10-08",
+    "source": {
+      "label": "X post (via claude-resets.com)",
+      "url": "https://x.com/thsottiaux/status/2108040921044639779"
+    },
+    "snippet": "Confirmed landed across all accounts. How are we doing so far?",
+    "via": "claude-resets.com",
+    "detectedAt": "2026-10-26T14:23:44.031Z",
+    "reviewed": false
+  }
+]

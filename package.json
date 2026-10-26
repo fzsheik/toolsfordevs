@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "watch": "node scripts/watch.mjs",
+    "promote": "node scripts/promote.mjs",
+    "quotes": "node scripts/quotes.mjs"
   },
   "dependencies": {
     "next": "16.4.3",
