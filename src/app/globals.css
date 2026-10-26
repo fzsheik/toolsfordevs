@@ -184,3 +184,5 @@ details p{margin:8px 0 2px;color:var(--muted)}
   .tracker-bottom{flex-direction:column}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
+.news-heading{flex-direction:column;align-items:center;text-align:center;gap:4px}
+.history-link{text-align:center}
