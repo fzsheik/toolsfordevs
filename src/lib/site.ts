@@ -1,6 +1,13 @@
+/** Accepts "toolsfordevs.app", "https://toolsfordevs.app/" etc. and always returns an origin with a scheme. */
+function siteUrl(raw?: string) {
+  const v = raw?.trim();
+  if (!v) return "https://toolsfordevs.com";
+  return (/^https?:\/\//i.test(v) ? v : `https://${v}`).replace(/\/+$/, "");
+}
+
 export const SITE = {
   name: "toolsfordevs",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://toolsfordevs.com",
+  url: siteUrl(process.env.NEXT_PUBLIC_SITE_URL),
   tagline: "Live Claude and Codex usage limit reset tracker",
 };
 
