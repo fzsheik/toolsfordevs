@@ -87,8 +87,8 @@ function Panel({ v }: { v: ShotVendor }) {
   const last = saved.results[0];
   const hits = saved.results.filter((r) => r.diff === 0).length;
   const total = crowd ? Object.values(crowd).reduce((a, b) => a + b, 0) : 0;
-  const top = crowd ? Math.max(1, ...Object.values(crowd)) : 1;
-  const favorite = crowd && total > 0 ? Object.entries(crowd).sort((a, b) => b[1] - a[1])[0] : null;
+  const top = crowd ? Math.max(1, ...days.map((d) => crowd[d] ?? 0)) : 1;
+  const favorite = crowd && total > 0 ? Object.entries(crowd).filter(([d, n]) => n > 0 && days.includes(d)).sort((a, b) => b[1] - a[1])[0] ?? null : null;
 
   return (
     <div className="shot-body">
