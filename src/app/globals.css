@@ -126,7 +126,7 @@ h3{margin:0}
 .banked-note{font:700 .85rem/1.4 var(--font-mono),monospace;opacity:.9}
 
 /* event list: flat chat messages */
-.events{list-style:none;padding:0;margin:0;display:grid;gap:18px}
+.events{list-style:none;padding:0;margin:0 auto;max-width:640px;display:grid;gap:18px}
 .msg{display:flex;align-items:flex-end;gap:12px}
 .msg-avatar{flex:none;width:44px;height:44px;border:var(--bd);border-radius:50%;overflow:hidden;display:grid;place-items:center;background:var(--vc)}
 .msg-avatar .vlogo{border-radius:0}
