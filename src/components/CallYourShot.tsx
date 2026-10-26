@@ -109,16 +109,16 @@ function Panel({ v }: { v: ShotVendor }) {
           const p = parts(d);
           const n = crowd?.[d] ?? 0;
           return (
-            <button key={d} type="button" className={saved.call?.day === d ? "on" : ""} aria-pressed={saved.call?.day === d} onClick={() => pick(d)}>
+            <button key={d} type="button" className={saved.call?.day === d ? "on" : ""} data-hot={n / top > 0.55 ? "" : undefined} style={crowd ? ({ "--heat": Math.round((n / top) * 100) } as React.CSSProperties) : undefined} aria-pressed={saved.call?.day === d} onClick={() => pick(d)}>
               <span>{p.wd}</span>
               <b>{p.num}</b>
               <span>{p.mon}</span>
-              {crowd ? <i className="shot-bar" aria-label={`${n} calls`} style={{ height: `${Math.max(n ? 4 : 2, (n / top) * 22)}px` }} /> : null}
+              {crowd && n > 0 ? <small aria-label={`${n} calls`}>{n}</small> : null}
             </button>
           );
         })}
       </div>
-      <p className="shot-note">{crowd ? "Bars = everyone's calls this round. Resets when a new reset lands." : "Your call stays in this browser."}</p>
+      <p className="shot-note">{crowd ? "Darker = more calls this round. Resets when a new reset lands." : "Your call stays in this browser."}</p>
     </div>
   );
 }

@@ -157,8 +157,10 @@ details p{margin:8px 0 2px;color:var(--muted)}
 .shot-tabs button{font:800 .85rem/1 var(--font-mono),monospace;padding:8px 12px;border:var(--bd);border-radius:10px;background:var(--card);color:inherit;cursor:pointer;box-shadow:var(--shadow-s)}
 .shot-tabs button.on{background:var(--vc);color:var(--on-vc);transform:translate(3px,3px);box-shadow:none}
 .shot-note{margin:10px 0 0;font:600 .75rem/1.4 var(--font-mono),monospace;color:var(--muted)}
-.shot-bar{display:block;width:60%;margin-top:4px;background:var(--vc,var(--lime));border:2px solid var(--line);border-radius:4px;box-sizing:border-box;min-height:2px}
-.shot-days button.on .shot-bar{background:var(--card)}
+.shot-days button{position:relative;background:color-mix(in srgb,var(--vc,var(--lime)) calc(var(--heat,0) * 1%),var(--card))}
+.shot-days button[data-hot]{color:var(--on-vc,var(--on-lime))}
+.shot-days button small{position:absolute;top:3px;right:5px;font:800 .62rem/1 var(--font-mono),monospace}
+.shot-days button.on{background:var(--vc,var(--lime));color:var(--on-vc,var(--on-lime))}
 .shot-hint,.shot-locked,.shot-result{margin:10px 0;font:600 .9rem/1.45 var(--font-mono),monospace}
 .shot-result{padding:10px 14px;border:var(--bd);border-radius:12px;background:var(--vc-soft,var(--card))}
 .shot-result.hit{background:var(--lime);color:var(--on-lime)}
