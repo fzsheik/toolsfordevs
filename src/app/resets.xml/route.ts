@@ -11,7 +11,7 @@ export async function GET() {
     .filter((e) => e.kind === "reset")
     .map(
       (e) =>
-        `<item><title>${esc(e.title)}</title><link>${eventUrl(e)}</link><guid>${eventUrl(e)}</guid><pubDate>${new Date(e.date + "T00:00:00Z").toUTCString()}</pubDate><description>${esc(e.summary)}</description></item>`,
+        `<item><title>${esc(e.title)}</title><link>${eventUrl(e)}</link><guid>${eventUrl(e)}</guid><pubDate>${new Date(e.announced_at ?? `${e.date}T00:00:00Z`).toUTCString()}</pubDate><description>${esc(e.summary)}</description></item>`,
     )
     .join("");
   const xml = `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>${SITE.name}: Claude and Codex resets only</title><link>${SITE.url}</link><description>Only announced usage limit resets.</description>${items}</channel></rss>`;

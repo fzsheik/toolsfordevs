@@ -1,8 +1,10 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { VENDORS, SITE } from "@/lib/site";
-import { getEvents, daysSince, fmtDate } from "@/lib/events";
-import CallYourShot from "@/components/CallYourShot";
+import { getEvents, daysSince, when } from "@/lib/events";
+import { answer } from "@/lib/seo";
+import AlertsBlock from "@/components/AlertsBlock";
+import CallYourShot from "@/components/CallYourShotLazy";
 import Estimate from "@/components/Estimate";
 import EventList from "@/components/EventList";
 import JsonLd from "@/components/JsonLd";
@@ -11,36 +13,31 @@ import VendorLogo from "@/components/VendorLogo";
 export const revalidate = 300;
 
 export const metadata: Metadata = {
-  title: { absolute: "Claude reset & Codex reset tracker: did limits reset today?" },
+  title: { absolute: "Did Claude or Codex Reset Today? Live Limit Reset Tracker" },
   description:
-    "Live tracker for Claude and Codex usage limit resets. See the last reset, full history with sources, and a rough estimate of the next one.",
+    "Live answer for Claude Code and OpenAI Codex usage limit resets: last reset date and time, sourced history, banked resets, and free RSS and calendar alerts.",
   alternates: { canonical: "/" },
 };
 
 export default async function Home() {
   const events = await getEvents();
   const checked = new Date();
-  const lastOf = (id: string) => events.find((e) => e.vendor === id && e.kind === "reset");
-  const phrase = (id: "claude" | "codex") => {
-    const l = lastOf(id);
-    const d = l ? daysSince(l.date) : null;
-    return `${VENDORS[id].name} ${l ? (d === 0 ? "reset today" : d === 1 ? "last reset 1 day ago" : `last reset ${d} days ago`) : "has no logged reset"} (${l ? fmtDate(l.date) : "n/a"})`;
-  };
-  const answer = `${phrase("claude")}. ${phrase("codex")}. Full history, sources and a rough guess at the next reset below.`;
+  const [claude, codex] = await Promise.all([answer("claude"), answer("codex")]);
+  const answerText = `${claude.text} ${codex.text}`;
   const faq = [
-    { q: "Did Claude reset today?", a: `${phrase("claude")}. Extra resets are announced by Anthropic staff on X; this page checks every few minutes.` },
-    { q: "Did Codex reset today?", a: `${phrase("codex")}. Extra resets are announced by OpenAI staff on X; this page checks every few minutes.` },
-    { q: "How often do Claude and Codex usage limits reset?", a: "Normal 5-hour and weekly windows roll on their own. Separate one-off resets are announced ad hoc, roughly every few weeks, with no published schedule. The rhythm cards on this page show the recent gaps." },
+    { q: "Did Claude reset today?", a: `${claude.text} Extra resets are announced by Anthropic staff on X; this page checks every few minutes. See how Claude usage limits work and how to use Reset for free.` },
+    { q: "Did Codex reset today?", a: `${codex.text} Extra resets are announced by OpenAI staff on X; this page checks every few minutes. See how Codex usage limits work and how to redeem a banked reset.` },
+    { q: "How often do Claude and Codex usage limits reset?", a: "Normal 5-hour and weekly windows roll on their own. Separate one-off resets are announced ad hoc, with no published schedule. The rhythm cards on this page show the median gap and recent counts." },
   ];
   return (
     <>
       <JsonLd
         data={{
           "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: SITE.name,
-          url: SITE.url,
-          description: SITE.tagline,
+          "@graph": [
+            { "@type": "WebSite", name: SITE.name, url: SITE.url, description: SITE.tagline },
+            { "@type": "Organization", name: SITE.name, url: SITE.url, logo: `${SITE.url}/icon.svg` },
+          ],
         }}
       />
       <JsonLd
@@ -52,9 +49,9 @@ export default async function Home() {
       />
       <section className="home-intro" aria-labelledby="home-title">
         <p className="eyebrow">$ did-it-reset --claude --codex</p>
-        <h1 id="home-title">Did Claude or Codex reset?</h1>
-        <p className="intro-copy">{answer}</p>
-        <p className="checked">Checked <time dateTime={checked.toISOString()}>{checked.toISOString().slice(0, 16).replace("T", " ")} UTC</time></p>
+        <h1 id="home-title">Did Claude or Codex reset today?</h1>
+        <p className="intro-copy">{answerText}</p>
+        <p className="checked">Checked <time dateTime={checked.toISOString()}>{checked.toISOString().slice(0, 16).replace("T", " ")} UTC</time>. &ldquo;Today&rdquo; is the UTC day.</p>
       </section>
       <div className="section-heading">
         <h2>The reset log</h2>
@@ -73,9 +70,9 @@ export default async function Home() {
                 <span className="tracker-arrow" aria-hidden="true">↗</span>
               </div>
               <p className="metric-label">Last logged reset</p>
-              <p className="big">{last ? daysSince(last.date) : "—"}{last && <span>days ago</span>}</p>
+              <p className="big">{last ? (daysSince(last.date) === 0 ? "Today" : daysSince(last.date)) : "—"}{last && daysSince(last.date) > 0 && <span>{daysSince(last.date) === 1 ? "day ago" : "days ago"}</span>}</p>
               <div className="tracker-bottom">
-                <span>{last ? <time dateTime={last.date}>{fmtDate(last.date)}</time> : "None logged"}</span>
+                <span>{last ? <time dateTime={last.announced_at ?? last.date}>{when(last)}</time> : "None logged"}</span>
                 <span>View history <span aria-hidden="true">→</span></span>
               </div>
               </div>
@@ -100,6 +97,7 @@ export default async function Home() {
         <span className="eyebrow">{"// latest news"}</span>
       </div>
       <EventList events={events.slice(0, 5)} />
+      <AlertsBlock />
       <h2>Quick answers</h2>
       {faq.map((f) => (
         <details key={f.q} open>
@@ -107,6 +105,7 @@ export default async function Home() {
           <p>{f.a}</p>
         </details>
       ))}
+      <p className="history-link">Guides: <Link href="/claude-usage-limits">Claude usage limits</Link> · <Link href="/claude-limit-reset">Claude limit reset</Link> · <Link href="/codex-usage-limits">Codex usage limits</Link> · <Link href="/codex-banked-reset">Codex banked reset</Link></p>
       <p className="history-link"><Link href="/reset-history">Explore the full reset history <span aria-hidden="true">→</span></Link></p>
     </>
   );

@@ -7,6 +7,7 @@ import "./globals.css";
 import { SITE } from "@/lib/site";
 import BrandMark from "@/components/BrandMark";
 import VendorLogo from "@/components/VendorLogo";
+import FooterCredit from "@/components/FooterCredit";
 
 const head = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-head", weight: ["600", "800"] });
 const body = Figtree({ subsets: ["latin"], variable: "--font-body" });
@@ -17,7 +18,6 @@ export const metadata: Metadata = {
   applicationName: SITE.name,
   title: { default: SITE.tagline, template: `%s | ${SITE.name}` },
   description: SITE.tagline,
-  alternates: { types: { "application/rss+xml": "/feed.xml" } },
   openGraph: { siteName: SITE.name, type: "website" },
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
@@ -26,6 +26,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${head.variable} ${body.variable} ${mono.variable}`}>
+      <head>
+        <link rel="alternate" type="application/rss+xml" title="Claude and Codex resets" href="/feed.xml" />
+      </head>
       <body>
         <a className="skip-link" href="#main">Skip to content</a>
         <header className="site-header">
@@ -48,7 +51,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <span className="footer-note">Small tools. More headroom.</span>
             <a href="/feed.xml">RSS <span aria-hidden="true">↗</span></a>
           </div>
-          <p>Data: <a href="https://codex-reset.com/" rel="noopener" target="_blank">codex-reset.com</a> and <a href="https://claude-resets.com/" rel="noopener" target="_blank">claude-resets.com</a>, merged with our own log.</p>
+          <FooterCredit />
+          <div className="footer-links">
+            <Link href="/claude-usage-limits">Claude usage limits</Link>
+            <Link href="/claude-limit-reset">Claude limit reset</Link>
+            <Link href="/codex-usage-limits">Codex usage limits</Link>
+            <Link href="/codex-banked-reset">Codex banked reset</Link>
+            <Link href="/claude-vs-codex-resets">Claude vs Codex</Link>
+            <Link href="/changes">Limit changes</Link>
+          </div>
           <p>Independent. Not affiliated with Anthropic or OpenAI. Claude is a trademark of Anthropic; Codex and OpenAI are trademarks of OpenAI. Every entry links its sources; &quot;Source-linked&quot; means the primary link is cited but not yet checked by us.</p>
         </footer>
         <Analytics />

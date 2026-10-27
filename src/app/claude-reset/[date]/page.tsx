@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import EventPage from "@/components/EventPage";
-import { getEvents, getEvent } from "@/lib/events";
+import { getEvents, getEvent, indexable } from "@/lib/events";
+import { eventMeta } from "@/lib/seo";
 
 export const revalidate = 300;
 
@@ -11,10 +12,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ date: string }> }): Promise<Metadata> {
   const { date } = await params;
   const e = await getEvent("claude", date);
+  if (!e) return { title: "Claude reset" };
   return {
-    title: e?.title ?? "Claude reset",
-    description: e?.summary,
+    ...(await eventMeta(e)),
     alternates: { canonical: `/claude-reset/${date}` },
+    robots: indexable(e) ? { index: true, follow: true } : { index: false, follow: true },
   };
 }
 

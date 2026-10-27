@@ -1,0 +1,8 @@
+{
+  "name": "did-it-reset",
+  "version": "0.1.0",
+  "description": "Did Claude or Codex reset today? Reads toolsfordevs.app/resets.json.",
+  "bin": { "did-it-reset": "index.mjs" },
+  "type": "module",
+  "license": "MIT"
+}

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { VENDORS } from "@/lib/site";
-import { fmtDate, postHandle, postUrl, type ResetEvent } from "@/lib/events";
+import { when, postHandle, postUrl, type ResetEvent } from "@/lib/events";
 import Badge from "./Badge";
 import VendorLogo from "./VendorLogo";
 
@@ -15,7 +15,7 @@ export default function Message({ e, link = true }: { e: ResetEvent; link?: bool
       <div className="msg-bubble">
         <div className="msg-head">
           <b>{handle ? `@${handle}` : v.name}</b>
-          <time dateTime={e.date}>{fmtDate(e.date)}</time>
+          <time dateTime={e.announced_at ?? e.date}>{when(e)}</time>
           {e.kind === "banked" ? <span className="tag">banked</span> : null}
           <Badge status={e.status} />
         </div>
@@ -26,7 +26,7 @@ export default function Message({ e, link = true }: { e: ResetEvent; link?: bool
         {url || e.quote?.via ? (
           <div className="msg-foot">
             {url ? <a href={url} target="_blank" rel="noopener nofollow">Open on X ↗</a> : null}
-            {e.quote?.via ? <span>text via <a href={`https://${e.quote.via}/`} target="_blank" rel="noopener">{e.quote.via}</a></span> : null}
+            {e.quote?.via ? <span>text via {e.quote.via}</span> : null}
           </div>
         ) : null}
       </div>

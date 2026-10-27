@@ -12,6 +12,12 @@ export type ResetEvent = {
   summary: string;
   /** X status ID of the primary post. When set, `date` is derived from it (UTC). */
   postId?: string;
+  /** Keep `date` as written instead of deriving it from the post (reset landed on a different UTC day than the post). */
+  keepDate?: boolean;
+  /** When the primary post went out (ISO, UTC). Derived from `postId` when absent. */
+  announced_at?: string;
+  /** Banked events only: when the credit stopped being redeemable (ISO, UTC). */
+  expires_at?: string;
   /** Verbatim post text when we have it. `via` credits the tracker we got it from. */
   quote?: { text: string; via?: string };
   scope: string;
@@ -21,10 +27,14 @@ export type ResetEvent = {
 };
 
 /** X status IDs are snowflakes: the top bits are ms since 2010-11-04T01:42:54.657Z. */
-export const dateFromPostId = (id: string) =>
-  new Date(Number((BigInt(id) >> BigInt(22)) + BigInt(1288834974657))).toISOString().slice(0, 10);
+export const isoFromPostId = (id: string) =>
+  new Date(Number((BigInt(id) >> BigInt(22)) + BigInt(1288834974657))).toISOString();
+export const dateFromPostId = (id: string) => isoFromPostId(id).slice(0, 10);
 
-const base = (raw as ResetEvent[]).map((e) => (e.postId ? { ...e, date: dateFromPostId(e.postId) } : e));
+const withTime = (e: ResetEvent): ResetEvent =>
+  e.postId ? { ...e, ...(e.keepDate ? {} : { date: dateFromPostId(e.postId) }), announced_at: e.announced_at ?? isoFromPostId(e.postId) } : e;
+
+const base = (raw as ResetEvent[]).map(withTime);
 
 /** Committed events + whatever the community trackers report right now. Ours win on conflicts (same post or same vendor+day). */
 async function load() {
@@ -60,6 +70,49 @@ export const daysSince = (date: string, now = Date.now()) =>
 export const postHandle = (e: ResetEvent) => e.sources.find((s) => /x\.com\/[^/]+\/status/.test(s.url))?.url.match(/x\.com\/([^/]+)\/status/)?.[1];
 export const postUrl = (e: ResetEvent) => e.sources.find((s) => /x\.com\/[^/]+\/status/.test(s.url))?.url;
 
+const fmtParts = (iso: string, tz: string, opts: Intl.DateTimeFormatOptions) =>
+  new Date(iso).toLocaleString("en-US", { timeZone: tz, ...opts });
+
+/** "Oct 26, 2026" */
+export const fmtMDY = (date: string) =>
+  new Date(`${date.slice(0, 10)}T00:00:00Z`).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
+/** "06:08" (UTC, 24h) */
+export const fmtHM = (iso: string) => fmtParts(iso, "UTC", { hour: "2-digit", minute: "2-digit", hour12: false });
+/** "Oct 26, 2026, 06:08 UTC" */
+export const fmtUtc = (iso: string) => `${fmtMDY(iso)}, ${fmtHM(iso)} UTC`;
+/** "Oct 25, 2026, 11:08 PM PDT" */
+export const fmtPacific = (iso: string) =>
+  fmtParts(iso, "America/Los_Angeles", { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" }).replace(/(\d{4}) at /, "$1, ");
+/** Best available time label for an event: full UTC time when we know it, else the date. */
+export const when = (e: ResetEvent) => (e.announced_at ? fmtUtc(e.announced_at) : fmtDate(e.date));
+
+export const plural = (n: number, w: string) => `${n} ${w}${n === 1 ? "" : "s"}`;
+/** "today" / "1 day ago" / "5 days ago". Days are counted in UTC. */
+export const ago = (days: number) => (days <= 0 ? "today" : `${plural(days, "day")} ago`);
+
+export type EventType = "global" | "banked" | "max-only";
+export const eventType = (e: ResetEvent): EventType =>
+  e.kind === "banked" ? "banked" : /\bmax\b/i.test(e.scope) && !/\ball\b|pro/i.test(e.scope) ? "max-only" : "global";
+
+/** Thin pages (no post text and not checked by us) stay out of the index until enriched. */
+export const indexable = (e: ResetEvent) => Boolean(e.quote?.text) || e.status === "verified";
+
+export const gapDays = (a: string, b: string) => Math.round((utc(a) - utc(b)) / DAY);
+
+export const isExpired = (e: ResetEvent, now = Date.now()) => Boolean(e.expires_at && Date.parse(e.expires_at) <= now);
+
+/** Cadence of full resets from our own log. */
+export async function stats(vendor: VendorId, now = Date.now()) {
+  const resets = (await getEvents(vendor)).filter((e) => e.kind === "reset");
+  const gaps: number[] = [];
+  for (let i = 0; i < resets.length - 1; i++) gaps.push(gapDays(resets[i].date, resets[i + 1].date));
+  const sorted = [...gaps].sort((a, b) => a - b);
+  const mid = sorted.length >> 1;
+  const median = sorted.length ? (sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2) : null;
+  const within = (d: number) => resets.filter((e) => daysSince(e.date, now) < d).length;
+  return { total: resets.length, gaps, median, longest: sorted.length ? sorted[sorted.length - 1] : null, last30: within(30), last90: within(90) };
+}
+
 export const fmtShort = (date: string) =>
   new Date(`${date}T00:00:00Z`).toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
 
@@ -71,36 +124,3 @@ export const fmtDate = (date: string) =>
     timeZone: "UTC",
   });
 
-export type Verdict = "fresh" | "waiting" | "due" | "overdue";
-
-/** Base-rate gauge: how long since the last full reset vs. how long resets usually take. Not a forecast. */
-export async function estimate(vendor: VendorId, now = Date.now()) {
-  const events = await getEvents(vendor);
-  const resets = events.filter((e) => e.kind === "reset");
-  const last = resets[0];
-  if (!last) return null;
-  const gaps: number[] = [];
-  for (let i = 0; i < resets.length - 1 && gaps.length < 8; i++)
-    gaps.push(Math.round((utc(resets[i].date) - utc(resets[i + 1].date)) / DAY));
-  if (gaps.length < 3) return null;
-  const sorted = [...gaps].sort((a, b) => a - b);
-  const at = (q: number) => sorted[Math.min(sorted.length - 1, Math.floor(sorted.length * q))];
-  const median = Math.max(at(0.5), 1);
-  const since = daysSince(last.date, now);
-  const verdict: Verdict =
-    since <= 1 ? "fresh" : since < median ? "waiting" : since <= Math.ceil(median * 1.5) ? "due" : "overdue";
-  const banked = events.find((e) => e.kind === "banked" && e.date > last.date);
-  return {
-    last,
-    n: resets.length,
-    gaps,
-    median,
-    since,
-    verdict,
-    left: Math.max(median - since, 0),
-    behind: Math.max(since - median, 0),
-    // medium only when the recent gaps are fairly consistent
-    confidence: (gaps.length >= 6 && at(0.75) <= median * 2.5 ? "medium" : "low") as "low" | "medium",
-    banked,
-  };
-}

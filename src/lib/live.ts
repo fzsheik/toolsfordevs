@@ -1,4 +1,4 @@
-import type { ResetEvent } from "./events";
+import { isoFromPostId, type ResetEvent } from "./events";
 import type { VendorId } from "./site";
 
 // Free community trackers, read at request time (cached + revalidated, so ~1 hit per 5 min each).
@@ -30,6 +30,7 @@ function build(vendor: VendorId, id: string, url: string, via: "claude-resets.co
     vendor,
     date,
     postId: id,
+    announced_at: isoFromPostId(id),
     kind: banked ? "banked" : "reset",
     title: banked ? `@${account} grants a banked ${name} reset` : `@${account} announces a ${name} usage limit reset`,
     summary: banked

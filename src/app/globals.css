@@ -187,3 +187,22 @@ details p{margin:8px 0 2px;color:var(--muted)}
 .checked{font:600 .75rem/1.4 var(--font-mono),monospace;color:var(--muted);margin:10px 0 0}
 .ctx{margin:18px 0}
 .ctx a{font-weight:800}
+.hist-filter{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+.hist-filter button{font:700 .85rem/1 var(--font-mono),monospace;padding:9px 14px;border:var(--bd);border-radius:12px;background:var(--card);color:inherit;cursor:pointer;box-shadow:var(--shadow-s)}
+.hist-filter button[aria-pressed=true]{background:var(--lime);color:var(--on-lime)}
+.hist section>h2{text-align:center;margin:36px 0 14px}
+.hist[data-filter=claude] li:not([data-vendor=claude]),.hist[data-filter=codex] li:not([data-vendor=codex]),.hist[data-filter=banked] li:not([data-kind=banked]){display:none}
+.hist[data-filter=claude] section:not(:has(li[data-vendor=claude])),.hist[data-filter=codex] section:not(:has(li[data-vendor=codex])),.hist[data-filter=banked] section:not(:has(li[data-kind=banked])){display:none}
+.alerts{padding:20px 24px;margin:32px auto;max-width:640px}
+.alerts h2{margin-top:0}
+.alerts ul{margin:0;padding-left:20px}
+.guide-links{margin:18px 0}
+.guide-links a{font-weight:800}
+.prose{max-width:70ch}
+.prose h2{margin-top:32px}
+.chart{display:grid;gap:6px;margin:16px 0}
+.chart-row{display:grid;grid-template-columns:90px 1fr;gap:10px;align-items:center;font:600 .8rem/1 var(--font-mono),monospace}
+.bar{display:flex;align-items:center;gap:6px;height:16px}
+.bar i{display:block;height:100%;background:var(--claude);border:2px solid var(--line);border-radius:4px;min-width:2px}
+.bar i.codex{background:var(--codex)}
+.site-footer .footer-links{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0 0}

@@ -1,7 +1,7 @@
 /** Accepts "toolsfordevs.app", "https://toolsfordevs.app/" etc. and always returns an origin with a scheme. */
 function siteUrl(raw?: string) {
   const v = raw?.trim();
-  if (!v) return "https://toolsfordevs.com";
+  if (!v) return "https://toolsfordevs.app";
   return (/^https?:\/\//i.test(v) ? v : `https://${v}`).replace(/\/+$/, "");
 }
 

@@ -1,5 +1,461 @@
 [
   {
+    "id": "codex-2025-09-17",
+    "vendor": "codex",
+    "date": "2025-09-17",
+    "postId": "1968163721034994139",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/1968163721034994139"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2025-09-17T04:02:52.465Z"
+  },
+  {
+    "id": "codex-2025-11-05",
+    "vendor": "codex",
+    "date": "2025-11-05",
+    "postId": "1986166501435711936",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/1986166501435711936"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2025-11-05T20:19:29.788Z"
+  },
+  {
+    "id": "codex-2025-11-22",
+    "vendor": "codex",
+    "date": "2025-11-22",
+    "postId": "1992370994028388670",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/1992370994028388670"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2025-11-22T23:13:56.096Z"
+  },
+  {
+    "id": "codex-2025-12-02",
+    "vendor": "codex",
+    "date": "2025-12-02",
+    "postId": "1995988609896513743",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/1995988609896513743"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2025-12-02T22:49:02.931Z"
+  },
+  {
+    "id": "codex-2025-12-17",
+    "vendor": "codex",
+    "date": "2025-12-17",
+    "postId": "2001114683047317723",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2001114683047317723"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2025-12-17T02:18:14.008Z"
+  },
+  {
+    "id": "codex-2025-12-19",
+    "vendor": "codex",
+    "date": "2025-12-19",
+    "postId": "2002137269134819610",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2002137269134819610"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2025-12-19T22:01:37.530Z"
+  },
+  {
+    "id": "codex-2025-12-25",
+    "vendor": "codex",
+    "date": "2025-12-25",
+    "postId": "2004100061933064395",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2004100061933064395"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2025-12-25T08:01:03.800Z"
+  },
+  {
+    "id": "codex-2026-03-03",
+    "vendor": "codex",
+    "date": "2026-03-03",
+    "postId": "2028649088594436225",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2028649088594436225"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-03-03T01:50:07.855Z"
+  },
+  {
+    "id": "codex-2026-03-04",
+    "vendor": "codex",
+    "date": "2026-03-04",
+    "postId": "2029308599835738218",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2029308599835738218"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-03-04T21:30:47.588Z"
+  },
+  {
+    "id": "codex-2026-03-08",
+    "vendor": "codex",
+    "date": "2026-03-08",
+    "postId": "2030474136024400173",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2030474136024400173"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-03-08T02:42:13.070Z"
+  },
+  {
+    "id": "codex-2026-03-10",
+    "vendor": "codex",
+    "date": "2026-03-10",
+    "postId": "2031216405266481489",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2031216405266481489"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-03-10T03:51:43.848Z"
+  },
+  {
+    "id": "codex-2026-03-11",
+    "vendor": "codex",
+    "date": "2026-03-11",
+    "postId": "2031605592352313567",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2031605592352313567"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-03-11T05:38:13.280Z"
+  },
+  {
+    "id": "codex-2026-03-27",
+    "vendor": "codex",
+    "date": "2026-03-27",
+    "postId": "2037346989244096581",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2037346989244096581"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-03-27T01:52:28.969Z"
+  },
+  {
+    "id": "codex-2026-04-01",
+    "vendor": "codex",
+    "date": "2026-04-01",
+    "postId": "2039248564967424483",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2039248564967424483"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-04-01T07:48:39.951Z"
+  },
+  {
+    "id": "codex-2026-04-07",
+    "vendor": "codex",
+    "date": "2026-04-07",
+    "postId": "2041655710346572085",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2041655710346572085"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-04-07T23:13:48.132Z"
+  },
+  {
+    "id": "codex-2026-04-08",
+    "vendor": "codex",
+    "date": "2026-04-08",
+    "kind": "reset",
+    "title": "Sam Altman resets Codex limits for 3 million weekly users",
+    "summary": "One-time usage limit reset celebrating 3 million weekly Codex users. Altman said further resets would follow for each additional million users, up to 10 million.",
+    "scope": "Usage limits, all Codex users",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "Business Today (secondary)",
+        "url": "https://www.businesstoday.in/amp/technology/story/openai-codex-celebrates-3-million-weekly-users-ceo-sam-altman-resets-usage-limits-524717-2026-04-08"
+      }
+    ]
+  },
+  {
+    "id": "codex-2026-04-09",
+    "vendor": "codex",
+    "date": "2026-04-09",
+    "postId": "2042299371602264319",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2042299371602264319"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-04-09T17:51:28.934Z"
+  },
+  {
+    "id": "claude-2026-04-16",
+    "vendor": "claude",
+    "date": "2026-04-16",
+    "postId": "2044868953206612154",
+    "kind": "reset",
+    "title": "@ClaudeDevs announces a Claude usage limit reset",
+    "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@ClaudeDevs on X (primary)",
+        "url": "https://x.com/ClaudeDevs/status/2044868953206612154"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-04-16T20:02:04.929Z"
+  },
+  {
+    "id": "codex-2026-04-17",
+    "vendor": "codex",
+    "date": "2026-04-17",
+    "postId": "2044943514832871564",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2044943514832871564"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-04-17T00:58:21.806Z"
+  },
+  {
+    "id": "codex-2026-04-20",
+    "vendor": "codex",
+    "date": "2026-04-20",
+    "postId": "2046367145588916687",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2046367145588916687"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-04-20T23:15:21.828Z"
+  },
+  {
+    "id": "claude-2026-04-23",
+    "vendor": "claude",
+    "date": "2026-04-23",
+    "postId": "2047371123185287223",
+    "kind": "reset",
+    "title": "@ClaudeDevs announces a Claude usage limit reset",
+    "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@ClaudeDevs on X (primary)",
+        "url": "https://x.com/ClaudeDevs/status/2047371123185287223"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-04-23T17:44:48.740Z"
+  },
+  {
     "id": "claude-2026-05-15",
     "vendor": "claude",
     "date": "2026-05-15",
@@ -18,65 +474,140 @@
         "url": "https://pasqualepillitteri.it/en/news/2614/claude-resets-rate-limits-5-hour-weekly-may-15-2026"
       }
     ],
-    "postId": "2055347539923308703"
+    "postId": "2055347539923308703",
+    "announced_at": "2026-05-15T18:00:14.685Z"
   },
   {
-    "id": "claude-2026-07-09",
-    "vendor": "claude",
-    "date": "2026-07-09",
-    "kind": "reset",
-    "title": "ClaudeDevs resets 5-hour and weekly limits for all users",
-    "summary": "ClaudeDevs posted: \"We've reset 5-hour and weekly rate limits for all users.\" No reason given. Some outlets date this July 10; the post is cited as July 9.",
-    "scope": "5-hour + weekly, all users",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "ClaudeDevs on X (primary)",
-        "url": "https://x.com/ClaudeDevs/status/2075279141352706215"
-      },
-      {
-        "label": "Implicator (secondary)",
-        "url": "https://www.implicator.ai/anthropic-resets-claude-limits-for-third-week-without-explaining-why/"
-      }
-    ],
-    "postId": "2075279141352706215"
-  },
-  {
-    "id": "claude-2026-07-16",
-    "vendor": "claude",
-    "date": "2026-07-16",
-    "kind": "reset",
-    "title": "ClaudeDevs resets limits again, third blanket reset in three weeks",
-    "summary": "ClaudeDevs repeated the July 9 wording. No reason given.",
-    "scope": "5-hour + weekly, all users",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "ClaudeDevs on X (primary)",
-        "url": "https://x.com/ClaudeDevs/status/2077603834453770467"
-      },
-      {
-        "label": "Implicator (secondary)",
-        "url": "https://www.implicator.ai/anthropic-resets-claude-limits-for-third-week-without-explaining-why/"
-      }
-    ],
-    "postId": "2077603834453770467"
-  },
-  {
-    "id": "codex-2026-04-08",
+    "id": "codex-2026-05-16",
     "vendor": "codex",
-    "date": "2026-04-08",
+    "date": "2026-05-16",
+    "postId": "2055707616605835333",
     "kind": "reset",
-    "title": "Sam Altman resets Codex limits for 3 million weekly users",
-    "summary": "One-time usage limit reset celebrating 3 million weekly Codex users. Altman said further resets would follow for each additional million users, up to 10 million.",
-    "scope": "Usage limits, all Codex users",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
     "status": "verified",
     "sources": [
       {
-        "label": "Business Today (secondary)",
-        "url": "https://www.businesstoday.in/amp/technology/story/openai-codex-celebrates-3-million-weekly-users-ceo-sam-altman-resets-usage-limits-524717-2026-04-08"
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2055707616605835333"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
       }
-    ]
+    ],
+    "announced_at": "2026-05-16T17:51:03.656Z"
+  },
+  {
+    "id": "codex-2026-05-23",
+    "vendor": "codex",
+    "date": "2026-05-23",
+    "postId": "2058280452851638313",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2058280452851638313"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-05-23T20:14:35.618Z"
+  },
+  {
+    "id": "codex-2026-05-31",
+    "vendor": "codex",
+    "date": "2026-05-31",
+    "postId": "2061106703446450392",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2061106703446450392"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-05-31T15:25:06.269Z"
+  },
+  {
+    "id": "claude-2026-06-01",
+    "vendor": "claude",
+    "date": "2026-06-01",
+    "postId": "2061501787769893055",
+    "kind": "reset",
+    "title": "@ClaudeDevs announces a Claude usage limit reset",
+    "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@ClaudeDevs on X (primary)",
+        "url": "https://x.com/ClaudeDevs/status/2061501787769893055"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-06-01T17:35:01.712Z"
+  },
+  {
+    "id": "codex-2026-06-04",
+    "vendor": "codex",
+    "date": "2026-06-04",
+    "postId": "2062329981548802523",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2062329981548802523"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-06-04T00:25:58.496Z"
+  },
+  {
+    "id": "claude-2026-06-09",
+    "vendor": "claude",
+    "date": "2026-06-09",
+    "postId": "2064464557951852643",
+    "kind": "reset",
+    "title": "@ClaudeDevs announces a Claude usage limit reset",
+    "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@ClaudeDevs on X (primary)",
+        "url": "https://x.com/ClaudeDevs/status/2064464557951852643"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-06-09T21:48:01.169Z"
   },
   {
     "id": "codex-2026-06-11",
@@ -103,90 +634,6 @@
     ]
   },
   {
-    "id": "claude-2026-04-16",
-    "vendor": "claude",
-    "date": "2026-04-16",
-    "postId": "2044868953206612154",
-    "kind": "reset",
-    "title": "@ClaudeDevs announces a Claude usage limit reset",
-    "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@ClaudeDevs on X (primary)",
-        "url": "https://x.com/ClaudeDevs/status/2044868953206612154"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "claude-2026-04-23",
-    "vendor": "claude",
-    "date": "2026-04-23",
-    "postId": "2047371123185287223",
-    "kind": "reset",
-    "title": "@ClaudeDevs announces a Claude usage limit reset",
-    "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@ClaudeDevs on X (primary)",
-        "url": "https://x.com/ClaudeDevs/status/2047371123185287223"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "claude-2026-06-01",
-    "vendor": "claude",
-    "date": "2026-06-01",
-    "postId": "2061501787769893055",
-    "kind": "reset",
-    "title": "@ClaudeDevs announces a Claude usage limit reset",
-    "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@ClaudeDevs on X (primary)",
-        "url": "https://x.com/ClaudeDevs/status/2061501787769893055"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "claude-2026-06-09",
-    "vendor": "claude",
-    "date": "2026-06-09",
-    "postId": "2064464557951852643",
-    "kind": "reset",
-    "title": "@ClaudeDevs announces a Claude usage limit reset",
-    "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@ClaudeDevs on X (primary)",
-        "url": "https://x.com/ClaudeDevs/status/2064464557951852643"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
     "id": "claude-2026-06-13",
     "vendor": "claude",
     "date": "2026-06-13",
@@ -205,490 +652,8 @@
         "label": "Spotted via claude-resets.com",
         "url": "https://claude-resets.com/"
       }
-    ]
-  },
-  {
-    "id": "claude-2026-06-20",
-    "vendor": "claude",
-    "date": "2026-06-20",
-    "postId": "2068122937308426676",
-    "kind": "reset",
-    "title": "@ClaudeDevs announces a Claude usage limit reset",
-    "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@ClaudeDevs on X (primary)",
-        "url": "https://x.com/ClaudeDevs/status/2068122937308426676"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "claude-2026-07-01",
-    "vendor": "claude",
-    "date": "2026-07-01",
-    "postId": "2072429181565288665",
-    "kind": "reset",
-    "title": "@ClaudeDevs announces a Claude usage limit reset",
-    "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@ClaudeDevs on X (primary)",
-        "url": "https://x.com/ClaudeDevs/status/2072429181565288665"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "claude-2026-09-01",
-    "vendor": "claude",
-    "date": "2026-09-01",
-    "postId": "2094856679250919746",
-    "kind": "reset",
-    "title": "@ClaudeDevs announces a Claude usage limit reset",
-    "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@ClaudeDevs on X (primary)",
-        "url": "https://x.com/ClaudeDevs/status/2094856679250919746"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "claude-2026-09-04",
-    "vendor": "claude",
-    "date": "2026-09-04",
-    "postId": "2095967323412930677",
-    "kind": "reset",
-    "title": "@lydiahallie announces a Claude usage limit reset",
-    "summary": "@lydiahallie posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@lydiahallie on X (primary)",
-        "url": "https://x.com/lydiahallie/status/2095967323412930677"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2025-09-17",
-    "vendor": "codex",
-    "date": "2025-09-17",
-    "postId": "1968163721034994139",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/1968163721034994139"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2025-11-05",
-    "vendor": "codex",
-    "date": "2025-11-05",
-    "postId": "1986166501435711936",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/1986166501435711936"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2025-11-22",
-    "vendor": "codex",
-    "date": "2025-11-22",
-    "postId": "1992370994028388670",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/1992370994028388670"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2025-12-02",
-    "vendor": "codex",
-    "date": "2025-12-02",
-    "postId": "1995988609896513743",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/1995988609896513743"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2025-12-17",
-    "vendor": "codex",
-    "date": "2025-12-17",
-    "postId": "2001114683047317723",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2001114683047317723"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2025-12-19",
-    "vendor": "codex",
-    "date": "2025-12-19",
-    "postId": "2002137269134819610",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2002137269134819610"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2025-12-25",
-    "vendor": "codex",
-    "date": "2025-12-25",
-    "postId": "2004100061933064395",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2004100061933064395"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-03-03",
-    "vendor": "codex",
-    "date": "2026-03-03",
-    "postId": "2028649088594436225",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2028649088594436225"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-03-08",
-    "vendor": "codex",
-    "date": "2026-03-08",
-    "postId": "2030474136024400173",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2030474136024400173"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-03-11",
-    "vendor": "codex",
-    "date": "2026-03-11",
-    "postId": "2031605592352313567",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2031605592352313567"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-03-27",
-    "vendor": "codex",
-    "date": "2026-03-27",
-    "postId": "2037346989244096581",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2037346989244096581"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-04-01",
-    "vendor": "codex",
-    "date": "2026-04-01",
-    "postId": "2039248564967424483",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2039248564967424483"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-04-07",
-    "vendor": "codex",
-    "date": "2026-04-07",
-    "postId": "2041655710346572085",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2041655710346572085"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-04-09",
-    "vendor": "codex",
-    "date": "2026-04-09",
-    "postId": "2042299371602264319",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2042299371602264319"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-04-17",
-    "vendor": "codex",
-    "date": "2026-04-17",
-    "postId": "2044943514832871564",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2044943514832871564"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-04-20",
-    "vendor": "codex",
-    "date": "2026-04-20",
-    "postId": "2046367145588916687",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2046367145588916687"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-05-23",
-    "vendor": "codex",
-    "date": "2026-05-23",
-    "postId": "2058280452851638313",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2058280452851638313"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-05-31",
-    "vendor": "codex",
-    "date": "2026-05-31",
-    "postId": "2061106703446450392",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2061106703446450392"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-06-04",
-    "vendor": "codex",
-    "date": "2026-06-04",
-    "postId": "2062329981548802523",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2062329981548802523"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
+    ],
+    "announced_at": "2026-06-13T02:24:00.576Z"
   },
   {
     "id": "codex-2026-06-18",
@@ -709,322 +674,8 @@
         "label": "Spotted via claude-resets.com",
         "url": "https://claude-resets.com/"
       }
-    ]
-  },
-  {
-    "id": "codex-2026-06-26",
-    "vendor": "codex",
-    "date": "2026-06-26",
-    "postId": "2070653282440405046",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2070653282440405046"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-06-29",
-    "vendor": "codex",
-    "date": "2026-06-29",
-    "postId": "2071740419030053227",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2071740419030053227"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-07-09",
-    "vendor": "codex",
-    "date": "2026-07-09",
-    "postId": "2075330198887940337",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2075330198887940337"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-07-10",
-    "vendor": "codex",
-    "date": "2026-07-10",
-    "postId": "2075641131002700120",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2075641131002700120"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-07-11",
-    "vendor": "codex",
-    "date": "2026-07-11",
-    "postId": "2075820987833274448",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2075820987833274448"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-07-14",
-    "vendor": "codex",
-    "date": "2026-07-14",
-    "postId": "2077114635308986427",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2077114635308986427"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-07-18",
-    "vendor": "codex",
-    "date": "2026-07-18",
-    "postId": "2078320950488297917",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2078320950488297917"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-07-21",
-    "vendor": "codex",
-    "date": "2026-07-21",
-    "postId": "2079609157934886975",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2079609157934886975"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-07-25",
-    "vendor": "codex",
-    "date": "2026-07-25",
-    "postId": "2081096447718723984",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2081096447718723984"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-07-28",
-    "vendor": "codex",
-    "date": "2026-07-28",
-    "postId": "2081940052154933696",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2081940052154933696"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-07-29",
-    "vendor": "codex",
-    "date": "2026-07-29",
-    "postId": "2082317452755751098",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2082317452755751098"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-08-01",
-    "vendor": "codex",
-    "date": "2026-08-01",
-    "postId": "2083395449814229287",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2083395449814229287"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-08-08",
-    "vendor": "codex",
-    "date": "2026-08-08",
-    "postId": "2086188036493344823",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2086188036493344823"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-08-13",
-    "vendor": "codex",
-    "date": "2026-08-13",
-    "postId": "2087706104814023111",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2087706104814023111"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-08-31",
-    "vendor": "codex",
-    "date": "2026-08-31",
-    "postId": "2094251180121854309",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2094251180121854309"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
+    ],
+    "announced_at": "2026-06-18T00:10:10.387Z"
   },
   {
     "id": "claude-2026-06-19",
@@ -1045,196 +696,52 @@
         "label": "Spotted via claude-resets.com",
         "url": "https://claude-resets.com/"
       }
-    ]
+    ],
+    "announced_at": "2026-06-19T02:50:28.341Z"
   },
   {
-    "id": "codex-2026-03-04",
-    "vendor": "codex",
-    "date": "2026-03-04",
-    "postId": "2029308599835738218",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2029308599835738218"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-03-10",
-    "vendor": "codex",
-    "date": "2026-03-10",
-    "postId": "2031216405266481489",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2031216405266481489"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-05-16",
-    "vendor": "codex",
-    "date": "2026-05-16",
-    "postId": "2055707616605835333",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2055707616605835333"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-08-24",
-    "vendor": "codex",
-    "date": "2026-08-24",
-    "postId": "2091688655828246890",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2091688655828246890"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-08-29",
-    "vendor": "codex",
-    "date": "2026-08-29",
-    "postId": "2093801758665715784",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2093801758665715784"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-09-12",
-    "vendor": "codex",
-    "date": "2026-09-12",
-    "postId": "2098685367058612394",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2098685367058612394"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-09-26",
-    "vendor": "codex",
-    "date": "2026-09-26",
-    "postId": "2103911959544610829",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2103911959544610829"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "codex-2026-10-02",
-    "vendor": "codex",
-    "date": "2026-10-02",
-    "postId": "2106131810921136451",
-    "kind": "reset",
-    "title": "@thsottiaux announces a Codex usage limit reset",
-    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
-    "scope": "Usage limits (see post)",
-    "status": "verified",
-    "sources": [
-      {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2106131810921136451"
-      },
-      {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
-      }
-    ]
-  },
-  {
-    "id": "claude-2026-09-22",
+    "id": "claude-2026-06-20",
     "vendor": "claude",
-    "date": "2026-09-22",
-    "postId": "2102438800836489554",
-    "kind": "banked",
-    "title": "@ClaudeDevs grants a banked Claude reset",
-    "summary": "@ClaudeDevs posted about a banked Claude reset: a credit you redeem later, not an immediate flush of your limits. Read the linked post for who got it.",
-    "scope": "Banked reset credit (see post)",
+    "date": "2026-06-20",
+    "postId": "2068122937308426676",
+    "kind": "reset",
+    "title": "@ClaudeDevs announces a Claude usage limit reset",
+    "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
     "status": "verified",
     "sources": [
       {
         "label": "@ClaudeDevs on X (primary)",
-        "url": "https://x.com/ClaudeDevs/status/2102438800836489554"
+        "url": "https://x.com/ClaudeDevs/status/2068122937308426676"
       },
       {
         "label": "Spotted via claude-resets.com",
         "url": "https://claude-resets.com/"
       }
-    ]
+    ],
+    "announced_at": "2026-06-20T00:05:06.777Z"
+  },
+  {
+    "id": "codex-2026-06-26",
+    "vendor": "codex",
+    "date": "2026-06-26",
+    "postId": "2070653282440405046",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2070653282440405046"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-06-26T23:39:48.068Z"
   },
   {
     "id": "codex-2026-06-28",
@@ -1255,7 +762,140 @@
         "label": "Spotted via claude-resets.com",
         "url": "https://claude-resets.com/"
       }
-    ]
+    ],
+    "announced_at": "2026-06-28T23:54:07.968Z"
+  },
+  {
+    "id": "codex-2026-06-29",
+    "vendor": "codex",
+    "date": "2026-06-29",
+    "postId": "2071740419030053227",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2071740419030053227"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-06-29T23:39:41.629Z"
+  },
+  {
+    "id": "claude-2026-07-01",
+    "vendor": "claude",
+    "date": "2026-07-01",
+    "postId": "2072429181565288665",
+    "kind": "reset",
+    "title": "@ClaudeDevs announces a Claude usage limit reset",
+    "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@ClaudeDevs on X (primary)",
+        "url": "https://x.com/ClaudeDevs/status/2072429181565288665"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-07-01T21:16:35.414Z"
+  },
+  {
+    "id": "claude-2026-07-09",
+    "vendor": "claude",
+    "date": "2026-07-09",
+    "kind": "reset",
+    "title": "ClaudeDevs resets 5-hour and weekly limits for all users",
+    "summary": "ClaudeDevs posted: \"We've reset 5-hour and weekly rate limits for all users.\" No reason given. Some outlets date this July 10; the post is cited as July 9.",
+    "scope": "5-hour + weekly, all users",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "ClaudeDevs on X (primary)",
+        "url": "https://x.com/ClaudeDevs/status/2075279141352706215"
+      },
+      {
+        "label": "Implicator (secondary)",
+        "url": "https://www.implicator.ai/anthropic-resets-claude-limits-for-third-week-without-explaining-why/"
+      }
+    ],
+    "postId": "2075279141352706215",
+    "announced_at": "2026-07-09T18:01:18.777Z"
+  },
+  {
+    "id": "codex-2026-07-09",
+    "vendor": "codex",
+    "date": "2026-07-09",
+    "postId": "2075330198887940337",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2075330198887940337"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-07-09T21:24:11.842Z"
+  },
+  {
+    "id": "codex-2026-07-10",
+    "vendor": "codex",
+    "date": "2026-07-10",
+    "postId": "2075641131002700120",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2075641131002700120"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-07-10T17:59:43.835Z"
+  },
+  {
+    "id": "codex-2026-07-11",
+    "vendor": "codex",
+    "date": "2026-07-11",
+    "postId": "2075820987833274448",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2075820987833274448"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-07-11T05:54:25.045Z"
   },
   {
     "id": "codex-2026-07-12",
@@ -1276,7 +916,8 @@
         "label": "Spotted via claude-resets.com",
         "url": "https://claude-resets.com/"
       }
-    ]
+    ],
+    "announced_at": "2026-07-12T21:28:59.055Z"
   },
   {
     "id": "codex-2026-07-13",
@@ -1297,49 +938,52 @@
         "label": "Spotted via claude-resets.com",
         "url": "https://claude-resets.com/"
       }
-    ]
+    ],
+    "announced_at": "2026-07-13T18:29:31.013Z"
   },
   {
-    "id": "codex-2026-09-03",
+    "id": "codex-2026-07-14",
     "vendor": "codex",
-    "date": "2026-09-03",
-    "postId": "2095651088502591861",
-    "kind": "banked",
-    "title": "@thsottiaux grants a banked Codex reset",
-    "summary": "@thsottiaux posted about a banked Codex reset: a credit you redeem later, not an immediate flush of your limits. Read the linked post for who got it.",
-    "scope": "Banked reset credit (see post)",
+    "date": "2026-07-14",
+    "postId": "2077114635308986427",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
     "status": "verified",
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2095651088502591861"
+        "url": "https://x.com/thsottiaux/status/2077114635308986427"
       },
       {
         "label": "Spotted via claude-resets.com",
         "url": "https://claude-resets.com/"
       }
-    ]
+    ],
+    "announced_at": "2026-07-14T19:34:54.638Z"
   },
   {
-    "id": "codex-2026-09-05",
-    "vendor": "codex",
-    "date": "2026-09-05",
-    "postId": "2096035437299237298",
-    "kind": "banked",
-    "title": "@thsottiaux grants a banked Codex reset",
-    "summary": "@thsottiaux posted about a banked Codex reset: a credit you redeem later, not an immediate flush of your limits. Read the linked post for who got it.",
-    "scope": "Banked reset credit (see post)",
+    "id": "claude-2026-07-16",
+    "vendor": "claude",
+    "date": "2026-07-16",
+    "kind": "reset",
+    "title": "ClaudeDevs resets limits again, third blanket reset in three weeks",
+    "summary": "ClaudeDevs repeated the July 9 wording. No reason given.",
+    "scope": "5-hour + weekly, all users",
     "status": "verified",
     "sources": [
       {
-        "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2096035437299237298"
+        "label": "ClaudeDevs on X (primary)",
+        "url": "https://x.com/ClaudeDevs/status/2077603834453770467"
       },
       {
-        "label": "Spotted via claude-resets.com",
-        "url": "https://claude-resets.com/"
+        "label": "Implicator (secondary)",
+        "url": "https://www.implicator.ai/anthropic-resets-claude-limits-for-third-week-without-explaining-why/"
       }
-    ]
+    ],
+    "postId": "2077603834453770467",
+    "announced_at": "2026-07-16T03:58:48.803Z"
   },
   {
     "id": "codex-2026-07-16",
@@ -1360,13 +1004,14 @@
         "label": "Spotted via claude-resets.com",
         "url": "https://claude-resets.com/"
       }
-    ]
+    ],
+    "announced_at": "2026-07-16T04:14:09.822Z"
   },
   {
-    "id": "codex-2026-10-26",
+    "id": "codex-2026-07-18",
     "vendor": "codex",
-    "date": "2026-10-26",
-    "postId": "2114588174249071102",
+    "date": "2026-07-18",
+    "postId": "2078320950488297917",
     "kind": "reset",
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
@@ -1375,15 +1020,559 @@
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2114588174249071102"
+        "url": "https://x.com/thsottiaux/status/2078320950488297917"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-07-18T03:28:22.589Z"
+  },
+  {
+    "id": "codex-2026-07-21",
+    "vendor": "codex",
+    "date": "2026-07-21",
+    "postId": "2079609157934886975",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2079609157934886975"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-07-21T16:47:15.178Z"
+  },
+  {
+    "id": "codex-2026-07-25",
+    "vendor": "codex",
+    "date": "2026-07-25",
+    "postId": "2081096447718723984",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2081096447718723984"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-07-25T19:17:12.695Z"
+  },
+  {
+    "id": "codex-2026-07-28",
+    "vendor": "codex",
+    "date": "2026-07-28",
+    "postId": "2081940052154933696",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2081940052154933696"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-07-28T03:09:23.666Z"
+  },
+  {
+    "id": "codex-2026-07-29",
+    "vendor": "codex",
+    "date": "2026-07-29",
+    "postId": "2082317452755751098",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2082317452755751098"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-07-29T04:09:02.981Z"
+  },
+  {
+    "id": "codex-2026-08-01",
+    "vendor": "codex",
+    "date": "2026-08-01",
+    "postId": "2083395449814229287",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2083395449814229287"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-08-01T03:32:37.508Z"
+  },
+  {
+    "id": "codex-2026-08-08",
+    "vendor": "codex",
+    "date": "2026-08-08",
+    "postId": "2086188036493344823",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2086188036493344823"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-08-08T20:29:22.056Z"
+  },
+  {
+    "id": "codex-2026-08-13",
+    "vendor": "codex",
+    "date": "2026-08-13",
+    "postId": "2087706104814023111",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2087706104814023111"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-08-13T01:01:37.748Z"
+  },
+  {
+    "id": "codex-2026-08-24",
+    "vendor": "codex",
+    "date": "2026-08-24",
+    "postId": "2091688655828246890",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2091688655828246890"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      },
+      {
+        "label": "Earlier announcement (Aug 23) on X",
+        "url": "https://x.com/thsottiaux/status/2091412393368945027"
+      }
+    ],
+    "announced_at": "2026-08-24T00:46:51.902Z",
+    "quote": {
+      "text": "Reset has been propagated to accounts..."
+    }
+  },
+  {
+    "id": "codex-2026-08-29",
+    "vendor": "codex",
+    "date": "2026-08-29",
+    "postId": "2093801758665715784",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2093801758665715784"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-08-29T20:43:34.878Z"
+  },
+  {
+    "id": "codex-2026-08-31",
+    "vendor": "codex",
+    "date": "2026-08-31",
+    "postId": "2094251180121854309",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2094251180121854309"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-08-31T02:29:25.303Z"
+  },
+  {
+    "id": "claude-2026-09-01",
+    "vendor": "claude",
+    "date": "2026-09-01",
+    "postId": "2094856679250919746",
+    "kind": "reset",
+    "title": "@ClaudeDevs announces a Claude usage limit reset",
+    "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@ClaudeDevs on X (primary)",
+        "url": "https://x.com/ClaudeDevs/status/2094856679250919746"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-09-01T18:35:27.545Z"
+  },
+  {
+    "id": "codex-2026-09-03",
+    "vendor": "codex",
+    "date": "2026-09-03",
+    "postId": "2095651088502591861",
+    "kind": "banked",
+    "title": "@thsottiaux grants a banked Codex reset",
+    "summary": "@thsottiaux posted about a banked Codex reset: a credit you redeem later, not an immediate flush of your limits. Read the linked post for who got it.",
+    "scope": "Banked reset credit (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2095651088502591861"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-09-03T23:12:09.470Z"
+  },
+  {
+    "id": "claude-2026-09-04",
+    "vendor": "claude",
+    "date": "2026-09-04",
+    "postId": "2095967323412930677",
+    "kind": "reset",
+    "title": "@lydiahallie announces a Claude usage limit reset",
+    "summary": "@lydiahallie posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Weekly limits, Max plans",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@lydiahallie on X (primary)",
+        "url": "https://x.com/lydiahallie/status/2095967323412930677"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-09-04T20:08:45.748Z"
+  },
+  {
+    "id": "codex-2026-09-05",
+    "vendor": "codex",
+    "date": "2026-09-05",
+    "postId": "2096035437299237298",
+    "kind": "banked",
+    "title": "@thsottiaux grants a banked Codex reset",
+    "summary": "@thsottiaux posted about a banked Codex reset: a credit you redeem later, not an immediate flush of your limits. Read the linked post for who got it.",
+    "scope": "Banked reset credit (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2096035437299237298"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-09-05T00:39:25.364Z"
+  },
+  {
+    "id": "codex-2026-09-08",
+    "vendor": "codex",
+    "date": "2026-09-08",
+    "postId": "2097174560412246215",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2097174560412246215"
+      },
+      {
+        "label": "Earlier announcement (Sep 7) on X",
+        "url": "https://x.com/thsottiaux/status/2097043464538264003"
+      }
+    ],
+    "announced_at": "2026-09-08T04:05:53.478Z",
+    "quote": {
+      "text": "All reset for everyone. Enjoy the week with Astra."
+    }
+  },
+  {
+    "id": "codex-2026-09-12",
+    "vendor": "codex",
+    "date": "2026-09-12",
+    "postId": "2098685367058612394",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2098685367058612394"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-09-12T08:09:17.852Z"
+  },
+  {
+    "id": "claude-2026-09-22",
+    "vendor": "claude",
+    "date": "2026-09-22",
+    "postId": "2102438800836489554",
+    "kind": "banked",
+    "title": "@ClaudeDevs grants a banked Claude reset",
+    "summary": "@ClaudeDevs posted about a banked Claude reset: a credit you redeem later, not an immediate flush of your limits. Read the linked post for who got it.",
+    "scope": "Banked reset credit (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@ClaudeDevs on X (primary)",
+        "url": "https://x.com/ClaudeDevs/status/2102438800836489554"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      },
+      {
+        "label": "@lydiahallie on X (\"expires tomorrow at 9am PT\", Oct 21)",
+        "url": "https://x.com/lydiahallie/status/2113007239476977744"
+      }
+    ],
+    "announced_at": "2026-09-22T16:44:06.200Z",
+    "expires_at": "2026-10-22T16:00:00.000Z"
+  },
+  {
+    "id": "codex-2026-09-26",
+    "vendor": "codex",
+    "date": "2026-09-26",
+    "postId": "2103911959544610829",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2103911959544610829"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-09-26T18:17:54.606Z"
+  },
+  {
+    "id": "codex-2026-10-02",
+    "vendor": "codex",
+    "date": "2026-10-02",
+    "postId": "2106131810921136451",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2106131810921136451"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ],
+    "announced_at": "2026-10-02T21:18:48.417Z"
+  },
+  {
+    "id": "codex-2026-10-11",
+    "vendor": "codex",
+    "date": "2026-10-11",
+    "postId": "2109132167112782291",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2109132167112782291"
+      }
+    ],
+    "announced_at": "2026-10-11T04:01:09.077Z",
+    "quote": {
+      "text": "Put the reset in the bag. All propagated."
+    }
+  },
+  {
+    "id": "codex-2026-10-13",
+    "vendor": "codex",
+    "date": "2026-10-13",
+    "postId": "2109873287853707513",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2109873287853707513"
+      },
+      {
+        "label": "Earlier announcement (Oct 13) on X",
+        "url": "https://x.com/thsottiaux/status/2109812360596865224"
+      }
+    ],
+    "announced_at": "2026-10-13T05:06:06.031Z",
+    "quote": {
+      "text": "What would you like with your side of reset? It's done."
+    }
+  },
+  {
+    "id": "codex-2026-10-15",
+    "vendor": "codex",
+    "date": "2026-10-15",
+    "postId": "2110595484180214059",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2110595484180214059"
+      }
+    ],
+    "announced_at": "2026-10-15T04:55:51.053Z",
+    "quote": {
+      "text": "The reports of my reset button being lost are greatly exaggerated\n\nDay 10/ Reset"
+    }
+  },
+  {
+    "id": "codex-2026-10-17",
+    "vendor": "codex",
+    "date": "2026-10-17",
+    "postId": "2111492673890824348",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2111492673890824348"
+      }
+    ],
+    "announced_at": "2026-10-17T16:20:57.749Z",
+    "quote": {
+      "text": "Day 13/ Le limit reset"
+    }
+  },
+  {
+    "id": "codex-2026-10-20",
+    "vendor": "codex",
+    "date": "2026-10-20",
+    "postId": "2112432076767289678",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2112432076767289678"
       },
       {
         "label": "Spotted via codex-reset.com",
         "url": "https://codex-reset.com/"
       }
     ],
+    "announced_at": "2026-10-20T06:33:48.848Z",
     "quote": {
-      "text": "Day 21/ Wonder what happens the remaining seven days. But today is a reset.",
+      "text": "Day 15/ Nevermind, we're still cooking... and reset. Enjoy. https://t.co/RZ9WhtI802",
       "via": "codex-reset.com"
     }
   },
@@ -1407,16 +1596,17 @@
         "url": "https://codex-reset.com/"
       }
     ],
+    "announced_at": "2026-10-22T06:55:22.314Z",
     "quote": {
       "text": "Day 17/ Bet you thought we forgot, but no, it’s reset day today.\n\nAlso good time to remind you to get Daybreak Blue access, it only takes 15 mins and you don’t want to have to do it in the middle of an incident.",
       "via": "codex-reset.com"
     }
   },
   {
-    "id": "codex-2026-10-20",
+    "id": "codex-2026-10-23",
     "vendor": "codex",
-    "date": "2026-10-20",
-    "postId": "2112432076767289678",
+    "date": "2026-10-23",
+    "postId": "2113492187770175603",
     "kind": "reset",
     "title": "@thsottiaux announces a Codex usage limit reset",
     "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
@@ -1425,15 +1615,58 @@
     "sources": [
       {
         "label": "@thsottiaux on X (primary)",
-        "url": "https://x.com/thsottiaux/status/2112432076767289678"
+        "url": "https://x.com/thsottiaux/status/2113492187770175603"
+      }
+    ],
+    "quote": {
+      "text": "Day 18/ Decisions API is GA, OpenResponses joined the Linux Foundation, we shipped some performance improvements and Uber is going all-in on codex & work. But yes… that’s a reset!"
+    },
+    "announced_at": "2026-10-23T04:46:19.007Z"
+  },
+  {
+    "id": "codex-2026-10-25",
+    "vendor": "codex",
+    "date": "2026-10-25",
+    "postId": "2114200152701575656",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2114200152701575656"
+      }
+    ],
+    "quote": {
+      "text": "Day 20/ Rest and reset"
+    },
+    "announced_at": "2026-10-25T03:39:31.000Z"
+  },
+  {
+    "id": "codex-2026-10-26",
+    "vendor": "codex",
+    "date": "2026-10-26",
+    "postId": "2114588174249071102",
+    "kind": "reset",
+    "title": "@thsottiaux announces a Codex usage limit reset",
+    "summary": "@thsottiaux posted that Codex usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "verified",
+    "sources": [
+      {
+        "label": "@thsottiaux on X (primary)",
+        "url": "https://x.com/thsottiaux/status/2114588174249071102"
       },
       {
         "label": "Spotted via codex-reset.com",
         "url": "https://codex-reset.com/"
       }
     ],
+    "announced_at": "2026-10-26T05:21:22.546Z",
     "quote": {
-      "text": "Day 15/ Nevermind, we're still cooking... and reset. Enjoy. https://t.co/RZ9WhtI802",
+      "text": "Day 21/ Wonder what happens the remaining seven days. But today is a reset.",
       "via": "codex-reset.com"
     }
   }
