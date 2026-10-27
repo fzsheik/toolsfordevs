@@ -43,7 +43,10 @@ export const dateFromPostId = (id: string) => isoFromPostId(id).slice(0, 10);
 const withTime = (e: ResetEvent): ResetEvent =>
   e.postId ? { ...e, ...(e.keepDate ? {} : { date: dateFromPostId(e.postId) }), announced_at: e.announced_at ?? isoFromPostId(e.postId) } : e;
 
-const base = (raw as ResetEvent[]).map(withTime);
+/** Posts that look like resets but are not (e.g. replies about an earlier reset). Never ingest them, from our log or from the live sync. */
+const IGNORED_POSTS = new Set(["2092311059197808936"]);
+
+const base = (raw as ResetEvent[]).filter((e) => !IGNORED_POSTS.has(e.postId ?? "")).map(withTime);
 
 /** Committed events + whatever the community trackers report right now. Ours win on conflicts (same post or same vendor+day). */
 async function load() {
@@ -53,6 +56,7 @@ async function load() {
   const days = new Set(base.map((e) => `${e.vendor}:${e.date}`));
   const fresh: ResetEvent[] = [];
   for (const e of await liveEvents()) {
+    if (IGNORED_POSTS.has(e.postId ?? "")) continue;
     const day = `${e.vendor}:${e.date}`;
     if (postIds.has(e.postId) || days.has(day)) continue;
     postIds.add(e.postId);
@@ -73,6 +77,8 @@ function addAutoContext(all: ResetEvent[]) {
     const inWindow = same.filter((x) => x.date <= e.date && gapDays(e.date, x.date) < 30).length;
     const name = VENDORS[e.vendor].name;
     const noun = e.kind === "banked" ? "banked reset" : e.kind === "reset" ? "reset" : "update";
+    if (e.kind === "policy")
+      return { ...e, auto_context: `Feature or policy update, not a reset${e.announced_at ? `. Announced ${fmtMDY(e.announced_at)}, ${fmtHM(e.announced_at)} UTC` : ""}.` };
     const lead = leadMinutes(e);
     const parts = [
       `${ordinal(inWindow)} ${name} ${noun} in the last 30 days${prev ? `, ${plural(gapDays(e.date, prev.date), "day")} after the previous one (${fmtMDY(prev.date)})` : ""}.`,
@@ -125,9 +131,9 @@ export const plural = (n: number, w: string) => `${n} ${w}${n === 1 ? "" : "s"}`
 /** "today" / "1 day ago" / "5 days ago". Days are counted in UTC. */
 export const ago = (days: number) => (days <= 0 ? "today" : `${plural(days, "day")} ago`);
 
-export type EventType = "global" | "banked" | "max-only";
+export type EventType = "global" | "banked" | "max-only" | "update";
 export const eventType = (e: ResetEvent): EventType =>
-  e.kind === "banked" ? "banked" : /\bmax\b/i.test(e.scope) && !/\ball\b|pro/i.test(e.scope) ? "max-only" : "global";
+  e.kind === "policy" ? "update" : e.kind === "banked" ? "banked" : /\bmax\b/i.test(e.scope) && !/\ball\b|pro/i.test(e.scope) ? "max-only" : "global";
 
 /** Thin pages (no post text and not checked by us) stay out of the index until enriched. */
 export const indexable = (e: ResetEvent) => Boolean(e.date && e.sources.length);

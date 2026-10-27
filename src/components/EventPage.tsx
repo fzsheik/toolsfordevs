@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const ord = (n: number) => (n % 100 >= 11 && n % 100 <= 13 ? "th" : ["th", "st", "nd", "rd"][n % 10 > 3 ? 0 : n % 10]);
 
-const TYPE_LABEL = { global: "Global reset", banked: "Banked reset", "max-only": "Max-only reset" } as const;
+const TYPE_LABEL = { global: "Global reset", banked: "Banked reset", "max-only": "Max-only reset", update: "Feature update (not a reset)" } as const;
 
 const CLAUDE_HELP = "https://support.claude.com/en/articles/17007452-what-is-a-limit-reset";
 const CODEX_HELP = "https://help.openai.com/en/articles/20001498-how-resets-work-in-codex";
@@ -84,7 +84,7 @@ export default async function EventPage({ vendor, date }: { vendor: VendorId; da
             A banked reset is a credit you redeem yourself{vendor === "claude" ? " in Settings > Usage" : " in Settings > Usage (or /usage in Codex CLI)"}. Official help:{" "}
             <a href={vendor === "claude" ? CLAUDE_HELP : CODEX_HELP} rel="nofollow noopener" target="_blank">{vendor === "claude" ? "What is a limit reset?" : "How resets work in Codex"}</a>.
           </>
-        ) : type === "max-only" ? "This reset applied to Max plans only. It is applied automatically; there is nothing to redeem." : "This was a global reset: it applies automatically to covered accounts and there is nothing to redeem."}
+        ) : type === "update" ? "This is a feature or policy update, not a reset: nothing was reset and there is nothing to redeem from this post." : type === "max-only" ? "This reset applied to Max plans only. It is applied automatically; there is nothing to redeem." : "This was a global reset: it applies automatically to covered accounts and there is nothing to redeem."}
       </p>
       <GuideLinks vendor={vendor} current={v.path} />
       <p>Guide: <Link href={guide.href}>{guide.label}</Link></p>
