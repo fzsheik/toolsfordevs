@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { VENDORS, SITE, type VendorId } from "@/lib/site";
-import { getEvent, fmtDate, daysSince, ago, when, fmtUtc, fmtPacific, fmtMDY, gapDays, eventType, bankedStatus, countdown, leadMinutes, fmtDur, plural, postHandle } from "@/lib/events";
+import { contextOf, getEvent, fmtDate, daysSince, ago, when, fmtUtc, fmtPacific, fmtMDY, gapDays, eventType, bankedStatus, countdown, leadMinutes, fmtDur, plural, postHandle } from "@/lib/events";
 import { neighbours, eventH1 } from "@/lib/seo";
 import Badge from "./Badge";
 import JsonLd from "./JsonLd";
@@ -51,7 +51,7 @@ export default async function EventPage({ vendor, date }: { vendor: VendorId; da
         <time dateTime={published}>{when(e)}</time>{e.landed_at ? ` · landed ${fmtUtc(e.landed_at)}` : ""} · {ago(daysSince(e.date))} · <Badge status={e.status} />
       </p>
       <p>{e.title}. {e.summary}</p>
-      {e.context ? <p className="ctx"><strong>Context:</strong> {e.context}</p> : null}
+      {contextOf(e) ? <p className="ctx"><strong>Context:</strong> {contextOf(e)}</p> : null}
       <Message e={e} link={false} />
       <h2>Details</h2>
       <ul>

@@ -23,6 +23,8 @@ export type ResetEvent = {
   announced_post_url?: string;
   /** One hand-written sentence of context. Required for indexing when there is no post text. */
   context?: string;
+  /** Generated from our own log at load time. Never stored, never overrides `context`. */
+  auto_context?: string;
   /** Banked events only: when the credit stopped being redeemable (ISO, UTC). */
   expires_at?: string;
   /** Verbatim post text when we have it. `via` credits the tracker we got it from. */
@@ -57,7 +59,28 @@ async function load() {
     days.add(day);
     fresh.push(e);
   }
-  return [...base, ...fresh].sort((a, b) => b.date.localeCompare(a.date));
+  return addAutoContext([...base, ...fresh].sort((a, b) => b.date.localeCompare(a.date)));
+}
+
+const ordinal = (n: number) => `${n}${n % 100 >= 11 && n % 100 <= 13 ? "th" : ["th", "st", "nd", "rd"][n % 10 > 3 ? 0 : n % 10]}`;
+
+/** Fills `auto_context` from the log itself (newest-first input). Skips nothing; display prefers `context`. */
+function addAutoContext(all: ResetEvent[]) {
+  return all.map((e) => {
+    const same = all.filter((x) => x.vendor === e.vendor && x.kind === e.kind);
+    const i = same.findIndex((x) => x.id === e.id);
+    const prev = same[i + 1];
+    const inWindow = same.filter((x) => x.date <= e.date && gapDays(e.date, x.date) < 30).length;
+    const name = VENDORS[e.vendor].name;
+    const noun = e.kind === "banked" ? "banked reset" : e.kind === "reset" ? "reset" : "update";
+    const lead = leadMinutes(e);
+    const parts = [
+      `${ordinal(inWindow)} ${name} ${noun} in the last 30 days${prev ? `, ${plural(gapDays(e.date, prev.date), "day")} after the previous one (${fmtMDY(prev.date)})` : ""}.`,
+      e.announced_at ? ` Announced ${fmtHM(e.announced_at)} UTC${e.landed_at && lead !== null ? `, landed ${fmtDur(lead)} later` : ""}.` : "",
+      e.expires_at ? (Date.parse(e.expires_at) > Date.now() ? ` Usable until ${fmtMDY(e.expires_at)}.` : ` Expired ${fmtMDY(e.expires_at)}.`) : "",
+    ];
+    return { ...e, auto_context: parts.join("") };
+  });
 }
 
 export const eventUrl = (e: ResetEvent) => `${SITE.url}${VENDORS[e.vendor].path}/${e.date}`;
@@ -107,7 +130,10 @@ export const eventType = (e: ResetEvent): EventType =>
   e.kind === "banked" ? "banked" : /\bmax\b/i.test(e.scope) && !/\ball\b|pro/i.test(e.scope) ? "max-only" : "global";
 
 /** Thin pages (no post text and not checked by us) stay out of the index until enriched. */
-export const indexable = (e: ResetEvent) => Boolean(e.context) || Boolean(e.quote?.text);
+export const indexable = (e: ResetEvent) => Boolean(e.date && e.sources.length);
+
+/** Hand-written context first, generated one as fallback. */
+export const contextOf = (e: ResetEvent) => e.context ?? e.auto_context;
 
 /** Minutes between announcement and landing, when both are known. */
 export const leadMinutes = (e: ResetEvent) =>

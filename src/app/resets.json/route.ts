@@ -16,6 +16,7 @@ export async function GET() {
     announced_post_url: e.announced_post_url ?? null,
     lead_time_minutes: leadMinutes(e),
     context: e.context ?? null,
+    auto_context: e.auto_context ?? null,
     type: eventType(e),
     kind: e.kind,
     title: e.title,
