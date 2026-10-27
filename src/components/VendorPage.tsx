@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { VENDORS, SITE, type VendorId } from "@/lib/site";
-import { getEvents, daysSince, ago, fmtMDY, isExpired, when } from "@/lib/events";
+import { getEvents, daysSince, ago, fmtMDY, bankedStatus, when } from "@/lib/events";
 import { answer } from "@/lib/seo";
 import EventList from "./EventList";
 import Estimate from "./Estimate";
 import JsonLd from "./JsonLd";
 import CallYourShot from "./CallYourShotLazy";
 import VendorLogo from "./VendorLogo";
+import BankedBanner from "./BankedBanner";
 import AlertsBlock from "./AlertsBlock";
 import GuideLinks, { GUIDES } from "./GuideLinks";
 
@@ -60,6 +61,7 @@ export default async function VendorPage({ vendor }: { vendor: VendorId }) {
           ],
         }}
       />
+      <BankedBanner vendor={vendor} />
       <h1>Did {v.name} reset today?</h1>
       <p className="intro-copy">{text}</p>
       {last ? (
@@ -68,7 +70,7 @@ export default async function VendorPage({ vendor }: { vendor: VendorId }) {
           <div className="answer-body">
             <p className="kicker"><VendorLogo vendor={vendor} size={26} /> {daysSince(last.date) <= 1 ? "> yes, it just reset" : "> not lately. last reset was"}</p>
             <p className="big">{daysSince(last.date) === 0 ? "Today" : ago(daysSince(last.date))}</p>
-            {banked ? <p className="banked-note">+ banked reset granted {ago(daysSince(banked.date))} ({fmtMDY(banked.date)}), {isExpired(banked) ? `expired ${fmtMDY(banked.expires_at!)}` : "redeemable later"}</p> : null}
+            {banked ? <p className="banked-note">+ banked reset granted {ago(daysSince(banked.date))} ({fmtMDY(banked.date)}), {bankedStatus(banked) === "expired" ? `expired ${fmtMDY(banked.expires_at!)}` : "redeemable later"}</p> : null}
             <p>
               Last {v.name} limit reset: <time dateTime={last.announced_at ?? last.date}>{when(last)}</time>. {last.title}.
             </p>

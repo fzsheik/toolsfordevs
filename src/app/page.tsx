@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { VENDORS, SITE } from "@/lib/site";
 import { getEvents, daysSince, when } from "@/lib/events";
 import { answer } from "@/lib/seo";
+import BankedBanner from "@/components/BankedBanner";
 import AlertsBlock from "@/components/AlertsBlock";
 import CallYourShot from "@/components/CallYourShotLazy";
 import Estimate from "@/components/Estimate";
@@ -47,6 +48,7 @@ export default async function Home() {
           mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
         }}
       />
+      <BankedBanner />
       <section className="home-intro" aria-labelledby="home-title">
         <p className="eyebrow">$ did-it-reset --claude --codex</p>
         <h1 id="home-title">Did Claude or Codex reset today?</h1>

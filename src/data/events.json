@@ -1207,10 +1207,14 @@
         "url": "https://x.com/thsottiaux/status/2091412393368945027"
       }
     ],
-    "announced_at": "2026-08-24T00:46:51.902Z",
+    "announced_at": "2026-08-23T06:29:05.799Z",
     "quote": {
       "text": "Reset has been propagated to accounts..."
-    }
+    },
+    "announced_post_url": "https://x.com/thsottiaux/status/2091412393368945027",
+    "landed_at": "2026-08-24T00:46:51.902Z",
+    "landed_post_url": "https://x.com/thsottiaux/status/2091688655828246890",
+    "context": "Codex reset announced the day before and propagated to accounts alongside usage fixes."
   },
   {
     "id": "codex-2026-08-29",
@@ -1276,7 +1280,8 @@
         "url": "https://claude-resets.com/"
       }
     ],
-    "announced_at": "2026-09-01T18:35:27.545Z"
+    "announced_at": "2026-09-01T18:35:27.545Z",
+    "context": "Reset 5-hour and weekly limits for all users on the day Fable 5.1 shipped."
   },
   {
     "id": "codex-2026-09-03",
@@ -1320,7 +1325,8 @@
         "url": "https://claude-resets.com/"
       }
     ],
-    "announced_at": "2026-09-04T20:08:45.748Z"
+    "announced_at": "2026-09-04T20:08:45.748Z",
+    "context": "A Max-only weekly reset three days after the all-users reset, issued after Fable 5.1 launched so people could keep building over the long weekend."
   },
   {
     "id": "codex-2026-09-05",
@@ -1364,10 +1370,14 @@
         "url": "https://x.com/thsottiaux/status/2097043464538264003"
       }
     ],
-    "announced_at": "2026-09-08T04:05:53.478Z",
+    "announced_at": "2026-09-07T19:24:57.786Z",
     "quote": {
       "text": "All reset for everyone. Enjoy the week with Astra."
-    }
+    },
+    "announced_post_url": "https://x.com/thsottiaux/status/2097043464538264003",
+    "landed_at": "2026-09-08T04:05:53.478Z",
+    "landed_post_url": "https://x.com/thsottiaux/status/2097174560412246215",
+    "context": "2nd Codex reset in 10 days, confirmed overnight after the previous evening's announcement and framed as a fresh start for the week with Astra."
   },
   {
     "id": "codex-2026-09-12",
@@ -1416,7 +1426,8 @@
       }
     ],
     "announced_at": "2026-09-22T16:44:06.200Z",
-    "expires_at": "2026-10-22T16:00:00.000Z"
+    "expires_at": "2026-10-22T16:00:00.000Z",
+    "context": "Banked reset granted to Pro, Max and Team alongside the Opus 5.5 launch, usable until Oct 22."
   },
   {
     "id": "codex-2026-09-26",
@@ -1478,10 +1489,13 @@
         "url": "https://x.com/thsottiaux/status/2109132167112782291"
       }
     ],
-    "announced_at": "2026-10-11T04:01:09.077Z",
+    "announced_at": "2026-10-10T22:15:00.000Z",
     "quote": {
       "text": "Put the reset in the bag. All propagated."
-    }
+    },
+    "landed_at": "2026-10-11T04:01:09.077Z",
+    "landed_post_url": "https://x.com/thsottiaux/status/2109132167112782291",
+    "context": "2nd Codex reset in 10 days, and Day 6 of Tibo's 28-day ship-or-reset run."
   },
   {
     "id": "codex-2026-10-13",
@@ -1503,10 +1517,14 @@
         "url": "https://x.com/thsottiaux/status/2109812360596865224"
       }
     ],
-    "announced_at": "2026-10-13T05:06:06.031Z",
+    "announced_at": "2026-10-13T01:03:59.841Z",
     "quote": {
       "text": "What would you like with your side of reset? It's done."
-    }
+    },
+    "announced_post_url": "https://x.com/thsottiaux/status/2109812360596865224",
+    "landed_at": "2026-10-13T05:06:06.031Z",
+    "landed_post_url": "https://x.com/thsottiaux/status/2109873287853707513",
+    "context": "2nd Codex reset in 10 days, and Day 8 of Tibo's 28-day ship-or-reset run."
   },
   {
     "id": "codex-2026-10-15",
@@ -1527,7 +1545,8 @@
     "announced_at": "2026-10-15T04:55:51.053Z",
     "quote": {
       "text": "The reports of my reset button being lost are greatly exaggerated\n\nDay 10/ Reset"
-    }
+    },
+    "context": "3rd Codex reset in 10 days, and Day 10 of Tibo's 28-day ship-or-reset run."
   },
   {
     "id": "codex-2026-10-17",
@@ -1548,7 +1567,8 @@
     "announced_at": "2026-10-17T16:20:57.749Z",
     "quote": {
       "text": "Day 13/ Le limit reset"
-    }
+    },
+    "context": "4th Codex reset in 10 days, and Day 13 of Tibo's 28-day ship-or-reset run."
   },
   {
     "id": "codex-2026-10-20",
@@ -1621,7 +1641,8 @@
     "quote": {
       "text": "Day 18/ Decisions API is GA, OpenResponses joined the Linux Foundation, we shipped some performance improvements and Uber is going all-in on codex & work. But yes… that’s a reset!"
     },
-    "announced_at": "2026-10-23T04:46:19.007Z"
+    "announced_at": "2026-10-23T04:46:19.007Z",
+    "context": "5th Codex reset in 10 days, and Day 18 of Tibo's 28-day ship-or-reset run."
   },
   {
     "id": "codex-2026-10-25",
@@ -1642,7 +1663,8 @@
     "quote": {
       "text": "Day 20/ Rest and reset"
     },
-    "announced_at": "2026-10-25T03:39:31.000Z"
+    "announced_at": "2026-10-25T03:39:31.000Z",
+    "context": "5th Codex reset in 10 days, and Day 20 of Tibo's 28-day ship-or-reset run."
   },
   {
     "id": "codex-2026-10-26",
@@ -1668,6 +1690,7 @@
     "quote": {
       "text": "Day 21/ Wonder what happens the remaining seven days. But today is a reset.",
       "via": "codex-reset.com"
-    }
+    },
+    "context": "6th Codex reset in 10 days, and Day 21 of Tibo's 28-day ship-or-reset run."
   }
 ]

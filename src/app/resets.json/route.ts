@@ -1,5 +1,5 @@
 import { SITE } from "@/lib/site";
-import { getEvents, eventUrl, eventType } from "@/lib/events";
+import { getEvents, eventUrl, eventType, bankedStatus, leadMinutes } from "@/lib/events";
 
 export const revalidate = 300;
 
@@ -10,6 +10,12 @@ export async function GET() {
     date: e.date,
     announced_at: e.announced_at ?? null,
     expires_at: e.expires_at ?? null,
+    banked_status: bankedStatus(e),
+    landed_at: e.landed_at ?? null,
+    landed_post_url: e.landed_post_url ?? null,
+    announced_post_url: e.announced_post_url ?? null,
+    lead_time_minutes: leadMinutes(e),
+    context: e.context ?? null,
     type: eventType(e),
     kind: e.kind,
     title: e.title,

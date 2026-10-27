@@ -206,3 +206,4 @@ details p{margin:8px 0 2px;color:var(--muted)}
 .bar i{display:block;height:100%;background:var(--claude);border:2px solid var(--line);border-radius:4px;min-width:2px}
 .bar i.codex{background:var(--codex)}
 .site-footer .footer-links{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0 0}
+.banked-banner{padding:14px 20px;margin:0 auto 20px;max-width:640px;background:var(--lime);color:var(--on-lime)}.banked-banner p{margin:0}

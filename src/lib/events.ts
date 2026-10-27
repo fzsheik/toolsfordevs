@@ -16,6 +16,13 @@ export type ResetEvent = {
   keepDate?: boolean;
   /** When the primary post went out (ISO, UTC). Derived from `postId` when absent. */
   announced_at?: string;
+  /** Separate "propagated / it's done" post, when the landing came after the announcement. */
+  landed_at?: string;
+  landed_post_url?: string;
+  /** Announcement post, when `postId` points at the landing post instead. */
+  announced_post_url?: string;
+  /** One hand-written sentence of context. Required for indexing when there is no post text. */
+  context?: string;
   /** Banked events only: when the credit stopped being redeemable (ISO, UTC). */
   expires_at?: string;
   /** Verbatim post text when we have it. `via` credits the tracker we got it from. */
@@ -38,7 +45,9 @@ const base = (raw as ResetEvent[]).map(withTime);
 
 /** Committed events + whatever the community trackers report right now. Ours win on conflicts (same post or same vendor+day). */
 async function load() {
-  const postIds = new Set(base.map((e) => e.postId).filter(Boolean));
+  // Hand-set fields always win: skip synced posts we already hold as primary, announcement or landing post.
+  const idOf = (u?: string) => u?.match(/status\/(\d+)/)?.[1];
+  const postIds = new Set(base.flatMap((e) => [e.postId, idOf(e.landed_post_url), idOf(e.announced_post_url)]).filter(Boolean));
   const days = new Set(base.map((e) => `${e.vendor}:${e.date}`));
   const fresh: ResetEvent[] = [];
   for (const e of await liveEvents()) {
@@ -86,6 +95,9 @@ export const fmtPacific = (iso: string) =>
 /** Best available time label for an event: full UTC time when we know it, else the date. */
 export const when = (e: ResetEvent) => (e.announced_at ? fmtUtc(e.announced_at) : fmtDate(e.date));
 
+/** Time of the post whose text we quote (landing post when separate). */
+export const postAt = (e: ResetEvent) => (e.postId ? isoFromPostId(e.postId) : e.announced_at);
+
 export const plural = (n: number, w: string) => `${n} ${w}${n === 1 ? "" : "s"}`;
 /** "today" / "1 day ago" / "5 days ago". Days are counted in UTC. */
 export const ago = (days: number) => (days <= 0 ? "today" : `${plural(days, "day")} ago`);
@@ -95,11 +107,33 @@ export const eventType = (e: ResetEvent): EventType =>
   e.kind === "banked" ? "banked" : /\bmax\b/i.test(e.scope) && !/\ball\b|pro/i.test(e.scope) ? "max-only" : "global";
 
 /** Thin pages (no post text and not checked by us) stay out of the index until enriched. */
-export const indexable = (e: ResetEvent) => Boolean(e.quote?.text) || e.status === "verified";
+export const indexable = (e: ResetEvent) => Boolean(e.context) || Boolean(e.quote?.text);
+
+/** Minutes between announcement and landing, when both are known. */
+export const leadMinutes = (e: ResetEvent) =>
+  e.announced_at && e.landed_at ? Math.round((Date.parse(e.landed_at) - Date.parse(e.announced_at)) / 60_000) : null;
+
+/** "8 h 41 min" */
+export const fmtDur = (min: number) => {
+  const m = Math.abs(Math.round(min));
+  return m < 60 ? `${m} min` : m % 60 ? `${Math.floor(m / 60)} h ${m % 60} min` : `${m / 60} h`;
+};
+
+/** Banked credits are active until `expires_at` passes. Computed per request, never stored. */
+export const bankedStatus = (e: ResetEvent, now = Date.now()): "active" | "expired" | null =>
+  e.kind !== "banked" || !e.expires_at ? null : Date.parse(e.expires_at) > now ? "active" : "expired";
+
+/** "2 d 3 h" / "5 h 10 min" left until `iso`. */
+export const countdown = (iso: string, now = Date.now()) => {
+  const min = Math.max(0, Math.floor((Date.parse(iso) - now) / 60_000));
+  const d = Math.floor(min / 1440), h = Math.floor((min % 1440) / 60);
+  return d ? `${d} d ${h} h` : fmtDur(min);
+};
+
+export const activeBanked = async (vendor?: VendorId) =>
+  (await getEvents(vendor)).filter((e) => bankedStatus(e) === "active");
 
 export const gapDays = (a: string, b: string) => Math.round((utc(a) - utc(b)) / DAY);
-
-export const isExpired = (e: ResetEvent, now = Date.now()) => Boolean(e.expires_at && Date.parse(e.expires_at) <= now);
 
 /** Cadence of full resets from our own log. */
 export async function stats(vendor: VendorId, now = Date.now()) {
@@ -110,7 +144,12 @@ export async function stats(vendor: VendorId, now = Date.now()) {
   const mid = sorted.length >> 1;
   const median = sorted.length ? (sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2) : null;
   const within = (d: number) => resets.filter((e) => daysSince(e.date, now) < d).length;
-  return { total: resets.length, gaps, median, longest: sorted.length ? sorted[sorted.length - 1] : null, last30: within(30), last90: within(90) };
+  const leads = resets.map(leadMinutes).filter((m): m is number => m !== null);
+  return {
+    leadAvg: leads.length ? Math.round(leads.reduce((a, b) => a + b, 0) / leads.length) : null,
+    leadN: leads.length,
+    last7: within(7),
+    total: resets.length, gaps, median, longest: sorted.length ? sorted[sorted.length - 1] : null, last30: within(30), last90: within(90) };
 }
 
 export const fmtShort = (date: string) =>

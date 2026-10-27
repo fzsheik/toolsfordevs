@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Guide from "@/components/Guide";
-import { getEvents, fmtUtc, fmtMDY, isExpired, postUrl } from "@/lib/events";
+import { getEvents, fmtUtc, fmtMDY, bankedStatus, postUrl } from "@/lib/events";
 
 export const revalidate = 300;
 
@@ -32,7 +32,7 @@ export default async function Page() {
             <li key={e.id}>
               Granted <a href={`/claude-reset/${e.date}`}>{fmtUtc(e.announced_at ?? `${e.date}T00:00:00Z`)}</a>
               {e.announced_at ? "" : " (date only)"} ·{" "}
-              {e.expires_at ? (isExpired(e) ? `expired ${fmtUtc(e.expires_at)}` : `expires ${fmtUtc(e.expires_at)}`) : "expiry: see Settings > Usage"} · {e.scope}
+              {e.expires_at ? (bankedStatus(e) === "expired" ? `expired ${fmtUtc(e.expires_at)}` : `expires ${fmtUtc(e.expires_at)}`) : "expiry: see Settings > Usage"} · {e.scope}
               {postUrl(e) ? <> · <a href={postUrl(e)} rel="nofollow noopener" target="_blank">post</a></> : null}
             </li>
           ))}

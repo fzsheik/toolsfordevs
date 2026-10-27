@@ -1,5 +1,5 @@
 import { VENDORS } from "./site";
-import { ago, daysSince, eventType, fmtHM, fmtMDY, gapDays, getEvents, isExpired, postHandle, when, type ResetEvent } from "./events";
+import { plural, ago, daysSince, eventType, fmtDur, fmtHM, fmtMDY, gapDays, leadMinutes, getEvents, bankedStatus, postHandle, when, type ResetEvent } from "./events";
 import type { VendorId } from "./site";
 
 /** Position of an event among same-kind events of its vendor (newest first in the list). */
@@ -26,10 +26,12 @@ export async function eventMeta(e: ResetEvent) {
   const noun = e.kind === "banked" ? "banked usage limit reset" : "usage limit reset";
   const time = e.announced_at ? ` at ${fmtHM(e.announced_at)} UTC` : "";
   const text = e.quote?.text.replace(/\s+/g, " ").trim().slice(0, 80).replace(/[.!?\s]+$/, "");
-  const tail = prev ? `Reset #${n} in our log, ${gapDays(e.date, prev.date)} days after the previous one.` : `Reset #${n} in our log, the first one.`;
-  const posted = e.announced_at && e.announced_at.slice(0, 10) !== e.date ? fmtMDY(e.announced_at) : date;
-  const landed = posted !== date ? ` It landed ${date}.` : "";
-  const description = `${actor} announced a ${name} ${noun} on ${posted}${time}.${landed}${text ? ` "${text}".` : ""} ${tail}`;
+  const posted = e.announced_at ? fmtMDY(e.announced_at) : date;
+  const lead = leadMinutes(e);
+  const landed = e.landed_at && lead !== null ? `; it landed at ${fmtHM(e.landed_at)} UTC, ${fmtDur(lead)} later` : "";
+  const tail = prev ? `Reset #${n} in our log, ${plural(gapDays(e.date, prev.date), "day")} after the previous one.` : `Reset #${n} in our log, the first one.`;
+  const extra = e.context ?? (text ? `"${text}".` : "");
+  const description = `${actor} announced a ${name} ${noun} on ${posted}${time}${landed}.${extra ? ` ${extra}` : ""} ${tail}`;
   return { title: { absolute: title }, description };
 }
 
@@ -47,7 +49,7 @@ export async function answer(vendor: VendorId) {
     const g = fmtMDY(banked.date).replace(/, \d{4}$/, "");
     if (banked.expires_at) {
       const x = fmtMDY(banked.expires_at).replace(/, \d{4}$/, "");
-      text += isExpired(banked) ? ` The banked reset granted ${g} expired ${x}.` : ` The banked reset granted ${g} is redeemable until ${x}.`;
+      text += bankedStatus(banked) === "expired" ? ` The banked reset granted ${g} expired ${x}.` : ` The banked reset granted ${g} is redeemable until ${x}.`;
     } else text += ` A banked reset was granted ${g}; its expiry is shown in your usage settings.`;
   }
   return { last, banked, text };

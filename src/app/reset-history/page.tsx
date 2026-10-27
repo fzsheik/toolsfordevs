@@ -58,6 +58,8 @@ export default async function Page() {
       </HistoryFilter>
       <AlertsBlock />
       <section id="how-we-verify">
+        <h2>Why our times differ</h2>
+        <p>We use the post timestamp for the announcement and, when there is a separate &ldquo;propagated&rdquo; or &ldquo;it&apos;s done&rdquo; post, its timestamp for the landing. We do not use the moment a tracker first noticed a reset, so our times can be earlier than codex-reset.com or claude-resets.com.</p>
         <h2>How we verify</h2>
         <ul>
           <li><b>Verified:</b> a human opened the primary post (X) and confirmed it announces a reset.</li>

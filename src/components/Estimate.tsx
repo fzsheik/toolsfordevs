@@ -1,4 +1,4 @@
-import { stats, plural } from "@/lib/events";
+import { stats, plural, fmtDur } from "@/lib/events";
 import { VENDORS, type VendorId } from "@/lib/site";
 import VendorLogo from "./VendorLogo";
 
@@ -16,6 +16,7 @@ export default async function Estimate({ vendor }: { vendor: VendorId }) {
       </div>
       <p className="est-big">Median gap {e.median}<small>{e.median === 1 ? "day" : "days"}</small></p>
       <p className="est-chip waiting">{plural(e.last30, "reset")} in the last 30 days · {plural(e.last90, "reset")} in the last 90 days</p>
+      <p className="est-chip waiting">Reset streak: {plural(e.last7, "reset")} in the last 7 days{e.leadAvg !== null ? ` · Avg announcement to landing: ${fmtDur(e.leadAvg)} (${plural(e.leadN, "reset")})` : ""}</p>
       <div className="gapbars" aria-label={`Days between the last ${gaps.length} resets`}>
         {gaps.map((g, i) => (
           <span key={i} style={{ height: `${Math.max((g / maxGap) * 100, 8)}%` }}><b>{g}d</b></span>

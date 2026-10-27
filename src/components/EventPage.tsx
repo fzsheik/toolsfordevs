@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { VENDORS, SITE, type VendorId } from "@/lib/site";
-import { getEvent, fmtDate, daysSince, ago, when, fmtUtc, fmtPacific, fmtMDY, gapDays, eventType, isExpired, plural, postHandle } from "@/lib/events";
+import { getEvent, fmtDate, daysSince, ago, when, fmtUtc, fmtPacific, fmtMDY, gapDays, eventType, bankedStatus, countdown, leadMinutes, fmtDur, plural, postHandle } from "@/lib/events";
 import { neighbours, eventH1 } from "@/lib/seo";
 import Badge from "./Badge";
 import JsonLd from "./JsonLd";
@@ -24,7 +24,9 @@ export default async function EventPage({ vendor, date }: { vendor: VendorId; da
   const type = eventType(e);
   const url = `${SITE.url}${v.path}/${e.date}`;
   const handle = postHandle(e);
-  const expired = isExpired(e);
+  const status = bankedStatus(e);
+  const expired = status === "expired";
+  const lead = leadMinutes(e);
   const published = e.announced_at ?? `${e.date}T00:00:00Z`;
   const guide = GUIDES[vendor][e.kind === "banked" ? 2 : 1];
   return (
@@ -46,22 +48,27 @@ export default async function EventPage({ vendor, date }: { vendor: VendorId; da
       <p><Link href={v.path}>← {v.name} reset tracker</Link></p>
       <h1>{eventH1(e)}</h1>
       <p className="muted">
-        <time dateTime={published}>{when(e)}</time> · {ago(daysSince(e.date))} · <Badge status={e.status} />
+        <time dateTime={published}>{when(e)}</time>{e.landed_at ? ` · landed ${fmtUtc(e.landed_at)}` : ""} · {ago(daysSince(e.date))} · <Badge status={e.status} />
       </p>
       <p>{e.title}. {e.summary}</p>
+      {e.context ? <p className="ctx"><strong>Context:</strong> {e.context}</p> : null}
       <Message e={e} link={false} />
       <h2>Details</h2>
       <ul>
         {e.announced_at ? (
           <>
-            <li><strong>Announced (UTC):</strong> {fmtUtc(e.announced_at)}</li>
-            <li><strong>Announced (Pacific):</strong> {fmtPacific(e.announced_at)}</li>
+            <li><strong>Announced:</strong> {fmtUtc(e.announced_at)} ({fmtPacific(e.announced_at)})</li>
+            {e.landed_at ? (
+              <li><strong>Landed:</strong> {fmtUtc(e.landed_at)} ({fmtPacific(e.landed_at)}){lead !== null ? `, ${fmtDur(lead)} later` : ""}</li>
+            ) : null}
           </>
         ) : <li><strong>Date:</strong> {fmtDate(e.date)} (UTC; exact time not recorded)</li>}
         <li><strong>Posted by:</strong> {handle ? `@${handle}` : v.owner}</li>
         <li><strong>Type:</strong> {TYPE_LABEL[type]}</li>
         <li><strong>Scope and plans covered:</strong> {e.scope}</li>
-        {e.expires_at ? <li><strong>{expired ? "Expired" : "Expires"}:</strong> {fmtUtc(e.expires_at)} ({fmtPacific(e.expires_at)})</li> : null}
+        {e.expires_at ? (
+          <li><strong>Status:</strong> {expired ? `Expired ${fmtMDY(e.expires_at)} (${fmtPacific(e.expires_at)})` : `Active until ${fmtPacific(e.expires_at)}, ${countdown(e.expires_at)} left`}</li>
+        ) : null}
       </ul>
       <p className="ctx">
         This is the {n}{ord(n)} {v.name} {noun} in our log.{" "}

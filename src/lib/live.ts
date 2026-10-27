@@ -73,8 +73,21 @@ async function fromCodexReset(): Promise<ResetEvent[]> {
   return out;
 }
 
+/** Backfill: codex-reset.com's archive of every announced reset and banked grant (full history, not just recent posts). */
+async function fromCodexArchive(): Promise<ResetEvent[]> {
+  const j = await getJson("https://codex-reset.com/api/feed");
+  const out: ResetEvent[] = [];
+  for (const ev of j.events ?? []) {
+    const id = String(ev.id);
+    const banked = ev.reset_kind === "banked" || ev.type === "credits";
+    if (!/^\d{15,20}$/.test(id) || !ev.url || !(ev.type === "reset" || banked)) continue;
+    out.push(build("codex", id, ev.url, "codex-reset.com", "", banked));
+  }
+  return out;
+}
+
 /** Never throws: if a tracker is down we just fall back to our committed data. */
 export async function liveEvents(): Promise<ResetEvent[]> {
-  const results = await Promise.allSettled([fromClaudeResets(), fromCodexReset()]);
+  const results = await Promise.allSettled([fromClaudeResets(), fromCodexReset(), fromCodexArchive()]);
   return results.flatMap((r) => (r.status === "fulfilled" ? r.value : []));
 }
