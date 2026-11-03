@@ -7,11 +7,13 @@ import {
   CATEGORIES,
   FAQS,
   INDEX_DESCRIPTION,
+  INDEX_META_TITLE,
   INDEX_PATH,
   INDEX_TITLE,
   PICKS,
   SKILL_ROWS,
   SKILLS,
+  TAKEAWAYS,
   UPDATED,
   UPDATED_LABEL,
   getSkill,
@@ -20,22 +22,32 @@ import {
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: { absolute: INDEX_TITLE },
+  title: { absolute: INDEX_META_TITLE },
   description: INDEX_DESCRIPTION,
   alternates: { canonical: INDEX_PATH },
   openGraph: {
-    title: INDEX_TITLE,
+    title: INDEX_META_TITLE,
     description: INDEX_DESCRIPTION,
     url: INDEX_PATH,
     type: "website",
   },
-  twitter: { card: "summary_large_image", title: INDEX_TITLE, description: INDEX_DESCRIPTION },
+  twitter: { card: "summary_large_image", title: INDEX_META_TITLE, description: INDEX_DESCRIPTION },
 };
 
 export default function Page() {
   const pageUrl = `${SITE.url}${INDEX_PATH}`;
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: SITE.name, item: SITE.url },
+            { "@type": "ListItem", position: 2, name: "Motion graphics skills", item: pageUrl },
+          ],
+        }}
+      />
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -83,7 +95,22 @@ export default function Page() {
         <p className="checked">
           Last updated <time dateTime={UPDATED}>{UPDATED_LABEL}</time>. {SKILLS.length} skills. Facts left out when a page did not state them.
         </p>
+        <section className="card tldr" id="tldr" aria-labelledby="tldr-title">
+          <div className="titlebar" aria-hidden="true">
+            <i />
+            <i />
+            <i />
+            <span>tldr.txt</span>
+          </div>
+          <div className="tldr-body">
+            <h2 id="tldr-title">Which free Claude Code skill should I use?</h2>
+            {TAKEAWAYS.map((line) => (
+              <p key={line}>{line}</p>
+            ))}
+          </div>
+        </section>
         <nav className="skill-jump" aria-label="On this page">
+          <a href="#tldr">Takeaways</a>
           <a href="#compare">Compare</a>
           {CATEGORIES.map((category) => (
             <a key={category.id} href={`#${category.id}`}>
@@ -95,18 +122,19 @@ export default function Page() {
         </nav>
 
         <div className="section-heading" id="compare">
-          <h2>Compare them</h2>
+          <h2>How do these free Claude Code skills compare?</h2>
           <span className="eyebrow">{"// sort or filter"}</span>
         </div>
+        <p>The comparison lists every skill&apos;s name, style, what is free, voice, operating system, and licence. The full table is in the page HTML. Filters only hide rows after a click.</p>
         <SkillTable rows={SKILL_ROWS} />
-        <p className="checked">Name opens the notes on this site. The last column opens the README or format page. “Not stated” means that page did not say.</p>
+        <p className="checked">The name opens the notes on this site. The last column opens the README or format page. “Not stated” means that page did not say.</p>
 
         {CATEGORIES.map((category) => (
           <section key={category.id} id={category.id} aria-labelledby={`${category.id}-title`}>
             <div className="section-heading">
-              <h2 id={`${category.id}-title`}>{category.title}</h2>
-              <span className="eyebrow">{`// ${category.lede}`}</span>
+              <h2 id={`${category.id}-title`}>{category.question}</h2>
             </div>
+            <p>{category.lede}</p>
             <div className="grid skill-grid">
               {SKILLS.filter((skill) => skill.category === category.id).map((skill) => (
                 <SkillCard key={skill.slug} skill={skill} />
@@ -116,9 +144,10 @@ export default function Page() {
         ))}
 
         <div className="section-heading" id="pick">
-          <h2>Which one should I pick?</h2>
+          <h2>Which Claude Code skill should I pick?</h2>
           <span className="eyebrow">{"// by the job"}</span>
         </div>
+        <p>Pick a Claude Code motion skill by the job. Each recommendation uses only what that project&apos;s README or format page states.</p>
         <div className="pick-grid">
           {PICKS.map((pick) => {
             const skill = getSkill(pick.slug);
@@ -142,7 +171,7 @@ export default function Page() {
           })}
         </div>
 
-        <h2 id="faq">FAQ</h2>
+        <h2 id="faq">What do people ask about Claude Code video skills?</h2>
         {FAQS.map((item) => (
           <details key={item.q}>
             <summary>{item.q}</summary>

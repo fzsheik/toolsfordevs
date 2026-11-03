@@ -212,6 +212,10 @@ details p{margin:8px 0 2px;color:var(--muted)}
 /* motion-graphics roundup */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .skills-page .intro-copy{max-width:62ch}
+.tldr{margin:18px 0 8px}
+.tldr-body{padding:16px 18px 6px}
+.tldr-body h2{margin:0 0 10px;font-size:1.35rem}
+.tldr-body p{margin:0 0 12px}
 .skill-jump{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 8px}
 .skill-jump a{font:700 .85rem/1 var(--font-mono),monospace;padding:9px 14px;border:var(--bd);border-radius:12px;background:var(--card);box-shadow:var(--shadow-s)}
 .skill-jump a:hover{background:var(--lime);color:var(--on-lime);transform:translate(-1px,-1px)}

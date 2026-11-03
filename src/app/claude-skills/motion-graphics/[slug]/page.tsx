@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import JsonLd from "@/components/JsonLd";
 import CopyCommand from "@/components/motion/CopyCommand";
 import SkillVisual from "@/components/motion/SkillVisual";
-import { INDEX_PATH, INDEX_TITLE, SKILLS, UPDATED, UPDATED_LABEL, categoryLabel, getSkill, skillPath } from "@/lib/motion-skills";
+import { INDEX_PATH, INDEX_TITLE, SKILLS, UPDATED, UPDATED_LABEL, categoryLabel, getSkill, skillPath, structuredLicense } from "@/lib/motion-skills";
 import { SITE } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -48,15 +48,17 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <JsonLd
         data={{
           "@context": "https://schema.org",
-          "@type": "TechArticle",
-          headline: skill.metaTitle,
+          "@type": "SoftwareSourceCode",
+          name: skill.name,
           description: skill.metaDescription,
-          dateModified: UPDATED,
-          mainEntityOfPage: pageUrl,
-          author: { "@type": "Organization", name: SITE.name, url: SITE.url },
-          publisher: { "@type": "Organization", name: SITE.name, url: SITE.url, logo: { "@type": "ImageObject", url: `${SITE.url}/icon.svg` } },
-          isBasedOn: skill.url,
+          url: pageUrl,
+          codeRepository: skill.url.includes("github.com") ? skill.url : undefined,
+          license: structuredLicense(skill.license),
+          isAccessibleForFree: /^MIT\b/.test(skill.license) || /skill file free|free for now/i.test(skill.cost) ? true : undefined,
           about: skill.style,
+          dateModified: UPDATED,
+          isBasedOn: skill.url,
+          author: { "@type": "Organization", name: SITE.name, url: SITE.url },
         }}
       />
       <article className={`skills-page skill-detail cat-${skill.category}`}>
@@ -92,14 +94,18 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           </div>
         )}
 
-        <h2>What it makes</h2>
-        <ul>
-          {skill.makes.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
+        <h2>What does {skill.name} make?</h2>
+        <p>{skill.makes[0].toLowerCase().includes(skill.name.toLowerCase()) ? skill.makes[0] : `${skill.name}: ${skill.makes[0]}`}</p>
+        {skill.makes.length > 1 ? (
+          <ul>
+            {skill.makes.slice(1).map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        ) : null}
 
-        <h2>Install</h2>
+        <h2>How do I install {skill.name}?</h2>
+        <p>Install {skill.name} with the command from the project&apos;s README or format page.</p>
         {skill.installs.map((install) => (
           <div key={install.label} className="install-block">
             <CopyCommand command={install.command} label={install.label} />
@@ -107,21 +113,27 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           </div>
         ))}
 
-        <h2>What it needs</h2>
-        <ul>
-          {skill.needs.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
+        <h2>What does {skill.name} need?</h2>
+        <p>{skill.name} needs {skill.needs[0].replace(/\.$/, "")}.</p>
+        {skill.needs.length > 1 ? (
+          <ul>
+            {skill.needs.slice(1).map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        ) : null}
 
-        <h2>Gotchas</h2>
-        <ul>
-          {skill.gotchas.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
+        <h2>What are the limits of {skill.name}?</h2>
+        <p>{skill.gotchas[0].toLowerCase().includes(skill.name.toLowerCase()) ? skill.gotchas[0] : `${skill.name}: ${skill.gotchas[0]}`}</p>
+        {skill.gotchas.length > 1 ? (
+          <ul>
+            {skill.gotchas.slice(1).map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        ) : null}
 
-        <h2>At a glance</h2>
+        <h2>What are the key facts for {skill.name}?</h2>
         <dl className="glance">
           <div>
             <dt>Style</dt>
@@ -156,7 +168,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           </>
         ) : null}
 
-        <h2>Links</h2>
+        <h2>Where is {skill.name} published?</h2>
+        <p>
+          The project page for {skill.name} is <a href={skill.url}>{skill.url.replace(/^https:\/\//, "")}</a>.
+        </p>
         <ul>
           <li>
             <a href={skill.url} target="_blank" rel="noopener">
@@ -172,7 +187,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           ))}
         </ul>
 
-        <h2>More in {categoryLabel(skill.category).toLowerCase()}</h2>
+        <h2>Which other {categoryLabel(skill.category).toLowerCase()} skills are on this list?</h2>
         <ul>
           {related.map((item) => (
             <li key={item.slug}>

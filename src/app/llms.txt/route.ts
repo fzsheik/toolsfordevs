@@ -23,6 +23,7 @@ export async function GET() {
     `- [Claude vs Codex resets: monthly counts](${SITE.url}/claude-vs-codex-resets)`,
     `- [Limit changes log](${SITE.url}/changes)`,
     `- [${INDEX_TITLE}](${SITE.url}${INDEX_PATH})`,
+    `- [Full text of the motion-graphics roundup](${SITE.url}/llms-full.txt)`,
     ...SKILLS.map((s) => `  - [${s.name}](${SITE.url}${skillPath(s.slug)}): ${s.summary}`),
     "",
     "## Data",

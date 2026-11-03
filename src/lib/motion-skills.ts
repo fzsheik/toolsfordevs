@@ -4,33 +4,52 @@ export const UPDATED = "2026-11-03";
 export const UPDATED_LABEL = "Nov 3, 2026";
 export const INDEX_PATH = "/claude-skills/motion-graphics";
 export const INDEX_TITLE = "Best Free Claude Code Skills for Motion Graphics & Reels (2026)";
+/** Document title stays near 60 characters. The on-page H1 keeps the full phrase. */
+export const INDEX_META_TITLE = "Free Claude Code skills for reels (2026)";
 export const INDEX_DESCRIPTION =
   "Free Claude Code skills for reels, paper-cut explainers, 3D films and talking-head edits, with install commands, voice, OS and licence from each README.";
 
+export const TAKEAWAYS = [
+  "For a Mac cut-paper explainer with no API keys, paper-reel is the free Claude Code skill: local Kokoro voice, whisper.cpp word timing, and an MP4 rendered on the Mac.",
+  "papercut-explainer is the free Remotion kit for layered construction-paper reels, with local Qwen3-TTS, a recording you supply, or a silent placeholder, and the README estimates about $14-19 in Claude API cost per 25-30 second reel at list prices.",
+  "Appmorphy Paper, Appmorphy Voxel, and lowpoly-reel narrate with ElevenLabs. Pasteup needs a Gemini API key, and the README says the free tier works.",
+  "video-edit-skill turns raw talking-head clips into an Instagram reel on a Mac, a Windows 10/11 PC, or Linux. Herk Edit Kit edits footage you bring in Codex or Claude Code and includes 15 skills and 406 draft motion-graphics cards.",
+  "Charlie Hills' Motion Graphics Skill Pack makes launch videos and charts in code, and the README says there is no After Effects and no video generator. Remotion's own agent skills install with npx skills add remotion-dev/skills.",
+];
+
 export type CategoryId = "print" | "3d" | "talking" | "motion";
 
-export const CATEGORIES: { id: CategoryId; title: string; lede: string }[] = [
+export const CATEGORIES: { id: CategoryId; title: string; question: string; lede: string }[] = [
   {
     id: "print",
     title: "Print and paper",
-    lede: "Cut-paper dioramas, halftone collage and papercraft sets.",
+    question: "Which free Claude Code skills make paper-style reels?",
+    lede: "Papercut Explainer, Pasteup, gbro-collage-info, paper-reel, and Appmorphy Paper make cut-paper, halftone, or papercraft videos.",
   },
   {
     id: "3d",
     title: "3D",
-    lede: "Low-poly dialogue, researched Three.js films, and a voxel desk.",
+    question: "Which free Claude Code skills make 3D reels?",
+    lede: "lowpoly-reel, Promptfilm, and Appmorphy Voxel make low-poly dialogue, researched Three.js films, and voxel desk reels.",
   },
   {
     id: "talking",
-    title: "Talking head and editing",
-    lede: "Skills that start from footage you already filmed.",
+    title: "Talking head",
+    question: "Which free Claude Code skills edit talking-head footage?",
+    lede: "Herk Edit Kit and video-edit-skill start from footage you already filmed.",
   },
   {
     id: "motion",
     title: "Motion graphics",
-    lede: "Code-drawn launch films, a pack catalog, Reelkit, and two Remotion skill repos checked the same way.",
+    question: "Which free Claude Code skills make motion graphics?",
+    lede: "The Charlie Hills pack, iart-ai's packs, Reelkit, Remotion's official skills, and Claude Remotion Skill cover code-drawn motion graphics.",
   },
 ];
+
+/** SPDX-style name only when the source states MIT. Other wording stays on the page, not in JSON-LD. */
+export function structuredLicense(license: string) {
+  return /^MIT\b/.test(license) ? "MIT" : undefined;
+}
 
 export type Shot = {
   src: string;
@@ -91,7 +110,7 @@ export const SKILLS: Skill[] = [
       { src: "/motion-graphics/papercut-explainer/3.webp", alt: "Example reel frame: a paper phone and envelope on a desk diorama.", width: 252, height: 448 },
       { src: "/motion-graphics/papercut-explainer/4.webp", alt: "Example reel frame: paper props in a darker street set.", width: 252, height: 448 },
     ],
-    summary: "Nine agent skills plus a Remotion library for short vertical cut-paper explainer reels.",
+    summary: "Papercut Explainer is a free kit of nine agent skills plus a Remotion library for short vertical cut-paper explainer reels.",
     metaTitle: "Papercut Explainer: free cut-paper reel skill",
     metaDescription:
       "Papercut Explainer is a free MIT skill kit for vertical cut-paper reels in Remotion, with local Qwen3-TTS or a placeholder voice. Install from the README.",
@@ -148,7 +167,7 @@ export const SKILLS: Skill[] = [
       { src: "/motion-graphics/pasteup/3.webp", alt: "Jazz history collage: a blue halftone saxophonist.", width: 360, height: 360 },
       { src: "/motion-graphics/pasteup/4.webp", alt: "Jazz history collage: a red burst on a speckled paper field.", width: 360, height: 360 },
     ],
-    summary: "Halftone paper-collage stop-motion for Claude Code. Cut-outs from the Gemini image API, motion from a local compositor.",
+    summary: "Pasteup is a free Claude Code skill for halftone paper-collage stop-motion, with Gemini cut-outs and a local compositor.",
     metaTitle: "Pasteup: free halftone collage skill for Claude Code",
     metaDescription:
       "Pasteup is an MIT Claude Code skill for halftone paper-collage stop-motion. It needs Python, ffmpeg and a Gemini API key. The README says the free tier works.",
@@ -192,7 +211,7 @@ export const SKILLS: Skill[] = [
       { src: "/motion-graphics/gbro-collage-info/3.webp", alt: "Halftone paper info-graphic: a focus-pull card of document blocks.", width: 400, height: 712 },
       { src: "/motion-graphics/gbro-collage-info/4.webp", alt: "Halftone paper info-graphic: a card asking how do you unlock it.", width: 400, height: 712 },
     ],
-    summary: "Turns segments of a voiceover script into 1080×1920 halftone paper info-graphics, rendered locally. No image model.",
+    summary: "gbro-collage-info is a free Claude Code skill that turns a voiceover script into 1080×1920 halftone paper info-graphics, rendered locally with no image model.",
     metaTitle: "gbro-collage-info: free paper info-graphic skill",
     metaDescription:
       "gbro-collage-info is a free MIT Claude Code skill that animates a voiceover script as halftone paper cards in HyperFrames, with no image model.",
@@ -238,7 +257,7 @@ export const SKILLS: Skill[] = [
       { src: "/motion-graphics/paper-reel/3.webp", alt: "paper-reel example: a paper mascot beside a no-faces warning.", width: 720, height: 1280 },
       { src: "/motion-graphics/paper-reel/4.webp", alt: "paper-reel example: a free and open-source card with a star count.", width: 720, height: 1280 },
     ],
-    summary: "Faceless 9:16 cut-paper explainers on a Mac: flat paper shapes, a box mascot, word-by-word captions, local voice.",
+    summary: "paper-reel is a free Claude Code skill for faceless 9:16 cut-paper explainers on a Mac, with flat paper shapes, a box mascot, word-by-word captions and a local voice.",
     metaTitle: "paper-reel: free Mac cut-paper explainer skill",
     metaDescription:
       "paper-reel is a free MIT Claude Code skill for faceless 9:16 cut-paper reels on macOS, with local Kokoro voice and whisper.cpp. No API keys.",
@@ -286,7 +305,7 @@ export const SKILLS: Skill[] = [
       { src: "/motion-graphics/paper/5.webp", alt: "Paper reel frame: a counter and a thirty-dollar price.", width: 360, height: 640 },
       { src: "/motion-graphics/paper/6.webp", alt: "Paper reel frame: the end card asking viewers to comment paper.", width: 360, height: 640 },
     ],
-    summary: "A free SKILL.md for 25-40 second papercraft diorama reels: a paper TV studio, orange characters, taped banners, ElevenLabs narration.",
+    summary: "Paper is a free SKILL.md for 25-40 second papercraft diorama reels, with a paper TV studio, orange characters, taped banners and ElevenLabs narration.",
     metaTitle: "Paper: free papercraft diorama skill (Library.md)",
     metaDescription:
       "Paper is a free Claude skill from Library.md for papercraft diorama reels in three.js. The skill file is free. Narration is ElevenLabs.",
@@ -342,7 +361,7 @@ export const SKILLS: Skill[] = [
       { src: "/motion-graphics/lowpoly-reel/3.webp", alt: "Low-poly reel: a close-up of the low-poly face.", width: 300, height: 534 },
       { src: "/motion-graphics/lowpoly-reel/4.webp", alt: "Low-poly reel: a close-up of the orange block companion.", width: 300, height: 534 },
     ],
-    summary: "A script becomes a 1080×1920 low-poly reel: Three.js, ElevenLabs voices, synthesized sound, subtitles, end card.",
+    summary: "lowpoly-reel is a free Claude Code skill that turns a script into a 1080×1920 low-poly reel with Three.js, ElevenLabs voices, synthesized sound, subtitles and an end card.",
     metaTitle: "lowpoly-reel: free low-poly 3D reel skill",
     metaDescription:
       "lowpoly-reel is an MIT Claude Code skill that turns a dialogue script into a low-poly 3D reel with ElevenLabs voices, subtitles and a branded end card.",
@@ -395,7 +414,7 @@ export const SKILLS: Skill[] = [
       { src: "/motion-graphics/promptfilm/3.webp", alt: "Product film frame: an exploded view of the speaker's parts.", width: 304, height: 533 },
       { src: "/motion-graphics/promptfilm/4.webp", alt: "Promptfilm test frame: a labeled cross-section of a memory cell.", width: 540, height: 540 },
     ],
-    summary: "One sentence in, a researched 3D motion graphic out: a looping HTML film in Three.js, and a frame-exact MP4.",
+    summary: "Promptfilm is a free Claude Code skill that turns one sentence into a researched 3D motion graphic: a looping HTML film in Three.js and a frame-exact MP4.",
     metaTitle: "Promptfilm: free 3D motion-graphic skill",
     metaDescription:
       "Promptfilm is an MIT Claude Code skill that turns one sentence into a researched Three.js film and a 1080p MP4. Node 20+. Tested on macOS.",
@@ -454,7 +473,7 @@ export const SKILLS: Skill[] = [
       { src: "/motion-graphics/voxel/5.webp", alt: "Voxel reel frame: a skill.md page with a thirty-dollar tag.", width: 360, height: 640 },
       { src: "/motion-graphics/voxel/6.webp", alt: "Voxel reel frame: an end card that says comment voxel.", width: 360, height: 640 },
     ],
-    summary: "A free SKILL.md for 40-55 second voxel reels: a blocky night desk, two characters, torn-paper captions, ElevenLabs.",
+    summary: "Voxel is a free SKILL.md for 40-55 second voxel reels, with a blocky night desk, two characters, torn-paper captions and ElevenLabs narration.",
     metaTitle: "Voxel: free voxel 3D explainer skill",
     metaDescription:
       "Voxel is a free Claude skill for narrated voxel 3D reels in three.js. The skill file is free. The voice is ElevenLabs, with a preview before you spend credits.",
@@ -510,7 +529,7 @@ export const SKILLS: Skill[] = [
       { src: "/motion-graphics/herk-edit-kit/3.webp", alt: "AIS live ad still: Nate Herk at a microphone in front of an AIS sign.", width: 360, height: 640 },
       { src: "/motion-graphics/herk-edit-kit/4.webp", alt: "YouTube showreel still: a red lacquer play button with a look-dev readout.", width: 900, height: 506 },
     ],
-    summary: "Nate Herk's kit for editing your own footage in Codex or Claude Code: cuts, captions, 15 skills, 406 motion-graphics cards, HyperFrames.",
+    summary: "Herk Edit Kit is Nate Herk's free kit for editing footage you bring in Codex or Claude Code, with cuts, captions, 15 skills, 406 motion-graphics cards and HyperFrames.",
     metaTitle: "Herk Edit Kit: free talking-head edit skills",
     metaDescription:
       "Herk Edit Kit is a free-to-clone video kit for Codex and Claude Code: silence cuts, storytelling, 406 motion cards and HyperFrames. Licence is not in the README.",
@@ -555,7 +574,7 @@ export const SKILLS: Skill[] = [
     url: "https://github.com/tenfoldmarc/video-edit-skill",
     linkLabel: "GitHub",
     shots: [],
-    summary: "Drop talking-head clips in a folder, run /video-edit, and Claude cuts a finished Instagram reel with captions and one of three looks.",
+    summary: "video-edit-skill is a free Claude Code skill that turns raw talking-head clips into a finished Instagram reel with captions and one of three looks.",
     metaTitle: "Video Edit: free talking-head reel skill",
     metaDescription:
       "Video Edit is a Claude Code skill that turns raw talking-head clips into an Instagram reel with captions and three looks. Mac, Windows or Linux. No licence in the README.",
@@ -609,7 +628,7 @@ export const SKILLS: Skill[] = [
       { src: "/motion-graphics/motion-graphics-skills/2.webp", alt: "Launch film frame: the line you need Claude Code on a dark field.", width: 800, height: 450 },
       { src: "/motion-graphics/motion-graphics-skills/3.webp", alt: "Milestone loop frame: points forming 250,000 LinkedIn followers.", width: 540, height: 676 },
     ],
-    summary: "Charlie Hills' pack for launch-grade motion graphics in Claude Code. Every frame is code. No After Effects and no video generator.",
+    summary: "Charlie Hills' Motion Graphics Skill Pack is a free Claude Code pack for launch-grade motion graphics, and the README says every frame is code, with no After Effects and no video generator.",
     metaTitle: "Motion Graphics Skill Pack: free Claude Code skills",
     metaDescription:
       "Charlie Hills' MIT skill pack for launch videos, explainers and charts in Claude Code. Install with npx skills add. No API key, the README says.",
@@ -680,7 +699,7 @@ export const SKILLS: Skill[] = [
       { src: "/motion-graphics/motion-skills/3.webp", alt: "Showcase frame: a title card that reads motion skills.", width: 720, height: 406 },
       { src: "/motion-graphics/motion-skills/4.webp", alt: "Showcase frame: the iart.ai logo lockup.", width: 720, height: 406 },
     ],
-    summary: "An index of open-source motion skills for coding agents: kinetic type, charts, explainers, WebGL, Manim, TikTok and Reels. Install one pack at a time.",
+    summary: "Motion Skills is a free index of open-source agent skills for kinetic type, charts, explainers, WebGL, Manim, TikTok and Reels, installed one pack at a time.",
     metaTitle: "Motion Skills: free motion-graphics packs for agents",
     metaDescription:
       "iart-ai/motion-skills is an MIT index of agent skills for motion graphics and video. The README says 56 skills in 19 packs. Install a pack with npx skills add.",
@@ -749,7 +768,7 @@ export const SKILLS: Skill[] = [
       { src: "/motion-graphics/reelkit/3.webp", alt: "Narrated explainer frame: a task list with tasks, deadlines and energy.", width: 720, height: 1280 },
       { src: "/motion-graphics/reelkit/4.webp", alt: "Narrated explainer frame: a week calendar with the line tempo reshuffles everything.", width: 720, height: 1280 },
     ],
-    summary: "A CLI and a skill for Claude Code, Codex, Cursor and Gemini CLI. The agent plans the video and builds it in HyperFrames. Reelkit handles assets, voiceover and render.",
+    summary: "Reelkit is a free CLI and skill for Claude Code, Codex, Cursor and Gemini CLI that plans a short video in HyperFrames and handles assets, voiceover and render.",
     metaTitle: "Reelkit: free agent CLI for short-form video",
     metaDescription:
       "Reelkit is a CLI and skill that plans short-form video in HyperFrames. The site says it is free for now, with a monthly quota. Needs Node 22 and ffmpeg.",
@@ -791,7 +810,7 @@ export const SKILLS: Skill[] = [
     url: "https://github.com/remotion-dev/skills",
     linkLabel: "GitHub",
     shots: [],
-    summary: "Remotion's own agent skills: best practices for Claude Code, Codex, Cursor and other agents that work in Remotion projects.",
+    summary: "Remotion Agent Skills are Remotion's own free agent skills for best practices in Claude Code, Codex, Cursor and other agents that work in Remotion projects.",
     metaTitle: "Remotion Agent Skills: official free install",
     metaDescription:
       "Remotion's official agent skills teach Claude Code, Codex and Cursor how to create, mark up and render Remotion videos. Install with npx skills add remotion-dev/skills.",
@@ -835,7 +854,7 @@ export const SKILLS: Skill[] = [
       { src: "/motion-graphics/claude-remotion-skill/3.webp", alt: "Demo frame: a small sunburst mark on a light background.", width: 800, height: 450 },
       { src: "/motion-graphics/claude-remotion-skill/4.webp", alt: "Demo frame: a logo sting that reads Claude Design.", width: 800, height: 450 },
     ],
-    summary: "An MIT skill that tells Claude to design Remotion motion (springs, stagger, grain, Ken Burns, captions) and to inspect frames before it delivers.",
+    summary: "Claude Remotion Skill is a free MIT skill that tells Claude to design Remotion motion, including springs, stagger, grain, Ken Burns and captions, and to inspect frames before delivery.",
     metaTitle: "Claude Remotion Skill: free motion-design rules",
     metaDescription:
       "Claude Remotion Skill is a free MIT agent skill for Remotion motion graphics: springs, captions, grain and a render-and-inspect loop. Clone it into ~/.claude/skills.",
@@ -902,88 +921,88 @@ export const PICKS: { goal: string; slug: string; also?: string; why: string }[]
   {
     goal: "Cut-paper reel on a Mac, no API keys",
     slug: "paper-reel",
-    why: "Local Kokoro voice, whisper.cpp word timing, and a single export command. The README says it runs on your Mac.",
+    why: "paper-reel uses local Kokoro voice, whisper.cpp word timing, and a single export command. The README says paper-reel runs on a Mac.",
   },
   {
     goal: "A full paper-diorama kit",
     slug: "papercut-explainer",
-    why: "24 backdrops, camera moves and cuts in Remotion. Use the placeholder voice, or the Full install for local Qwen3-TTS.",
+    why: "papercut-explainer ships 24 backdrops, camera moves and cuts in Remotion. The placeholder voice works, or the Full install adds local Qwen3-TTS.",
   },
   {
     goal: "Match a poster or collage reference",
     slug: "pasteup",
-    why: "Halftone cut-outs from Gemini, then deterministic stop-motion. The README says the free Gemini tier works.",
+    why: "Pasteup makes halftone cut-outs with Gemini, then deterministic stop-motion. The README says the free Gemini tier works.",
   },
   {
     goal: "Animate a script you already voiced",
     slug: "gbro-collage-info",
-    why: "Info-graphic cards from the script, rendered locally, with no image model. Trigger phrases in the skill are in Chinese.",
+    why: "gbro-collage-info turns a voiceover script into info-graphic cards, rendered locally, with no image model. Trigger phrases in the skill are in Chinese.",
   },
   {
     goal: "Papercraft or voxel characters, with ElevenLabs",
     slug: "paper",
     also: "voxel",
-    why: "Both skill files are free. Paper is a TV-studio diorama (25-40s). Voxel is a night desk (40-55s) and can preview before you spend voice credits.",
+    why: "Appmorphy Paper and Voxel are free skill files that narrate with ElevenLabs. Paper is a 25-40 second TV-studio diorama. Voxel is a 40-55 second night desk and can preview before voice credits are spent.",
   },
   {
     goal: "A low-poly character reel",
     slug: "lowpoly-reel",
-    why: "Hand-coded Three.js, ElevenLabs dialogue, subtitles and an end card at 1080×1920.",
+    why: "lowpoly-reel builds a hand-coded Three.js scene, ElevenLabs dialogue, subtitles and an end card at 1080×1920.",
   },
   {
     goal: "One sentence into a researched 3D film",
     slug: "promptfilm",
-    why: "A looping HTML film and a frame-exact MP4. The README says a film takes hours of agent time.",
+    why: "Promptfilm turns one sentence into a looping HTML film and a frame-exact MP4. The README says a film takes hours of agent time.",
   },
   {
     goal: "Edit talking-head clips into an Instagram reel",
     slug: "video-edit",
-    why: "Best-take selection, dead air, three designed looks. Your voice, not a TTS vendor.",
+    why: "video-edit-skill picks the best take, cuts dead air, and applies one of three looks. The voice is the recording, not a text-to-speech vendor.",
   },
   {
     goal: "Cut footage and add motion-graphics cards",
     slug: "herk-edit-kit",
-    why: "15 edit skills and 406 draft cards on HyperFrames. The local starter needs no paid API. Scribe and Kie.ai are optional.",
+    why: "Herk Edit Kit includes 15 edit skills and 406 draft cards on HyperFrames. The local starter needs no paid API. ElevenLabs Scribe and Kie.ai are optional.",
   },
   {
     goal: "Launch films, charts and reels as code",
     slug: "motion-graphics-skills",
-    why: "Start with brand-intake, then a launch, explainer or chart skill. The README says no API key.",
+    why: "The Motion Graphics Skill Pack starts with brand-intake, then a launch, explainer or chart skill. The README says no API key is required.",
   },
   {
     goal: "Pick one motion workflow from a catalog",
     slug: "motion-skills",
-    why: "19 packs. Install the one that matches the job, such as explainers, kinetic type or WebGL.",
+    why: "Motion Skills lists 19 packs. Install the pack that matches the job, such as explainers, kinetic type or WebGL.",
   },
   {
     goal: "Let the agent handle voice, music and assets",
     slug: "reelkit",
-    why: "Plan, voiceover, library assets and a HyperFrames render. Free for now, with a monthly quota.",
+    why: "Reelkit plans the video, records a voiceover, pulls library assets and renders with HyperFrames. Reelkit is free for now, with a monthly quota.",
   },
   {
     goal: "Official Remotion rules",
     slug: "remotion-skills",
-    why: "Remotion's own skills for create, markup, captions, maps and render.",
+    why: "Remotion Agent Skills are Remotion's own skills for create, markup, captions, maps and render.",
   },
   {
     goal: "Stricter motion craft on top of Remotion",
     slug: "claude-remotion-skill",
-    why: "Springs, stagger, grain, Ken Burns and a rule that Claude inspects frames before delivery.",
+    why: "Claude Remotion Skill encodes springs, stagger, grain, Ken Burns, and a rule that Claude inspects frames before delivery.",
   },
 ];
 
 export const FAQS: { q: string; a: string }[] = [
   {
     q: "Are these Claude Code motion skills free?",
-    a: "The skills on this page are free to download. A finished video can still spend money. Appmorphy Paper and Voxel use ElevenLabs: the pages say the free plan is enough to try, and that videos promoting anything need a paid plan for the commercial licence, from $6 a month. lowpoly-reel spends ElevenLabs credits on voices. Pasteup needs a Gemini API key and says the free tier works. Reelkit says it is free for now, with a monthly quota for voiceover, images, clips, background removal and transcription. papercut-explainer estimates about $14-19 in Claude API cost per 25-30 second reel at list prices if you pay the API, and says local voice is not metered. paper-reel, gbro-collage-info, Promptfilm, the Charlie Hills pack, iart-ai's packs and Claude Remotion Skill do not ask for a paid voice or image key in their READMEs. Herk Edit Kit's local starter needs no paid API. ElevenLabs Scribe and Kie.ai are optional. The official Remotion skills README does not list a price.",
+    a: "Every Claude Code motion skill in this roundup is free to download. A finished video can still spend money. Appmorphy Paper and Voxel use ElevenLabs: the pages say the free plan is enough to try, and that videos promoting anything need a paid plan for the commercial licence, from $6 a month. lowpoly-reel spends ElevenLabs credits on voices. Pasteup needs a Gemini API key and says the free tier works. Reelkit says it is free for now, with a monthly quota for voiceover, images, clips, background removal and transcription. papercut-explainer estimates about $14-19 in Claude API cost per 25-30 second reel at list prices if you pay the API, and says local voice is not metered. paper-reel, gbro-collage-info, Promptfilm, the Charlie Hills pack, iart-ai's packs and Claude Remotion Skill do not ask for a paid voice or image key in their READMEs. Herk Edit Kit's local starter needs no paid API. ElevenLabs Scribe and Kie.ai are optional. The official Remotion skills README does not list a price.",
   },
   {
     q: "What is the best free Claude skill for a paper-cut explainer?",
-    a: "Pick by constraint. paper-reel is the Mac path with local Kokoro voice, whisper.cpp timing and no API keys. papercut-explainer is the larger Remotion diorama kit, with local Qwen3-TTS, your own recording, or a silent placeholder. Pasteup is halftone collage stop-motion and needs a Gemini key. gbro-collage-info turns parts of a voiceover script into info-graphics and does not call an image model. Appmorphy Paper is a papercraft TV-studio reel and uses ElevenLabs.",
+    a: "No single free Claude Code skill is the best paper-cut explainer for every setup. paper-reel is the Mac path with local Kokoro voice, whisper.cpp timing and no API keys. papercut-explainer is the larger Remotion diorama kit, with local Qwen3-TTS, your own recording, or a silent placeholder. Pasteup is halftone collage stop-motion and needs a Gemini key. gbro-collage-info turns parts of a voiceover script into info-graphics and does not call an image model. Appmorphy Paper is a papercraft TV-studio reel and uses ElevenLabs.",
   },
   {
     q: "Do I need ElevenLabs for Claude reel skills?",
-    a: "Only where the source says so. Appmorphy Paper, Appmorphy Voxel and lowpoly-reel use ElevenLabs. paper-reel uses local Kokoro. papercut-explainer uses local Qwen3-TTS, a recording you supply, or a placeholder (silent, or macOS say). Reelkit records narration with its voiceover command and does not name the vendor. Herk Edit Kit can transcribe with ElevenLabs Scribe or with Whisper. The other READMEs on this page do not name ElevenLabs.",
+    a: "A Claude reel skill needs ElevenLabs only when that skill's README or format page names ElevenLabs. Appmorphy Paper, Appmorphy Voxel and lowpoly-reel use ElevenLabs. paper-reel uses local Kokoro. papercut-explainer uses local Qwen3-TTS, a recording you supply, or a placeholder (silent, or macOS say). Reelkit records narration with its voiceover command and does not name the vendor. Herk Edit Kit can transcribe with ElevenLabs Scribe or with Whisper. The other READMEs on this page do not name ElevenLabs.",
   },
   {
     q: "Which Claude video skills work on Windows?",
@@ -991,10 +1010,10 @@ export const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Can Claude Code make motion graphics without After Effects?",
-    a: "Yes, according to these READMEs. The Charlie Hills pack says every frame is code, with no After Effects and no video generator. Claude Remotion Skill says you do not need After Effects or Premiere, and that it renders with Remotion. iart-ai's README says video skills render via Remotion or Manim, and web skills render HTML. papercut-explainer, paper-reel, lowpoly-reel, Promptfilm, Appmorphy Paper, Appmorphy Voxel, gbro-collage-info, Herk Edit Kit and Reelkit describe Remotion, canvas, Three.js or HyperFrames, not a timeline editor.",
+    a: "Claude Code can make motion graphics without After Effects, according to these READMEs. The Charlie Hills pack says every frame is code, with no After Effects and no video generator. Claude Remotion Skill says you do not need After Effects or Premiere, and that it renders with Remotion. iart-ai's README says video skills render via Remotion or Manim, and web skills render HTML. papercut-explainer, paper-reel, lowpoly-reel, Promptfilm, Appmorphy Paper, Appmorphy Voxel, gbro-collage-info, Herk Edit Kit and Reelkit describe Remotion, canvas, Three.js or HyperFrames, not a timeline editor.",
   },
   {
     q: "How do I install a Claude Code video skill?",
-    a: "Use the command on that skill's card. These READMEs use three patterns: npx skills add owner/repo, git clone into ~/.claude/skills/name, or a Claude Code plugin command such as /plugin marketplace add. Appmorphy Paper and Voxel have no shell command. Their pages say to save SKILL.md as ~/.claude/skills/paper/SKILL.md or ~/.claude/skills/voxel/SKILL.md, with reference.jpg beside it. Reelkit's page says npm install -g reelkit-cli, then reelkit init my-video.",
+    a: "Each Claude Code video skill in this roundup installs with the command printed on that skill's card. These READMEs use three patterns: npx skills add owner/repo, git clone into ~/.claude/skills/name, or a Claude Code plugin command such as /plugin marketplace add. Appmorphy Paper and Voxel have no shell command. Their pages say to save SKILL.md as ~/.claude/skills/paper/SKILL.md or ~/.claude/skills/voxel/SKILL.md, with reference.jpg beside it. Reelkit's page says npm install -g reelkit-cli, then reelkit init my-video.",
   },
 ];
