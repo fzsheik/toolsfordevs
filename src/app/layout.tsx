@@ -59,6 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/codex-banked-reset">Codex banked reset</Link>
             <Link href="/claude-vs-codex-resets">Claude vs Codex</Link>
             <Link href="/changes">Limit changes</Link>
+            <Link href="/claude-skills/motion-graphics">Motion graphics skills</Link>
           </div>
           <p>Independent. Not affiliated with Anthropic or OpenAI. Claude is a trademark of Anthropic; Codex and OpenAI are trademarks of OpenAI. Every entry links its sources; &quot;Source-linked&quot; means the primary link is cited but not yet checked by us.</p>
         </footer>

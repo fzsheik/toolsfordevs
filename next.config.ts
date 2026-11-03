@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: { formats: ["image/avif", "image/webp"] },
   async redirects() {
     return [
       // Old Aug 25 entry was a reply about the Aug 24 reset, not a separate reset.

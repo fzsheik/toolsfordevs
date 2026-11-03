@@ -107,7 +107,7 @@ export default async function Home() {
           <p>{f.a}</p>
         </details>
       ))}
-      <p className="history-link">Guides: <Link href="/claude-usage-limits">Claude usage limits</Link> · <Link href="/claude-limit-reset">Claude limit reset</Link> · <Link href="/codex-usage-limits">Codex usage limits</Link> · <Link href="/codex-banked-reset">Codex banked reset</Link></p>
+      <p className="history-link">Guides: <Link href="/claude-usage-limits">Claude usage limits</Link> · <Link href="/claude-limit-reset">Claude limit reset</Link> · <Link href="/codex-usage-limits">Codex usage limits</Link> · <Link href="/codex-banked-reset">Codex banked reset</Link> · <Link href="/claude-skills/motion-graphics">Motion graphics skills</Link></p>
       <p className="history-link"><Link href="/reset-history">Explore the full reset history <span aria-hidden="true">→</span></Link></p>
     </>
   );
