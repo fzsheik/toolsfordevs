@@ -32,14 +32,11 @@ export const CATEGORIES: { id: CategoryId; title: string; lede: string }[] = [
   },
 ];
 
-export type SkillImage = {
+export type Shot = {
   src: string;
   alt: string;
   width: number;
   height: number;
-  credit: string;
-  /** object-position for the card crop. Tall previews need a lower focal point. */
-  focus?: string;
 };
 
 export type SkillInstall = { label: string; command: string; note?: string };
@@ -58,7 +55,9 @@ export type Skill = {
   license: string;
   url: string;
   linkLabel: string;
-  image?: SkillImage;
+  /** Real frames published by the project. Empty when none exist. */
+  shots: Shot[];
+  shotsCredit?: string;
   summary: string;
   metaTitle: string;
   metaDescription: string;
@@ -69,8 +68,6 @@ export type Skill = {
   files?: { label: string; url: string }[];
   catalog?: { title: string; items: string[] };
 };
-
-const G = (file: string) => `/motion-graphics/${file}`;
 
 export const SKILLS: Skill[] = [
   {
@@ -87,14 +84,13 @@ export const SKILLS: Skill[] = [
     license: "MIT, except where its THIRD_PARTY.md says otherwise",
     url: "https://github.com/0xS4N4TG/papercut-explainer",
     linkLabel: "GitHub",
-    image: {
-      src: G("papercut.jpg"),
-      alt: "Still from the papercut-explainer hello-reel GIF: a paper character under a taped banner.",
-      width: 960,
-      height: 1707,
-      focus: "center 78%",
-      credit: "Still from the hello-reel GIF in the README.",
-    },
+    shotsCredit: "Frames from the hello-reel GIF and the hook still in the README.",
+    shots: [
+      { src: "/motion-graphics/papercut-explainer/1.webp", alt: "Example reel frame: a paper character under a banner that reads all cut paper.", width: 506, height: 900 },
+      { src: "/motion-graphics/papercut-explainer/2.webp", alt: "Example reel frame: a taped banner reading every prop is paper, with torn word scraps.", width: 252, height: 448 },
+      { src: "/motion-graphics/papercut-explainer/3.webp", alt: "Example reel frame: a paper phone and envelope on a desk diorama.", width: 252, height: 448 },
+      { src: "/motion-graphics/papercut-explainer/4.webp", alt: "Example reel frame: paper props in a darker street set.", width: 252, height: 448 },
+    ],
     summary: "Nine agent skills plus a Remotion library for short vertical cut-paper explainer reels.",
     metaTitle: "Papercut Explainer: free cut-paper reel skill",
     metaDescription:
@@ -145,13 +141,13 @@ export const SKILLS: Skill[] = [
     license: "MIT",
     url: "https://github.com/tmoody1973/pasteup",
     linkLabel: "GitHub",
-    image: {
-      src: G("pasteup.jpg"),
-      alt: "Still from the Pasteup header GIF: a halftone saxophonist beside a PASTEUP label.",
-      width: 960,
-      height: 384,
-      credit: "Still from the header GIF in the README.",
-    },
+    shotsCredit: "Frames from the jazz-history demo GIF in the README.",
+    shots: [
+      { src: "/motion-graphics/pasteup/1.webp", alt: "Jazz history collage: a blue halftone drum on a yellow paper field.", width: 360, height: 360 },
+      { src: "/motion-graphics/pasteup/2.webp", alt: "Jazz history collage: a poster that reads 1917, jazz on record.", width: 360, height: 360 },
+      { src: "/motion-graphics/pasteup/3.webp", alt: "Jazz history collage: a blue halftone saxophonist.", width: 360, height: 360 },
+      { src: "/motion-graphics/pasteup/4.webp", alt: "Jazz history collage: a red burst on a speckled paper field.", width: 360, height: 360 },
+    ],
     summary: "Halftone paper-collage stop-motion for Claude Code. Cut-outs from the Gemini image API, motion from a local compositor.",
     metaTitle: "Pasteup: free halftone collage skill for Claude Code",
     metaDescription:
@@ -189,13 +185,13 @@ export const SKILLS: Skill[] = [
     license: "MIT",
     url: "https://github.com/pyang5166/gbro-collage-info",
     linkLabel: "GitHub",
-    image: {
-      src: G("gbro.jpg"),
-      alt: "End frames from the gbro-collage-info README: vertical halftone paper info-graphics.",
-      width: 960,
-      height: 565,
-      credit: "End-frame sheet from the README.",
-    },
+    shotsCredit: "Frames from the four demo GIFs in the README.",
+    shots: [
+      { src: "/motion-graphics/gbro-collage-info/1.webp", alt: "Halftone paper info-graphic: a drawer of cards with the numbers 7 and 10.", width: 400, height: 712 },
+      { src: "/motion-graphics/gbro-collage-info/2.webp", alt: "Halftone paper info-graphic: a numbered list on a cut-paper card.", width: 400, height: 712 },
+      { src: "/motion-graphics/gbro-collage-info/3.webp", alt: "Halftone paper info-graphic: a focus-pull card of document blocks.", width: 400, height: 712 },
+      { src: "/motion-graphics/gbro-collage-info/4.webp", alt: "Halftone paper info-graphic: a card asking how do you unlock it.", width: 400, height: 712 },
+    ],
     summary: "Turns segments of a voiceover script into 1080×1920 halftone paper info-graphics, rendered locally. No image model.",
     metaTitle: "gbro-collage-info: free paper info-graphic skill",
     metaDescription:
@@ -235,13 +231,13 @@ export const SKILLS: Skill[] = [
     license: "MIT",
     url: "https://github.com/haiderfarooq3/paper-reel",
     linkLabel: "GitHub",
-    image: {
-      src: G("paper-reel.jpg"),
-      alt: "Seven scenes from the paper-reel example reel in the README.",
-      width: 960,
-      height: 239,
-      credit: "Scene strip from the README.",
-    },
+    shotsCredit: "Frames from the example MP4 linked in the README.",
+    shots: [
+      { src: "/motion-graphics/paper-reel/1.webp", alt: "paper-reel example: a paper mascot at a chalkboard asking why the sky is blue.", width: 720, height: 1280 },
+      { src: "/motion-graphics/paper-reel/2.webp", alt: "paper-reel example: a waveform scene titled the pen waits for the voice.", width: 720, height: 1280 },
+      { src: "/motion-graphics/paper-reel/3.webp", alt: "paper-reel example: a paper mascot beside a no-faces warning.", width: 720, height: 1280 },
+      { src: "/motion-graphics/paper-reel/4.webp", alt: "paper-reel example: a free and open-source card with a star count.", width: 720, height: 1280 },
+    ],
     summary: "Faceless 9:16 cut-paper explainers on a Mac: flat paper shapes, a box mascot, word-by-word captions, local voice.",
     metaTitle: "paper-reel: free Mac cut-paper explainer skill",
     metaDescription:
@@ -281,13 +277,15 @@ export const SKILLS: Skill[] = [
     license: "Not stated on the page",
     url: "https://www.appmorphy.com/formats/paper",
     linkLabel: "Page",
-    image: {
-      src: G("paper.jpg"),
-      alt: "Twelve frames from a finished Paper reel on appmorphy.com.",
-      width: 960,
-      height: 569,
-      credit: "Reference frames from the Paper format page.",
-    },
+    shotsCredit: "Frames cropped from the reference sheet on the Paper format page.",
+    shots: [
+      { src: "/motion-graphics/paper/1.webp", alt: "Paper reel frame: orange paper characters and a shark in a lit studio.", width: 360, height: 640 },
+      { src: "/motion-graphics/paper/2.webp", alt: "Paper reel frame: a sign reading skill.md for zero dollars.", width: 360, height: 640 },
+      { src: "/motion-graphics/paper/3.webp", alt: "Paper reel frame: a comment bubble that says paper.", width: 360, height: 640 },
+      { src: "/motion-graphics/paper/4.webp", alt: "Paper reel frame: a paper library set with a free sign.", width: 360, height: 640 },
+      { src: "/motion-graphics/paper/5.webp", alt: "Paper reel frame: a counter and a thirty-dollar price.", width: 360, height: 640 },
+      { src: "/motion-graphics/paper/6.webp", alt: "Paper reel frame: the end card asking viewers to comment paper.", width: 360, height: 640 },
+    ],
     summary: "A free SKILL.md for 25-40 second papercraft diorama reels: a paper TV studio, orange characters, taped banners, ElevenLabs narration.",
     metaTitle: "Paper: free papercraft diorama skill (Library.md)",
     metaDescription:
@@ -337,14 +335,13 @@ export const SKILLS: Skill[] = [
     license: "MIT",
     url: "https://github.com/stochosfrance/lowpoly-reel",
     linkLabel: "GitHub",
-    image: {
-      src: G("lowpoly.jpg"),
-      alt: "Still from the lowpoly-reel demo GIF: a low-poly figure at a desk at night, with an orange companion.",
-      width: 960,
-      height: 1709,
-      focus: "center 62%",
-      credit: "Still from the demo GIF in the README.",
-    },
+    shotsCredit: "Frames from the demo GIF in the README.",
+    shots: [
+      { src: "/motion-graphics/lowpoly-reel/1.webp", alt: "Low-poly reel: a person at a laptop at night, with a small orange companion.", width: 300, height: 534 },
+      { src: "/motion-graphics/lowpoly-reel/2.webp", alt: "Low-poly reel: a hologram interface above the desk.", width: 300, height: 534 },
+      { src: "/motion-graphics/lowpoly-reel/3.webp", alt: "Low-poly reel: a close-up of the low-poly face.", width: 300, height: 534 },
+      { src: "/motion-graphics/lowpoly-reel/4.webp", alt: "Low-poly reel: a close-up of the orange block companion.", width: 300, height: 534 },
+    ],
     summary: "A script becomes a 1080×1920 low-poly reel: Three.js, ElevenLabs voices, synthesized sound, subtitles, end card.",
     metaTitle: "lowpoly-reel: free low-poly 3D reel skill",
     metaDescription:
@@ -391,13 +388,13 @@ export const SKILLS: Skill[] = [
     license: "MIT",
     url: "https://github.com/Seokwoooo/promptfilm",
     linkLabel: "GitHub",
-    image: {
-      src: G("promptfilm.jpg"),
-      alt: "Three frames of a fictional speaker film from the Promptfilm README.",
-      width: 912,
-      height: 533,
-      credit: "Product-film still from the README.",
-    },
+    shotsCredit: "Three panels from the product-film still in the README, plus a test frame shipped in the repo.",
+    shots: [
+      { src: "/motion-graphics/promptfilm/1.webp", alt: "Product film frame: a dark cylindrical speaker on a gray set.", width: 304, height: 533 },
+      { src: "/motion-graphics/promptfilm/2.webp", alt: "Product film frame: the speaker's glowing top, labeled touch the light.", width: 304, height: 533 },
+      { src: "/motion-graphics/promptfilm/3.webp", alt: "Product film frame: an exploded view of the speaker's parts.", width: 304, height: 533 },
+      { src: "/motion-graphics/promptfilm/4.webp", alt: "Promptfilm test frame: a labeled cross-section of a memory cell.", width: 540, height: 540 },
+    ],
     summary: "One sentence in, a researched 3D motion graphic out: a looping HTML film in Three.js, and a frame-exact MP4.",
     metaTitle: "Promptfilm: free 3D motion-graphic skill",
     metaDescription:
@@ -448,13 +445,15 @@ export const SKILLS: Skill[] = [
     license: "Not stated on the page",
     url: "https://www.appmorphy.com/formats/voxel",
     linkLabel: "Page",
-    image: {
-      src: G("voxel.jpg"),
-      alt: "Twelve frames from a finished Voxel reel on appmorphy.com.",
-      width: 960,
-      height: 569,
-      credit: "Reference frames from the Voxel format page.",
-    },
+    shotsCredit: "Frames cropped from the reference sheet on the Voxel format page.",
+    shots: [
+      { src: "/motion-graphics/voxel/1.webp", alt: "Voxel reel frame: an orange block character with a dollar sign.", width: 360, height: 640 },
+      { src: "/motion-graphics/voxel/2.webp", alt: "Voxel reel frame: a skill.md document stamped free.", width: 360, height: 640 },
+      { src: "/motion-graphics/voxel/3.webp", alt: "Voxel reel frame: a wooden crate with a thirty-dollar tag.", width: 360, height: 640 },
+      { src: "/motion-graphics/voxel/4.webp", alt: "Voxel reel frame: a stack of markdown file cards.", width: 360, height: 640 },
+      { src: "/motion-graphics/voxel/5.webp", alt: "Voxel reel frame: a skill.md page with a thirty-dollar tag.", width: 360, height: 640 },
+      { src: "/motion-graphics/voxel/6.webp", alt: "Voxel reel frame: an end card that says comment voxel.", width: 360, height: 640 },
+    ],
     summary: "A free SKILL.md for 40-55 second voxel reels: a blocky night desk, two characters, torn-paper captions, ElevenLabs.",
     metaTitle: "Voxel: free voxel 3D explainer skill",
     metaDescription:
@@ -504,6 +503,13 @@ export const SKILLS: Skill[] = [
     license: "Not stated in the README",
     url: "https://github.com/nateherkai/herk-edit-kit",
     linkLabel: "GitHub",
+    shotsCredit: "Stills published in docs/images: two curiosity reels, the AIS live ad, and the YouTube showreel.",
+    shots: [
+      { src: "/motion-graphics/herk-edit-kit/1.webp", alt: "Edited reel still: a motion graphic above Nate Herk, with the line work with AI.", width: 360, height: 640 },
+      { src: "/motion-graphics/herk-edit-kit/2.webp", alt: "Edited reel still: a second curiosity reel, with Nate Herk and an on-screen card.", width: 360, height: 640 },
+      { src: "/motion-graphics/herk-edit-kit/3.webp", alt: "AIS live ad still: Nate Herk at a microphone in front of an AIS sign.", width: 360, height: 640 },
+      { src: "/motion-graphics/herk-edit-kit/4.webp", alt: "YouTube showreel still: a red lacquer play button with a look-dev readout.", width: 900, height: 506 },
+    ],
     summary: "Nate Herk's kit for editing your own footage in Codex or Claude Code: cuts, captions, 15 skills, 406 motion-graphics cards, HyperFrames.",
     metaTitle: "Herk Edit Kit: free talking-head edit skills",
     metaDescription:
@@ -548,6 +554,7 @@ export const SKILLS: Skill[] = [
     license: "Not stated in the README",
     url: "https://github.com/tenfoldmarc/video-edit-skill",
     linkLabel: "GitHub",
+    shots: [],
     summary: "Drop talking-head clips in a folder, run /video-edit, and Claude cuts a finished Instagram reel with captions and one of three looks.",
     metaTitle: "Video Edit: free talking-head reel skill",
     metaDescription:
@@ -596,13 +603,12 @@ export const SKILLS: Skill[] = [
     license: "MIT",
     url: "https://github.com/charlie947/motion-graphics-skills",
     linkLabel: "GitHub",
-    image: {
-      src: G("charlie.jpg"),
-      alt: "Hero image from the Motion Graphics Skill Pack README.",
-      width: 960,
-      height: 300,
-      credit: "Hero image from the README.",
-    },
+    shotsCredit: "Frames from the launch and milestone demo GIFs in the README.",
+    shots: [
+      { src: "/motion-graphics/motion-graphics-skills/1.webp", alt: "Launch film frame: a blue button that reads LinkedIn AI OS.", width: 800, height: 450 },
+      { src: "/motion-graphics/motion-graphics-skills/2.webp", alt: "Launch film frame: the line you need Claude Code on a dark field.", width: 800, height: 450 },
+      { src: "/motion-graphics/motion-graphics-skills/3.webp", alt: "Milestone loop frame: points forming 250,000 LinkedIn followers.", width: 540, height: 676 },
+    ],
     summary: "Charlie Hills' pack for launch-grade motion graphics in Claude Code. Every frame is code. No After Effects and no video generator.",
     metaTitle: "Motion Graphics Skill Pack: free Claude Code skills",
     metaDescription:
@@ -667,13 +673,13 @@ export const SKILLS: Skill[] = [
     license: "MIT",
     url: "https://github.com/iart-ai/motion-skills",
     linkLabel: "GitHub",
-    image: {
-      src: G("iart.jpg"),
-      alt: "Still from the iart-ai motion-skills showcase GIF.",
-      width: 960,
-      height: 540,
-      credit: "Still from the showcase GIF in the README.",
-    },
+    shotsCredit: "Frames from the showcase GIF in the README.",
+    shots: [
+      { src: "/motion-graphics/motion-skills/1.webp", alt: "Showcase frame: the word motion in large type on a dark gradient.", width: 720, height: 406 },
+      { src: "/motion-graphics/motion-skills/2.webp", alt: "Showcase frame: kinetic type reading create, in cyan and magenta.", width: 720, height: 406 },
+      { src: "/motion-graphics/motion-skills/3.webp", alt: "Showcase frame: a title card that reads motion skills.", width: 720, height: 406 },
+      { src: "/motion-graphics/motion-skills/4.webp", alt: "Showcase frame: the iart.ai logo lockup.", width: 720, height: 406 },
+    ],
     summary: "An index of open-source motion skills for coding agents: kinetic type, charts, explainers, WebGL, Manim, TikTok and Reels. Install one pack at a time.",
     metaTitle: "Motion Skills: free motion-graphics packs for agents",
     metaDescription:
@@ -736,13 +742,13 @@ export const SKILLS: Skill[] = [
     license: "CLI, skills and prompts open source. No SPDX name on the page",
     url: "https://reelkit.cc/en",
     linkLabel: "Page",
-    image: {
-      src: G("reelkit.png"),
-      alt: "Reelkit open graph image: Your agent writes code. Now it makes videos.",
-      width: 1200,
-      height: 630,
-      credit: "Open Graph image from reelkit.cc.",
-    },
+    shotsCredit: "Frames from the launch film and narrated explainer published on reelkit.cc.",
+    shots: [
+      { src: "/motion-graphics/reelkit/1.webp", alt: "Launch film frame: a laptop under a headline that says overbooked.", width: 720, height: 1280 },
+      { src: "/motion-graphics/reelkit/2.webp", alt: "Launch film frame: a phone UI on a dark background.", width: 720, height: 1280 },
+      { src: "/motion-graphics/reelkit/3.webp", alt: "Narrated explainer frame: a task list with tasks, deadlines and energy.", width: 720, height: 1280 },
+      { src: "/motion-graphics/reelkit/4.webp", alt: "Narrated explainer frame: a week calendar with the line tempo reshuffles everything.", width: 720, height: 1280 },
+    ],
     summary: "A CLI and a skill for Claude Code, Codex, Cursor and Gemini CLI. The agent plans the video and builds it in HyperFrames. Reelkit handles assets, voiceover and render.",
     metaTitle: "Reelkit: free agent CLI for short-form video",
     metaDescription:
@@ -784,6 +790,7 @@ export const SKILLS: Skill[] = [
     license: "Not stated in the README",
     url: "https://github.com/remotion-dev/skills",
     linkLabel: "GitHub",
+    shots: [],
     summary: "Remotion's own agent skills: best practices for Claude Code, Codex, Cursor and other agents that work in Remotion projects.",
     metaTitle: "Remotion Agent Skills: official free install",
     metaDescription:
@@ -821,13 +828,13 @@ export const SKILLS: Skill[] = [
     license: "MIT",
     url: "https://github.com/haidrrrry/claude-remotion-skill",
     linkLabel: "GitHub",
-    image: {
-      src: G("remotion-skill.jpg"),
-      alt: "Still from the claude-remotion-skill demo GIF: a logo sting reading Claude Design.",
-      width: 960,
-      height: 540,
-      credit: "Still from the demo GIF in the README.",
-    },
+    shotsCredit: "Frames from the demo GIF and the Focus Cat promo GIF in the README.",
+    shots: [
+      { src: "/motion-graphics/claude-remotion-skill/1.webp", alt: "Demo frame: kinetic type that reads your phone won't stop.", width: 480, height: 270 },
+      { src: "/motion-graphics/claude-remotion-skill/2.webp", alt: "Focus Cat promo frame: an app icon and the words Focus Cat.", width: 480, height: 270 },
+      { src: "/motion-graphics/claude-remotion-skill/3.webp", alt: "Demo frame: a small sunburst mark on a light background.", width: 800, height: 450 },
+      { src: "/motion-graphics/claude-remotion-skill/4.webp", alt: "Demo frame: a logo sting that reads Claude Design.", width: 800, height: 450 },
+    ],
     summary: "An MIT skill that tells Claude to design Remotion motion (springs, stagger, grain, Ken Burns, captions) and to inspect frames before it delivers.",
     metaTitle: "Claude Remotion Skill: free motion-design rules",
     metaDescription:

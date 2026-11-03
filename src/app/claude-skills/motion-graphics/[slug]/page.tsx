@@ -78,15 +78,19 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <p className="checked">
           Last updated <time dateTime={UPDATED}>{UPDATED_LABEL}</time>. Checked against the {skill.linkLabel === "GitHub" ? "README" : "format page"}.
         </p>
-        <div className="card skill-frame">
-          <div className="titlebar" aria-hidden="true">
-            <i />
-            <i />
-            <i />
-            <span>{skill.slug}</span>
-          </div>
+        {skill.shots.length ? (
           <SkillVisual skill={skill} frame="detail" />
-        </div>
+        ) : (
+          <div className="card skill-frame">
+            <div className="titlebar" aria-hidden="true">
+              <i />
+              <i />
+              <i />
+              <span>{skill.slug}</span>
+            </div>
+            <SkillVisual skill={skill} frame="detail" />
+          </div>
+        )}
 
         <h2>What it makes</h2>
         <ul>
