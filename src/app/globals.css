@@ -141,6 +141,7 @@ h3{margin:0}
 .msg-foot a:hover{background:var(--lime);color:var(--on-lime);border-bottom-color:var(--line)}
 .badge{display:inline-block;font:700 .68rem/1.6 var(--font-mono),monospace;border:2px solid var(--line);border-radius:8px;padding:0 7px;background:var(--card);color:var(--muted);white-space:nowrap}
 .badge.ok{background:var(--lime);color:var(--on-lime)}
+.badge.pay{background:var(--pink);color:#0f0d1a}
 .history-link{margin:28px 0 0;font-weight:700}
 
 details{background:var(--card);border:var(--bd);border-radius:14px;padding:10px 18px;margin:12px 0;box-shadow:var(--shadow-s)}
@@ -207,3 +208,65 @@ details p{margin:8px 0 2px;color:var(--muted)}
 .bar i.codex{background:var(--codex)}
 .site-footer .footer-links{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0 0}
 .banked-banner{padding:14px 20px;margin:0 auto 20px;max-width:640px;background:var(--lime);color:var(--on-lime)}.banked-banner p{margin:0}
+
+/* motion-graphics roundup */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skills-page .intro-copy{max-width:62ch}
+.skill-jump{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 8px}
+.skill-jump a{font:700 .85rem/1 var(--font-mono),monospace;padding:9px 14px;border:var(--bd);border-radius:12px;background:var(--card);box-shadow:var(--shadow-s)}
+.skill-jump a:hover{background:var(--lime);color:var(--on-lime);transform:translate(-1px,-1px)}
+.skill-grid{margin-top:4px}
+.skill-card{display:flex;flex-direction:column}
+.skill-visual{margin:0;background:var(--card);border-bottom:var(--bd);overflow:hidden}
+.skill-visual img{display:block;width:100%;height:210px;object-fit:cover;object-position:center}
+.skill-visual.is-detail img{height:auto;max-height:560px;object-fit:contain;background:#12101c;margin:0 auto}
+.skill-visual figcaption{margin:0;padding:8px 14px 10px;font:600 .75rem/1.4 var(--font-mono),monospace;color:var(--muted)}
+.skill-visual-empty{min-height:180px;aspect-ratio:16/9;display:flex;flex-direction:column;justify-content:space-between;padding:18px;background-color:var(--vc-soft,var(--card));background-image:radial-gradient(circle,color-mix(in srgb,var(--ink) 22%,transparent) 1.15px,transparent 1.25px);background-size:14px 14px}
+.skill-visual-empty span{font:800 .72rem/1.2 var(--font-mono),monospace;letter-spacing:.06em;text-transform:uppercase}
+.skill-visual-empty strong{font-size:clamp(1.6rem,4vw,2.1rem);letter-spacing:-.03em;line-height:.95;max-width:12ch}
+.cat-print{--vc:var(--claude);--vc-soft:var(--claude-soft)}
+.cat-3d{--vc:var(--codex);--vc-soft:var(--codex-soft)}
+.cat-talking{--vc:var(--pink);--vc-soft:color-mix(in srgb,var(--pink) 28%,var(--card))}
+.cat-motion{--vc:var(--lime);--vc-soft:color-mix(in srgb,var(--lime) 32%,var(--card))}
+.skill-body{display:flex;flex-direction:column;gap:8px;padding:16px 16px 18px}
+.skill-body h3{font-size:1.35rem;font-weight:800;letter-spacing:-.02em}
+.skill-body h3 a:hover{background:var(--lime);color:var(--on-lime);box-shadow:0 0 0 3px var(--lime)}
+.skill-body p{margin:0}
+.skill-meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.skill-links{display:flex;gap:16px;flex-wrap:wrap;font-weight:800;margin-top:4px}
+.skill-links a{border-bottom:2px solid transparent}
+.skill-links a:hover{background:var(--lime);color:var(--on-lime);border-bottom-color:var(--line)}
+.cmd{border:var(--bd);border-radius:14px;overflow:hidden;background:var(--card);box-shadow:var(--shadow-s)}
+.cmd .titlebar{border-bottom:var(--bd)}
+.cmd-copy{margin-left:auto;font:800 .72rem/1 var(--font-mono),monospace;padding:5px 8px;border:2px solid var(--line);border-radius:8px;background:var(--lime);color:var(--on-lime);cursor:pointer}
+.cmd-copy:hover{transform:translate(-1px,-1px)}
+.cmd pre{margin:0;padding:12px 14px 14px;overflow-x:auto;font:700 .78rem/1.5 var(--font-mono),monospace;white-space:pre}
+.table-wrap{border-radius:16px;box-shadow:var(--shadow)}
+.table-scroll{overflow-x:auto;border:var(--bd);border-radius:16px;background:var(--card)}
+table.cmp{width:100%;border-collapse:collapse;min-width:860px;font-size:.92rem}
+table.cmp th,table.cmp td{text-align:left;padding:10px 12px;border-bottom:2px solid var(--hair);vertical-align:top}
+table.cmp thead th{font:800 .75rem/1.2 var(--font-mono),monospace;background:color-mix(in srgb,var(--ink) 6%,var(--card))}
+table.cmp thead button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+table.cmp thead button:hover{background:var(--lime);color:var(--on-lime)}
+table.cmp tbody th{font-weight:800}
+table.cmp a{font-weight:800;border-bottom:2px solid transparent}
+table.cmp a:hover{background:var(--lime);color:var(--on-lime);border-bottom-color:var(--line)}
+.swipe-hint{display:none}
+.pick-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.pick-card{padding:16px 16px 14px;box-shadow:var(--shadow-s)}
+.pick-card h3{font-size:1.15rem;margin:6px 0}
+.pick-card h3 a:hover{background:var(--lime);color:var(--on-lime);box-shadow:0 0 0 3px var(--lime)}
+.pick-card p{margin:0}
+.pick-card .eyebrow{margin-bottom:4px}
+.skill-detail .skill-frame{margin:18px 0 8px}
+.skill-detail ul{padding-left:1.2em}
+.skill-detail li{margin:6px 0}
+.install-block{margin:0 0 16px}
+.glance{display:grid;gap:10px;margin:0}
+.glance div{background:var(--card);border:var(--bd);border-radius:14px;padding:12px 14px;box-shadow:var(--shadow-s)}
+.glance dt{font:800 .72rem/1.2 var(--font-mono),monospace;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.glance dd{margin:4px 0 0;font-weight:700}
+@media (max-width:800px){
+  .swipe-hint{display:block}
+  .skill-visual img{height:180px}
+}

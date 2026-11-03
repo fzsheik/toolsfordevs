@@ -1,6 +1,7 @@
 import { SITE, VENDORS } from "@/lib/site";
 import { getEvents } from "@/lib/events";
 import { answer } from "@/lib/seo";
+import { INDEX_PATH, INDEX_TITLE, SKILLS, skillPath } from "@/lib/motion-skills";
 
 export const revalidate = 300;
 
@@ -21,6 +22,8 @@ export async function GET() {
     `- [Codex banked reset](${SITE.url}/codex-banked-reset)`,
     `- [Claude vs Codex resets: monthly counts](${SITE.url}/claude-vs-codex-resets)`,
     `- [Limit changes log](${SITE.url}/changes)`,
+    `- [${INDEX_TITLE}](${SITE.url}${INDEX_PATH})`,
+    ...SKILLS.map((s) => `  - [${s.name}](${SITE.url}${skillPath(s.slug)}): ${s.summary}`),
     "",
     "## Data",
     `- [Reset history](${SITE.url}/reset-history): every logged reset`,
