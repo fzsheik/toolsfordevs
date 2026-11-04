@@ -6,8 +6,8 @@ export const contentType = ogType;
 
 export default function Image() {
   return renderOg({
-    kicker: "Live tracker",
-    title: "Claude reset & Codex reset",
-    sub: "Did your usage limits reset? News, history, sources.",
+    kicker: "toolsfordevs",
+    title: "Claude tools and skills",
+    sub: "Reset trackers, plus free motion-graphics skills.",
   });
 }

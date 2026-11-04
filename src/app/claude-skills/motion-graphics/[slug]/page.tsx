@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import JsonLd from "@/components/JsonLd";
 import CopyCommand from "@/components/motion/CopyCommand";
+import SkillBrowse from "@/components/motion/SkillBrowse";
 import SkillVisual from "@/components/motion/SkillVisual";
 import { INDEX_PATH, INDEX_TITLE, SKILLS, UPDATED, UPDATED_LABEL, categoryLabel, getSkill, skillPath, structuredLicense } from "@/lib/motion-skills";
 import { SITE } from "@/lib/site";
@@ -61,6 +62,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           author: { "@type": "Organization", name: SITE.name, url: SITE.url },
         }}
       />
+      <div className="skill-shell">
+      <SkillBrowse current={skill.slug} />
       <article className={`skills-page skill-detail cat-${skill.category}`}>
         <p className="eyebrow">
           <Link href={INDEX_PATH}>{INDEX_TITLE.replace(" (2026)", "")}</Link>
@@ -201,6 +204,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           </Link>
         </p>
       </article>
+      </div>
     </>
   );
 }

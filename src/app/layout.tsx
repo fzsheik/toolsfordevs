@@ -40,7 +40,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="nav-links">
               <Link href="/claude-reset"><VendorLogo vendor="claude" size={18} />Claude</Link>
               <Link href="/codex-reset"><VendorLogo vendor="codex" size={18} />Codex</Link>
-              <Link href="/reset-history">History <span aria-hidden="true">↗</span></Link>
+              <Link href="/claude-skills/motion-graphics">Skills</Link>
+              <Link href="/reset-history">History</Link>
             </div>
           </nav>
         </header>
@@ -53,13 +54,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
           <FooterCredit />
           <div className="footer-links">
+            <Link href="/claude-reset">Claude reset</Link>
+            <Link href="/codex-reset">Codex reset</Link>
+            <Link href="/reset-history">Reset history</Link>
+            <Link href="/claude-skills/motion-graphics">Motion graphics skills</Link>
+            <Link href="/claude-vs-codex-resets">Claude vs Codex</Link>
+            <Link href="/changes">Limit changes</Link>
             <Link href="/claude-usage-limits">Claude usage limits</Link>
             <Link href="/claude-limit-reset">Claude limit reset</Link>
             <Link href="/codex-usage-limits">Codex usage limits</Link>
             <Link href="/codex-banked-reset">Codex banked reset</Link>
-            <Link href="/claude-vs-codex-resets">Claude vs Codex</Link>
-            <Link href="/changes">Limit changes</Link>
-            <Link href="/claude-skills/motion-graphics">Motion graphics skills</Link>
           </div>
           <p>Independent. Not affiliated with Anthropic or OpenAI. Claude is a trademark of Anthropic; Codex and OpenAI are trademarks of OpenAI. Every entry links its sources; &quot;Source-linked&quot; means the primary link is cited but not yet checked by us.</p>
         </footer>

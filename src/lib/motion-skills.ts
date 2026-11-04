@@ -891,6 +891,18 @@ export const skillPath = (slug: string) => `${INDEX_PATH}/${slug}`;
 
 export const getSkill = (slug: string) => SKILLS.find((s) => s.slug === slug);
 
+const slugsIn = (id: CategoryId) => SKILLS.filter((s) => s.category === id).map((s) => s.slug);
+const REMOTION = new Set(["remotion-skills", "claude-remotion-skill"]);
+
+/** Sidebar groups. Paper, 3D, and editing follow the page categories. Motion is split into design versus Remotion. */
+export const BROWSE_GROUPS: { id: string; title: string; slugs: string[] }[] = [
+  { id: "paper", title: "Paper, cut-out, collage", slugs: slugsIn("print") },
+  { id: "3d", title: "3D, low-poly, voxel", slugs: slugsIn("3d") },
+  { id: "edit", title: "Video editing", slugs: slugsIn("talking") },
+  { id: "motion", title: "Motion design and explainers", slugs: slugsIn("motion").filter((s) => !REMOTION.has(s)) },
+  { id: "remotion", title: "Remotion and code-based", slugs: slugsIn("motion").filter((s) => REMOTION.has(s)) },
+];
+
 export type SkillRow = {
   slug: string;
   name: string;

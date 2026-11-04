@@ -12,6 +12,6 @@ export async function GET() {
       return `<item><title>${esc(e.title)}</title><link>${link}</link><guid>${link}</guid><pubDate>${new Date(e.announced_at ?? `${e.date}T00:00:00Z`).toUTCString()}</pubDate><description>${esc(e.summary)}</description></item>`;
     })
     .join("");
-  const xml = `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>${SITE.name} reset tracker</title><link>${SITE.url}</link><description>${esc(SITE.tagline)}</description>${items}</channel></rss>`;
+  const xml = `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>${SITE.name} reset tracker</title><link>${SITE.url}</link><description>${esc("Live Claude and Codex usage limit reset tracker")}</description>${items}</channel></rss>`;
   return new Response(xml, { headers: { "Content-Type": "application/rss+xml; charset=utf-8" } });
 }
