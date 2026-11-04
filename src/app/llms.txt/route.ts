@@ -7,7 +7,7 @@ export const revalidate = 300;
 
 /** Plain-text summary for LLM crawlers and answer engines (llmstxt.org convention). */
 export async function GET() {
-  const lines = [`# ${SITE.name}`, "", `> ${SITE.tagline}. Independent tracker of Claude Code and OpenAI Codex usage limit resets, with dates, UTC times and links to the original announcements. "Today" is decided in UTC.`, "", "## Current status"];
+  const lines = [`# ${SITE.name}`, "", `> ${SITE.tagline} "Today" on the reset trackers is the UTC day.`, "", "## Categories", `- [Home](${SITE.url}/): category hub`, `- [Claude reset tracker](${SITE.url}/claude-reset): did Claude reset today, banked Reset for free, sourced history`, `- [Codex reset tracker](${SITE.url}/codex-reset): did Codex reset today, banked resets, sourced history`, `- [Motion graphics skills](${SITE.url}${INDEX_PATH}): free Claude Code skills for reels and motion graphics`, `- [Reset history](${SITE.url}/reset-history): every logged reset`, "", "## Current reset status"];
   for (const v of Object.values(VENDORS)) {
     const events = await getEvents(v.id);
     const { last, text } = await answer(v.id);

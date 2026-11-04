@@ -8,7 +8,7 @@ function siteUrl(raw?: string) {
 export const SITE = {
   name: "toolsfordevs",
   url: siteUrl(process.env.NEXT_PUBLIC_SITE_URL),
-  tagline: "Live Claude and Codex usage limit reset tracker",
+  tagline: "Independent tools for Claude Code and Codex: live usage-limit reset trackers and free motion-graphics skills.",
 };
 
 export type VendorId = "claude" | "codex";

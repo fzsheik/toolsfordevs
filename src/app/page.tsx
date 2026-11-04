@@ -1,114 +1,152 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { VENDORS, SITE } from "@/lib/site";
-import { getEvents, daysSince, when } from "@/lib/events";
+import Image from "next/image";
+import { SITE, VENDORS } from "@/lib/site";
 import { answer } from "@/lib/seo";
+import { daysSince, getEvents, when } from "@/lib/events";
 import BankedBanner from "@/components/BankedBanner";
-import AlertsBlock from "@/components/AlertsBlock";
-import CallYourShot from "@/components/CallYourShotLazy";
-import Estimate from "@/components/Estimate";
-import EventList from "@/components/EventList";
 import JsonLd from "@/components/JsonLd";
 import VendorLogo from "@/components/VendorLogo";
+import { INDEX_PATH } from "@/lib/motion-skills";
 
 export const revalidate = 300;
 
+const TITLE = "toolsfordevs: Claude tools and skills";
+const DESCRIPTION =
+  "toolsfordevs.app is an independent directory of free tools for Claude Code and Codex: live usage-limit reset trackers, and free skills for motion graphics and reels.";
+
+const SECTIONS = [
+  { name: "Claude reset tracker", path: "/claude-reset", description: "Did Claude reset today? Last usage-limit reset, banked Reset for free, and the sourced history." },
+  { name: "Codex reset tracker", path: "/codex-reset", description: "Did Codex reset today? Last OpenAI Codex usage-limit reset, banked resets, and the sourced history." },
+  { name: "Motion graphics skills", path: INDEX_PATH, description: "Free Claude Code skills for paper-cut reels, 3D films, talking-head edits, and motion graphics." },
+  { name: "Reset history", path: "/reset-history", description: "Every logged Claude and Codex usage-limit reset, with dates and sources." },
+  { name: "Claude vs Codex resets", path: "/claude-vs-codex-resets", description: "Monthly counts of Claude and Codex usage-limit resets side by side." },
+  { name: "Limit changes", path: "/changes", description: "Logged changes to Claude and Codex usage limits, separate from one-off resets." },
+];
+
 export const metadata: Metadata = {
-  title: { absolute: "Did Claude or Codex Reset Today? Live Limit Reset Tracker" },
-  description:
-    "Live answer for Claude Code and OpenAI Codex usage limit resets: last reset date and time, sourced history, banked resets, and free RSS and calendar alerts.",
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
   alternates: { canonical: "/" },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: "/", type: "website" },
+  twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION },
 };
 
 export default async function Home() {
-  const events = await getEvents();
-  const checked = new Date();
-  const [claude, codex] = await Promise.all([answer("claude"), answer("codex")]);
-  const answerText = `${claude.text} ${codex.text}`;
-  const faq = [
-    { q: "Did Claude reset today?", a: `${claude.text} Extra resets are announced by Anthropic staff on X; this page checks every few minutes. See how Claude usage limits work and how to use Reset for free.` },
-    { q: "Did Codex reset today?", a: `${codex.text} Extra resets are announced by OpenAI staff on X; this page checks every few minutes. See how Codex usage limits work and how to redeem a banked reset.` },
-    { q: "How often do Claude and Codex usage limits reset?", a: "Normal 5-hour and weekly windows roll on their own. Separate one-off resets are announced ad hoc, with no published schedule. The rhythm cards on this page show the median gap and recent counts." },
-  ];
+  const [claude, codex, events] = await Promise.all([answer("claude"), answer("codex"), getEvents()]);
+  const pageUrl = SITE.url;
   return (
     <>
       <JsonLd
         data={{
           "@context": "https://schema.org",
           "@graph": [
-            { "@type": "WebSite", name: SITE.name, url: SITE.url, description: SITE.tagline },
+            { "@type": "WebSite", name: SITE.name, url: SITE.url, description: DESCRIPTION },
             { "@type": "Organization", name: SITE.name, url: SITE.url, logo: `${SITE.url}/icon.svg` },
+            {
+              "@type": "CollectionPage",
+              name: TITLE,
+              description: DESCRIPTION,
+              url: pageUrl,
+              isPartOf: { "@type": "WebSite", name: SITE.name, url: SITE.url },
+            },
+            {
+              "@type": "ItemList",
+              name: "toolsfordevs sections",
+              itemListOrder: "https://schema.org/ItemListOrderAscending",
+              numberOfItems: SECTIONS.length,
+              itemListElement: SECTIONS.map((s, i) => ({
+                "@type": "ListItem",
+                position: i + 1,
+                name: s.name,
+                url: `${SITE.url}${s.path}`,
+              })),
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [{ "@type": "ListItem", position: 1, name: SITE.name, item: SITE.url }],
+            },
           ],
-        }}
-      />
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
         }}
       />
       <BankedBanner />
       <section className="home-intro" aria-labelledby="home-title">
-        <p className="eyebrow">$ did-it-reset --claude --codex</p>
-        <h1 id="home-title">Did Claude or Codex reset today?</h1>
-        <p className="intro-copy">{answerText}</p>
-        <p className="checked">Checked <time dateTime={checked.toISOString()}>{checked.toISOString().slice(0, 16).replace("T", " ")} UTC</time>. &ldquo;Today&rdquo; is the UTC day.</p>
+        <p className="eyebrow">{"// toolsfordevs"}</p>
+        <h1 id="home-title">Small tools for Claude Code and Codex.</h1>
+        <p className="intro-copy">{DESCRIPTION}</p>
       </section>
+
       <div className="section-heading">
-        <h2>The reset log</h2>
-        <span className="eyebrow">{"// at a glance"}</span>
+        <h2>What is on toolsfordevs?</h2>
+        <span className="eyebrow">{"// pick a section"}</span>
       </div>
-      <div className="grid tracker-grid">
-        {Object.values(VENDORS).map((v) => {
-          const last = events.find((e) => e.vendor === v.id && e.kind === "reset");
-          return (
-            <Link key={v.id} href={v.path} className={`card tracker-card tracker-${v.id} v-${v.id}`}>
-              <div className="titlebar" aria-hidden="true"><i /><i /><i /><span>{v.id}-reset.log</span></div>
-              <div className="tracker-body">
-              <div className="tracker-heading">
-                <VendorLogo vendor={v.id} size={44} />
-                <div><h3>{v.product}</h3><span className="muted">{v.owner}</span></div>
-                <span className="tracker-arrow" aria-hidden="true">↗</span>
-              </div>
-              <p className="metric-label">Last logged reset</p>
-              <p className="big">{last ? (daysSince(last.date) === 0 ? "Today" : daysSince(last.date)) : "—"}{last && daysSince(last.date) > 0 && <span>{daysSince(last.date) === 1 ? "day ago" : "days ago"}</span>}</p>
-              <div className="tracker-bottom">
-                <span>{last ? <time dateTime={last.announced_at ?? last.date}>{when(last)}</time> : "None logged"}</span>
-                <span>View history <span aria-hidden="true">→</span></span>
-              </div>
-              </div>
-            </Link>
-          );
-        })}
+      <div className="hub-grid">
+        <Link href="/claude-reset" className="card tracker-card tracker-claude v-claude hub-card">
+          <div className="titlebar" aria-hidden="true"><i /><i /><i /><span>claude-reset.log</span></div>
+          <div className="tracker-body">
+            <div className="tracker-heading">
+              <VendorLogo vendor="claude" size={44} />
+              <div><h3>Claude reset tracker</h3><span className="muted">Usage limits</span></div>
+              <span className="tracker-arrow" aria-hidden="true">↗</span>
+            </div>
+            <p className="metric-label">Last logged reset</p>
+            <p className="hub-metric">{claude.last ? (daysSince(claude.last.date) === 0 ? "Today" : `${daysSince(claude.last.date)}d ago`) : "None logged"}</p>
+            <p>{claude.text}</p>
+            <p className="tracker-bottom"><span>{claude.last ? <time dateTime={claude.last.announced_at ?? claude.last.date}>{when(claude.last)}</time> : "Open the tracker"}</span><span>Open tracker →</span></p>
+          </div>
+        </Link>
+        <Link href="/codex-reset" className="card tracker-card tracker-codex v-codex hub-card">
+          <div className="titlebar" aria-hidden="true"><i /><i /><i /><span>codex-reset.log</span></div>
+          <div className="tracker-body">
+            <div className="tracker-heading">
+              <VendorLogo vendor="codex" size={44} />
+              <div><h3>Codex reset tracker</h3><span className="muted">Usage limits</span></div>
+              <span className="tracker-arrow" aria-hidden="true">↗</span>
+            </div>
+            <p className="metric-label">Last logged reset</p>
+            <p className="hub-metric">{codex.last ? (daysSince(codex.last.date) === 0 ? "Today" : `${daysSince(codex.last.date)}d ago`) : "None logged"}</p>
+            <p>{codex.text}</p>
+            <p className="tracker-bottom"><span>{codex.last ? <time dateTime={codex.last.announced_at ?? codex.last.date}>{when(codex.last)}</time> : "Open the tracker"}</span><span>Open tracker →</span></p>
+          </div>
+        </Link>
+        <Link href={INDEX_PATH} className="card hub-skills">
+          <div className="titlebar" aria-hidden="true"><i /><i /><i /><span>claude-skills/</span></div>
+          <div className="hub-shots" aria-hidden="true">
+            <Image src="/motion-graphics/papercut-explainer/1.webp" alt="" width={506} height={900} />
+            <Image src="/motion-graphics/lowpoly-reel/1.webp" alt="" width={300} height={534} />
+            <Image src="/motion-graphics/herk-edit-kit/1.webp" alt="" width={360} height={640} />
+          </div>
+          <div className="hub-skills-body">
+            <p className="eyebrow">Claude Code skills</p>
+            <h3>Motion graphics and reels</h3>
+            <p>Free Claude Code skills for paper-cut explainers, 3D films, talking-head edits, and motion graphics. More skill categories can sit beside this one.</p>
+            <p className="tracker-bottom"><span>15 skills, checked against each README</span><span>Open the roundup →</span></p>
+          </div>
+        </Link>
       </div>
-      <CallYourShot
-        vendors={Object.values(VENDORS).map((v) => ({
-          id: v.id,
-          name: v.name,
-          resetDates: events.filter((e) => e.vendor === v.id && e.kind === "reset").map((e) => e.date),
-        }))}
-      />
-      <div className="estimate-group">
-        <p className="eyebrow">{"// next up"}</p>
-        <Estimate vendor="claude" />
-        <Estimate vendor="codex" />
+
+      <div className="section-heading">
+        <h2>What reset was logged last?</h2>
+        <span className="eyebrow">{"// newest first"}</span>
       </div>
-      <div className="section-heading news-heading">
-        <h2>From the changelog</h2>
-        <span className="eyebrow">{"// latest news"}</span>
+      <ul className="hub-links">
+        {events.slice(0, 3).map((e) => (
+          <li key={e.id}><Link href={`${VENDORS[e.vendor].path}/${e.date}`}>{e.title}</Link>. {e.summary}</li>
+        ))}
+      </ul>
+      <div className="section-heading">
+        <h2>Reset history and guides</h2>
+        <span className="eyebrow">{"// same data, other doors"}</span>
       </div>
-      <EventList events={events.slice(0, 5)} />
-      <AlertsBlock />
-      <h2>Quick answers</h2>
-      {faq.map((f) => (
-        <details key={f.q} open>
-          <summary>{f.q}</summary>
-          <p>{f.a}</p>
-        </details>
-      ))}
-      <p className="history-link">Guides: <Link href="/claude-usage-limits">Claude usage limits</Link> · <Link href="/claude-limit-reset">Claude limit reset</Link> · <Link href="/codex-usage-limits">Codex usage limits</Link> · <Link href="/codex-banked-reset">Codex banked reset</Link> · <Link href="/claude-skills/motion-graphics">Motion graphics skills</Link></p>
-      <p className="history-link"><Link href="/reset-history">Explore the full reset history <span aria-hidden="true">→</span></Link></p>
+      <ul className="hub-links">
+        {SECTIONS.slice(3).map((s) => (
+          <li key={s.path}><Link href={s.path}>{s.name}</Link>. {s.description}</li>
+        ))}
+        <li><Link href="/claude-usage-limits">How Claude usage limits work</Link>. Session and weekly limits on paid Claude plans.</li>
+        <li><Link href="/claude-limit-reset">Claude limit reset</Link>. How Reset for free is announced and logged.</li>
+        <li><Link href="/codex-usage-limits">How Codex usage limits work</Link>. Codex plan windows and what counts.</li>
+        <li><Link href="/codex-banked-reset">Codex banked reset</Link>. How a banked Codex reset is granted and redeemed.</li>
+      </ul>
     </>
   );
 }

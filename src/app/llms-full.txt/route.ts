@@ -6,6 +6,20 @@ export const revalidate = 300;
 /** Expanded plain-text roundup for answer engines. Facts match the HTML pages. */
 export function GET() {
   const lines = [
+    `# ${SITE.name}`,
+    "",
+    `> ${SITE.tagline}`,
+    "",
+    "## Categories",
+    "",
+    `- Home: ${SITE.url}/`,
+    `- Claude reset tracker: ${SITE.url}/claude-reset. Did Claude reset today, plus banked Reset for free and the sourced history.`,
+    `- Codex reset tracker: ${SITE.url}/codex-reset. Did Codex reset today, plus banked resets and the sourced history.`,
+    `- Reset history: ${SITE.url}/reset-history`,
+    `- Claude vs Codex resets: ${SITE.url}/claude-vs-codex-resets`,
+    `- Limit changes: ${SITE.url}/changes`,
+    `- Motion graphics skills: ${SITE.url}${INDEX_PATH}`,
+    "",
     `# ${INDEX_TITLE}`,
     "",
     `> Free Claude Code skills for reels, paper-cut explainers, 3D films and talking-head edits. Facts come from each project's README or format page. Last updated ${UPDATED_LABEL}.`,
