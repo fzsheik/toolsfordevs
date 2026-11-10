@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { SITE, VENDORS, type VendorId } from "@/lib/site";
 import { getEvents, indexable } from "@/lib/events";
 import { INDEX_PATH, SKILLS, UPDATED } from "@/lib/motion-skills";
+import { CHECKED, PATH as GAME_DEV_PATH } from "@/lib/game-dev";
 
 export const revalidate = 300;
 
@@ -14,6 +15,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const u = (p: string, lastModified: string, priority: number) => ({ url: `${SITE.url}${p}`, lastModified, priority });
   const guides = ["/claude-usage-limits", "/claude-limit-reset", "/codex-usage-limits", "/codex-banked-reset"].map((p) => u(p, LAST_CHECKED, 0.7));
   const skills = [u(INDEX_PATH, UPDATED, 0.7), ...SKILLS.map((s) => u(`${INDEX_PATH}/${s.slug}`, UPDATED, 0.6))];
+  const gameDev = [u(GAME_DEV_PATH, CHECKED, 0.7)];
   return [
     { ...u("/", stamp(everything[0]), 1), changeFrequency: "daily" as const },
     u("/reset-history", stamp(everything[0]), 0.8),
@@ -21,6 +23,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     u("/changes", stamp(everything.find((e) => e.kind === "policy")), 0.5),
     ...guides,
     ...skills,
+    ...gameDev,
     ...Object.values(VENDORS).flatMap((v) => [
       { ...u(v.path, stamp(byVendor[v.id][0]), 0.9), changeFrequency: "daily" as const },
       ...byVendor[v.id].filter(indexable).map((e) => u(`${v.path}/${e.date}`, stamp(e), 0.6)),

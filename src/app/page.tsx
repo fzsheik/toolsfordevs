@@ -8,17 +8,19 @@ import BankedBanner from "@/components/BankedBanner";
 import JsonLd from "@/components/JsonLd";
 import VendorLogo from "@/components/VendorLogo";
 import { INDEX_PATH } from "@/lib/motion-skills";
+import { CHECKED_LABEL, PATH as GAME_DEV_PATH } from "@/lib/game-dev";
 
 export const revalidate = 300;
 
 const TITLE = "toolsfordevs: Claude tools and skills";
 const DESCRIPTION =
-  "toolsfordevs.app is an independent directory of free tools for Claude Code and Codex: live usage-limit reset trackers, and free skills for motion graphics and reels.";
+  "toolsfordevs.app is an independent directory for Claude Code and Codex: live usage-limit reset trackers, free motion-graphics skills, and AI tools for Unity, Godot, and Unreal.";
 
 const SECTIONS = [
   { name: "Claude reset tracker", path: "/claude-reset", description: "Did Claude reset today? Last usage-limit reset, banked Reset for free, and the sourced history." },
   { name: "Codex reset tracker", path: "/codex-reset", description: "Did Codex reset today? Last OpenAI Codex usage-limit reset, banked resets, and the sourced history." },
   { name: "Motion graphics skills", path: INDEX_PATH, description: "Free Claude Code skills for paper-cut reels, 3D films, talking-head edits, and motion graphics." },
+  { name: "AI game-dev tools", path: GAME_DEV_PATH, description: "Official and community AI paths for Unity, Godot, and Unreal: MCP or CLI, and the version each source states." },
   { name: "Reset history", path: "/reset-history", description: "Every logged Claude and Codex usage-limit reset, with dates and sources." },
   { name: "Claude vs Codex resets", path: "/claude-vs-codex-resets", description: "Monthly counts of Claude and Codex usage-limit resets side by side." },
   { name: "Limit changes", path: "/changes", description: "Logged changes to Claude and Codex usage limits, separate from one-off resets." },
@@ -123,6 +125,15 @@ export default async function Home() {
             <p className="tracker-bottom"><span>15 skills, checked against each README</span><span>Open the roundup →</span></p>
           </div>
         </Link>
+        <Link href={GAME_DEV_PATH} className="card hub-skills">
+          <div className="titlebar" aria-hidden="true"><i /><i /><i /><span>game-dev.md</span></div>
+          <div className="hub-skills-body">
+            <p className="eyebrow">Unity · Godot · Unreal</p>
+            <h3>AI game-dev tools</h3>
+            <p>Official CLI or MCP, community servers, and the engine version each source states.</p>
+            <p className="tracker-bottom"><span>Checked {CHECKED_LABEL}</span><span>Open the directory →</span></p>
+          </div>
+        </Link>
       </div>
 
       <div className="section-heading">
@@ -139,7 +150,7 @@ export default async function Home() {
         <span className="eyebrow">{"// same data, other doors"}</span>
       </div>
       <ul className="hub-links">
-        {SECTIONS.slice(3).map((s) => (
+        {SECTIONS.slice(4).map((s) => (
           <li key={s.path}><Link href={s.path}>{s.name}</Link>. {s.description}</li>
         ))}
         <li><Link href="/claude-usage-limits">How Claude usage limits work</Link>. Session and weekly limits on paid Claude plans.</li>

@@ -4,6 +4,7 @@ import { Bricolage_Grotesque, Figtree, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
+import { NAV_LABEL, PATH as GAME_DEV_PATH } from "@/lib/game-dev";
 import { SITE } from "@/lib/site";
 import BrandMark from "@/components/BrandMark";
 import VendorLogo from "@/components/VendorLogo";
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/codex-reset"><VendorLogo vendor="codex" size={18} />Codex</Link>
               <Link href="/claude-skills/motion-graphics">Skills</Link>
               <Link href="/reset-history">History</Link>
+              <Link href={GAME_DEV_PATH}>{NAV_LABEL}</Link>
             </div>
           </nav>
         </header>
@@ -58,6 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/codex-reset">Codex reset</Link>
             <Link href="/reset-history">Reset history</Link>
             <Link href="/claude-skills/motion-graphics">Motion graphics skills</Link>
+            <Link href={GAME_DEV_PATH}>AI game-dev tools</Link>
             <Link href="/claude-vs-codex-resets">Claude vs Codex</Link>
             <Link href="/changes">Limit changes</Link>
             <Link href="/claude-usage-limits">Claude usage limits</Link>
