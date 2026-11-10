@@ -1,4 +1,5 @@
 import { SITE } from "@/lib/site";
+import { PATH as GAME_DEV_PATH, plainTextLines } from "@/lib/game-dev";
 import { INDEX_PATH, INDEX_TITLE, SKILLS, TAKEAWAYS, UPDATED_LABEL, skillPath } from "@/lib/motion-skills";
 
 export const revalidate = 300;
@@ -19,6 +20,7 @@ export function GET() {
     `- Claude vs Codex resets: ${SITE.url}/claude-vs-codex-resets`,
     `- Limit changes: ${SITE.url}/changes`,
     `- Motion graphics skills: ${SITE.url}${INDEX_PATH}`,
+    `- AI tools for Unity, Godot, and Unreal: ${SITE.url}${GAME_DEV_PATH}`,
     "",
     `# ${INDEX_TITLE}`,
     "",
@@ -51,7 +53,7 @@ export function GET() {
       "",
     );
   }
-  lines.push("Not affiliated with Anthropic, OpenAI, or the skill authors.");
+  lines.push("Not affiliated with Anthropic, OpenAI, or the skill authors.", "", ...plainTextLines());
   return new Response(lines.filter((line) => line !== undefined).join("\n").replace(/\n{3,}/g, "\n\n") + "\n", {
     headers: { "content-type": "text/plain; charset=utf-8" },
   });
