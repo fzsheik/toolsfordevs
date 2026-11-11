@@ -1688,5 +1688,26 @@
       "via": "codex-reset.com"
     },
     "context": "6th Codex reset in 10 days, and Day 21 of Tibo's 28-day ship-or-reset run."
+  },
+  {
+    "id": "claude-2026-11-10",
+    "vendor": "claude",
+    "date": "2026-11-10",
+    "postId": "2120275296637321476",
+    "kind": "reset",
+    "title": "@ClaudeDevs announces a Claude usage limit reset",
+    "summary": "@ClaudeDevs posted that Claude usage limits were reset. Read the linked post for the exact wording and which limits and plans were covered.",
+    "scope": "Usage limits (see post)",
+    "status": "reported",
+    "sources": [
+      {
+        "label": "@ClaudeDevs on X (primary)",
+        "url": "https://x.com/ClaudeDevs/status/2120275296637321476"
+      },
+      {
+        "label": "Spotted via claude-resets.com",
+        "url": "https://claude-resets.com/"
+      }
+    ]
   }
 ]

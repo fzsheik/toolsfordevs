@@ -1,5 +1,19 @@
 [
   {
+    "id": "2119873095129550880",
+    "vendor": "claude",
+    "postId": "2119873095129550880",
+    "date": "2026-11-09",
+    "source": {
+      "label": "X post (via claude-resets.com)",
+      "url": "https://x.com/bcherny/status/2119873095129550880"
+    },
+    "snippet": "Eligible paid accounts get a Fable 5.2 reset grant: Max/Ultra and premium Team/legacy seat-based Enterprise receive 1–3 by paid tenure (under 6 months: 1; 6–12 months: 2; over 12 months: 3); Pro and standard Team receive one.* Each restores only Fable usage on the weekly meter; other weekly usage stays spent. It also refills the 5-hour window if the account has one.",
+    "via": "claude-resets.com",
+    "detectedAt": "2026-11-11T02:59:07.477Z",
+    "reviewed": false
+  },
+  {
     "id": "7d5d7726f8d1",
     "vendor": "codex",
     "source": {
